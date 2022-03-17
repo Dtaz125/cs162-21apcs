@@ -15,10 +15,11 @@ namespace CourseRegistration {
 		Iterator(const Iterator<T>& iter): curr(iter.curr){}
 		Iterator<T>& operator ++ (); //Prefix 
 		Iterator<T> operator ++ (int); //Postfix
+		const T& operator * () { if (curr) return curr->data; }
 		bool operator == (const Iterator<T>& obj);
 		bool operator != (const Iterator<T>& obj);
-		bool operator = (const T& obj);
-		T& remove();
+		Iterator<T>& operator = (const T& obj);
+		T& remove(); 
 		~Iterator();
 	};
 }

@@ -29,10 +29,10 @@ namespace CourseRegistration {
 	}
 
 	template<typename T>
-	bool Iterator<T>::operator = (const T& obj) {
+	Iterator<T>& Iterator<T>::operator = (const T& obj) {
 		if (!curr) return false;
 		curr->data = obj;
-		return true;
+		return *this;
 	}
 
 	template<typename T>

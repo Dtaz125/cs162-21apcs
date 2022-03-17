@@ -1,7 +1,9 @@
 #ifndef LINKED_LIST
 #define LINKED_LIST
 #include"Node.h"
+#include"Iterator.h"
 using CourseRegistration::Node;
+using CourseRegistration::Iterator;
 namespace CourseRegistration {
 	template<typename T>
 	class Linked_List {
@@ -19,6 +21,8 @@ namespace CourseRegistration {
 		bool remove(const T& data);
 		bool contains(const T& data);
 		int getSize() { return size; }
+		Iterator<T> begin() { return Iterator<T>(head); }
+		Iterator<T> end() { return Iterator<T>(); }
 	};
 }
 #endif // !LINKED_LIST
