@@ -45,4 +45,9 @@ namespace CourseRegistration {
 			return results;
 		}
 	}
+
+	template<typename T>
+	Iterator<T>::~Iterator() {
+		curr = nullptr;
+	}
 }

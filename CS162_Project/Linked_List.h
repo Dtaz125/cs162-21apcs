@@ -14,6 +14,7 @@ namespace CourseRegistration {
 		Linked_List(const T& data);
 		Linked_List(const Linked_List<T>& list); //Copy constructor
 		~Linked_List(); //Destructor
+		Linked_List<T>& operator = (const Linked_List& list);
 		bool insert(const T& new_data);
 		bool remove(const T& data);
 		bool contains(const T& data);

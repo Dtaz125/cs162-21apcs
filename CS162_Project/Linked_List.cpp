@@ -30,6 +30,22 @@ namespace CourseRegistration {
 	}
 
 	template<typename T>
+	Linked_List<T>& Linked_List<T>::operator = (const Linked_List& list) {
+		head = tail = nullptr;
+		size = 0;
+		if (list.head) {
+			Node<T>* curr = list.head;
+			head = tail = nullptr;
+			size = 0;
+			while (curr) {
+				insert(curr->data);
+				curr = curr->next;
+			}
+		}
+		return *this;
+	}
+
+	template<typename T>
 	bool Linked_List<T>::contains(const T& data) {
 		if (!head) return false;
 		Node<T>* curr = head;
