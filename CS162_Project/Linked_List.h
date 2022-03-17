@@ -1,13 +1,8 @@
 #ifndef LINKED_LIST
 #define LINKED_LIST
-
+#include"Node.h"
+using CourseRegistration::Node;
 namespace CourseRegistration {
-	template<typename T>
-	struct Node {
-		T data;
-		Node<T>* next;
-	};
-
 	template<typename T>
 	class Linked_List {
 	private:
