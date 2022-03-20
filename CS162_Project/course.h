@@ -3,6 +3,7 @@
 #include "linked_list.h"
 #include "Node.h"
 #include "iterator.h"
+#include "Student.h"
 using namespace std;
 
 class Course{
