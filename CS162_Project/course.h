@@ -3,7 +3,6 @@
 #include "linked_list.h"
 #include "Node.h"
 #include "iterator.h"
-#include "Student.h"
 using namespace std;
 
 class Course{
@@ -19,6 +18,9 @@ private:
     bool is_published;
 
 public:
+    Course (){}
+    Course (string __id, string __name, string __teacher_name, string __teaching_time);
+
 };
 
 
