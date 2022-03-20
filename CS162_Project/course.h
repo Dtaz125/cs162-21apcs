@@ -1,5 +1,8 @@
 #pragma once
 #include<iostream>
+#include "linked_list.h"
+#include "Node.h"
+#include "iterator.h"
 using namespace std;
 
 class Course{
