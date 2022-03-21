@@ -1,46 +1,55 @@
 #pragma once
-#include<iostream>
-#include "date.h"
-#include "course.h"
-#include "class.h"
-#include "linked_list.h"
-#include "Node.h"
-#include "iterator.h"
+#pragma once
+#include"Node.h"
+#include"Class.h"
+#include"Course.h"
+#include"Date.h"
 using namespace std;
 
-class semester{
+class Semester{
 private:
-    Linked_List<Class> list_of_classes;
-    Linked_List<Course> list_of_courses;
+    Node<Class>* list_of_classes;
+    Node<Course>* list_of_courses;
     int order;
     Date start_date;
     Date end_date;
 public:
-    semester(){}
-    bool Add_Class(Class new_class);
-    bool Add_Course(Course new_course);
-    bool Modify(int dd, int mm, int yyyy, bool isend = false);
-    bool set_order(int __order);
-
-    bool Add_Class(Class new_class){
-        return list_of_classes.insert(new_class);
+    Semester(const Date& start, const Date& end): start_date(start), end_date(end){}
+    int getOrder() { return order; }
+    const Date& getStartDate() { return start_date; }
+    const Date& getEndDate() { return end_date; }
+    void setOrder(int k) { order = k; }
+    void setStartDate(const Date& date) { start_date = date; }
+    void setEndDate(const Date& date) { end_date = date; }
+    void insert_class(const Class& _class) {
+        list_of_classes = new Node<Class>{ _class, list_of_classes };
     }
-
-    bool Add_Course(Course new_course){
-        return list_of_courses.insert(new_course);
+    void insert_course(const Course& _course) { 
+        list_of_courses = new Node<Course>{ _course, list_of_courses };
     }
-    bool Modify(int dd, int mm, int yyyy, bool isend = false){
-        Date tmp = {dd, mm, yyyy};
-        if (!valid(tmp)) return false;
-        if (!isend) start_date = tmp;
-        else end_date = tmp;
-        return true;
+    Node<Course>* contains_course(const Course& _course) {
+        Node<Course>* curr = list_of_courses;
+        while (curr && curr->data != _course)
+            curr = curr->next;
+        return curr;
     }
-    bool set_order(int __order){
-        if (__order > 0){
-            order = __order;
-            return true;
+    Node<Class>* contains_class(const Class& _class) {
+        Node<Class>* curr = list_of_classes;
+        while (curr && curr->data != _class)
+            curr = curr->next;
+        return curr;
+    }
+    bool remove_class(const Class& _class) {
+        Node<Class>* curr = list_of_classes, * prev = nullptr;
+        while (curr && curr->data != _class) {
+            prev = curr;
+            curr = curr->next;
         }
+        if (!curr) return false;
+        if (!prev) list_of_classes = list_of_classes->next;
+        else prev->next = curr->next;
+        delete curr;
+        return true;
     }
 };
 
