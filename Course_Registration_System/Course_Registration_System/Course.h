@@ -3,6 +3,7 @@
 #define COURSE_H
 #include "Node.h"
 #include"Student.h"
+class Student;                  // forward declaration
 class Course {
 private:
     string id;
