@@ -1,4 +1,3 @@
-#pragma once
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 #include"User.h"
@@ -10,6 +9,7 @@ private:
 public:
 	Account();
 	Account(string useracc, string pass, const User& info);
+	Account(const Account& account);
 	const string& getUsername();
 	const string& getPassword();
 	const User& getInfo();

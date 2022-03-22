@@ -1,8 +1,8 @@
-#pragma once
 #ifndef COURSE_H
 #define COURSE_H
 #include "Node.h"
 #include"Student.h"
+class Student;
 class Course {
 private:
     string id;

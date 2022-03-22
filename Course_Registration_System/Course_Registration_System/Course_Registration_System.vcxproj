@@ -153,6 +153,7 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="Course.cpp" />
+    <ClCompile Include="Driver.cpp" />
     <ClCompile Include="Semester.cpp" />
     <ClCompile Include="Staff.cpp" />
     <ClCompile Include="Student.cpp" />

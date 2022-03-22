@@ -1,4 +1,3 @@
-#pragma once
 #ifndef SEMESTER_H
 #define SEMESTER_H
 #include"Node.h"
@@ -6,7 +5,9 @@
 #include"Course.h"
 #include"Date.h"
 using namespace std;
-
+class Student;
+class Course;
+class Class;
 class Semester {
 private:
     Node<Class>* list_of_classes;
@@ -17,6 +18,8 @@ private:
 public:
     Semester(const Date& start, const Date& end);
     int getOrder();
+    const Node<Class>* getClasses();
+    const Node<Course>* getCourses();
     const Date& getStartDate();
     const Date& getEndDate();
     void setOrder(int k);

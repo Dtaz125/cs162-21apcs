@@ -1,8 +1,12 @@
 #include"Account.h"
+#include"Student.h"
 Account::Account() {
 	//empty
 }
 Account::Account(string useracc, string pass, const User& info) : username(useracc), password(pass), user_info(info) {
+	//empty
+}
+Account::Account(const Account& account): username(account.username), password(account.password), user_info(account.user_info) {
 	//empty
 }
 const string& Account::getUsername() { 

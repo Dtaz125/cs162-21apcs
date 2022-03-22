@@ -1,5 +1,5 @@
 #include"Course.h"
-
+#include"Student.h"
 Course::Course(string __id, string __name, string __teacher_name, string __teaching_time) : id(__id), name(__name), teacher_name(__teacher_name),
 teaching_time(__teaching_time) {}
 const string& Course::getID() { return id; }

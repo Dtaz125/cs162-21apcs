@@ -1,10 +1,16 @@
 #include"Semester.h"
 
 Semester::Semester(const Date& start, const Date& end) : start_date(start), end_date(end) {
-    //empty
+    order = -1;
 }
 int Semester::getOrder() { 
     return order; 
+}
+const Node<Class>* Semester::getClasses() {
+    return list_of_classes;
+}
+const Node<Course>* Semester::getCourses() {
+    return list_of_courses;
 }
 const Date& Semester::getStartDate() { 
     return start_date;

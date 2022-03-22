@@ -1,4 +1,4 @@
-#pragma once
+
 #ifndef STAFF_H
 #define STAFF_H
 
@@ -8,8 +8,8 @@ class Staff : public Account {
 private:
 
 public:
-	Staff() : Account() {}
-	Staff(string useracc, string pass, const User& info) : Account(useracc, pass, info) {}
-
+	Staff();
+	Staff(string useracc, string pass, const User& info);
+	Staff(const Staff& staff);
 };
 #endif // !STAFF_H
