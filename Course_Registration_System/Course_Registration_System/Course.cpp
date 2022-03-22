@@ -1,22 +1,54 @@
 #include"Course.h"
 #include"Student.h"
-Course::Course(string __id, string __name, string __teacher_name, string __teaching_time) : id(__id), name(__name), teacher_name(__teacher_name),
-teaching_time(__teaching_time) {}
-const string& Course::getID() { return id; }
-const string& Course::getCourseName() { return name; }
-const string& Course::getTeacherName() { return teacher_name; }
-const string& Course::getTeachingTime() { return teaching_time; }
-int Course::getStudent() { return current_student; }
-int Course::getMaxStudent() { return max_student; }
-int Course::getCredits() { return credits; }
-bool Course::isPublished() { return is_published; }
-void Course::setID(const string& _id) { id = _id; }
-void Course::setCourseName(const string& _name) { name = _name; }
-void Course::setTeacherName(const string& _name) { teacher_name = _name; }
-void Course::setTeachingTime(const string& _time) { teaching_time = _time; }
-void Course::setMaxStudent(int _number) { max_student = _number; }
-void Course::setCredits(int _credit) { credits = _credit; }
-void Course::publishCourse() { is_published = true; }
+Course::Course(string __id, string __name, string __teacher_name, string __teaching_time) : id(__id), 
+    name(__name), teacher_name(__teacher_name), teaching_time(__teaching_time) {
+    //empty
+}
+const string& Course::getID() { 
+    return id;
+}
+const string& Course::getCourseName() { 
+    return name;
+}
+const string& Course::getTeacherName() { 
+    return teacher_name; 
+}
+const string& Course::getTeachingTime() {
+    return teaching_time;
+}
+int Course::getStudent() { 
+    return current_student;
+}
+int Course::getMaxStudent() { 
+    return max_student;
+}
+int Course::getCredits() { 
+    return credits;
+}
+bool Course::isPublished() { 
+    return is_published;
+}
+void Course::setID(const string& _id) { 
+    id = _id;
+}
+void Course::setCourseName(const string& _name) { 
+    name = _name;
+}
+void Course::setTeacherName(const string& _name) { 
+    teacher_name = _name;
+}
+void Course::setTeachingTime(const string& _time) { 
+    teaching_time = _time;
+}
+void Course::setMaxStudent(int _number) { 
+    max_student = _number;
+}
+void Course::setCredits(int _credit) { 
+    credits = _credit;
+}
+void Course::publishCourse() { 
+    is_published = true;
+}
 void Course::add_student(const Student& student) {
     student_list = new Node<Student>{ student, student_list };
     current_student++;
