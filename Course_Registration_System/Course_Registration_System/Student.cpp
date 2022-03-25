@@ -38,19 +38,27 @@ void Student::calculateGPA() {
 
 }
 void Student::attend_course(const Course& course) {
-	list_of_courses = new Node<Course>{ course, list_of_courses };
+	list_of_courses.add(course);
 }
 void Student::empty_course() {
-	Node<Course>* curr = nullptr;
-	while (list_of_courses) {
-		curr = list_of_courses;
-		list_of_courses = list_of_courses->next;
-		delete curr;
-	}
+	list_of_courses.empty_list();
+}
+bool Student::is_in_course(const Course& course) {
+	return list_of_courses.contains(course) != nullptr;
+}
+const Iterator<Course> Student::course_begin() {
+	return list_of_courses.begin();
+}
+const Iterator<Course> Student::course_end() {
+	return list_of_courses.end();
 }
 bool operator == (const Student& student_1, const Student& student_2) {
 	return student_1.studentid == student_2.studentid;
 }
 bool operator != (const Student& student_1, const Student& student_2) {
 	return student_1.studentid != student_2.studentid;
+}
+Student::~Student() {
+	list_of_courses.empty_list();
+	student_class = nullptr;
 }

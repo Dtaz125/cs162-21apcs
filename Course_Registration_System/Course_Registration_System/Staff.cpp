@@ -9,4 +9,10 @@ Staff::Staff(string useracc, string pass, const User& info) : Account(useracc, p
 Staff::Staff(const Staff& staff) {
 	Account::Account(staff);
 }
+bool Staff::operator == (const Staff& other) {
+
+}
+bool Staff::operator != (const Staff& other) {
+
+}
 

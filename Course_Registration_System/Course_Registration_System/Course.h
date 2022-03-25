@@ -1,6 +1,7 @@
 #ifndef COURSE_H
 #define COURSE_H
 #include "Node.h"
+#include"Linked_List.h"
 #include"Student.h"
 class Student;
 class Course {
@@ -10,10 +11,9 @@ private:
     string teacher_name;
     string teaching_time;
     int max_student = 50;
-    int current_student = 0;
     int credits;
-    Node<Student>* student_list = nullptr;
-    Node<int>* student_score = nullptr;
+    Linked_List<Student> student_list;
+    Linked_List<int> student_score;
     bool is_published = false;
 public:
     Course(string __id, string __name, string __teacher_name, string __teaching_time);
@@ -41,6 +41,10 @@ public:
     friend bool operator == (const Course& course_1, const Course& course_2);
     friend bool operator != (const Course& course_1, const Course& course_2);
     Course& operator = (const Course& course);
+    const Iterator<Student> student_begin();
+    const Iterator<Student> student_end();
+    const Iterator<int> score_begin();
+    const Iterator<int> score_end();
     ~Course();
 };
 #endif // !COURSE_H

@@ -1,6 +1,6 @@
 #ifndef STUDENT_H
 #define STUDENT_H
-#include"Node.h"
+#include"Linked_List.h"
 #include"Account.h"
 #include"Class.h"
 #include"Course.h"
@@ -13,7 +13,7 @@ private:
 	string no;
 	float gpa;
 	Class* student_class = nullptr;
-	Node<Course>* list_of_courses;
+	Linked_List<Course> list_of_courses;
 public:
 	Student();
 	Student(string useracc, string pass, const User& info, string id, string NO);
@@ -28,8 +28,12 @@ public:
 	void calculateGPA();
 	void attend_course(const Course& course);
 	void empty_course();
+	bool is_in_course(const Course& course);
+	const Iterator<Course> course_begin();
+	const Iterator<Course> course_end();
 	friend bool operator == (const Student& student_1, const Student& student_2);
 	friend bool operator != (const Student& student_1, const Student& student_2);
+	~Student();
 };
 
 #endif // !STUDENT_H

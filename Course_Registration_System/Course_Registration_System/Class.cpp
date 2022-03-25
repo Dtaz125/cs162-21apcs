@@ -2,55 +2,34 @@
 Class::Class() {
 
 }
-Class::Class(const string& _name, int _member) : name(_name), member(_member) {
+Class::Class(const string& _name, int _member) : name(_name){
 
 }
 
-Class::Class(const Class& class_A):name(class_A.name), member(class_A.member), student_list(class_A.student_list) {
+Class::Class(const Class& class_A):name(class_A.name), student_list(class_A.student_list) {
 
 }
 int Class::getMember() { 
-    return member;
+    return student_list.size();
 }
 const string& Class::getName() {
     return name;
 }
 
-Node<Student>* Class::getStudentList() { 
-    return student_list; 
-}
-void Class::setMember(int _member) {
-    member = _member;
-}
 void Class::setName(const string& _name) {
     name = _name;
 }
+
 bool Class::add_student(const Student& student) {
-    if (contains_student(student)) return false;
-    Node<Student>* newNode = new Node<Student>{ student, nullptr };
-    newNode->next = student_list;
-    student_list = newNode;
-    return true;
+    return student_list.add(student);
 }
 
-bool Class::contains_student(const Student& student) {
-    Node<Student>* curr = student_list;
-    while (curr && curr->data != student)
-        curr = curr->next;
-    return curr != nullptr;
+Node<Student>* Class::contains_student(const Student& student) {
+    return student_list.contains(student);
 }
 
 bool Class::remove_student(const Student& student) {
-    Node<Student>* curr = student_list, * prev = nullptr;
-    while (curr && curr->data != student) {
-        prev = curr;
-        curr = curr->next;
-    }
-    if (!curr) return false;
-    if (!prev) student_list = student_list->next;
-    else prev->next = curr->next;
-    delete curr;
-    return true;
+    return student_list.remove(student);
 }
 
 bool operator == (const Class& class_1, const Class& class_2){
@@ -59,4 +38,11 @@ bool operator == (const Class& class_1, const Class& class_2){
 
 bool operator != (const Class& class_1, const Class& class_2) {
     return class_1.name != class_2.name;
+}
+
+const Iterator<Student> Class::student_begin() {
+    return student_list.begin();
+}
+const Iterator<Student> Class::student_end() {
+    return student_list.end();
 }

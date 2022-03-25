@@ -17,7 +17,7 @@ const string& Course::getTeachingTime() {
     return teaching_time;
 }
 int Course::getStudent() { 
-    return current_student;
+    return student_list.size();
 }
 int Course::getMaxStudent() { 
     return max_student;
@@ -50,46 +50,22 @@ void Course::publishCourse() {
     is_published = true;
 }
 void Course::add_student(const Student& student) {
-    student_list = new Node<Student>{ student, student_list };
-    current_student++;
+    student_list.add(student);
 }
 void Course::add_score(int k) {
-    student_score = new Node<int>{ k, student_score };
+    student_score.add(k);
 }
 Node<Student>* Course::contains(const Student& student) {
-    Node<Student>* curr = student_list;
-    while (curr && curr->data != student)
-        curr = curr->next;
-    return curr;
+    return student_list.contains(student);
 }
 bool Course::remove(const Student& student) {
-    Node<Student>* curr = student_list, * prev = nullptr;
-    while (curr && curr->data != student) {
-        prev = curr;
-        curr = curr->next;
-    }
-    if (!curr) return false;
-    if (!prev) student_list = student_list->next;
-    else prev->next = curr->next;
-    delete curr;
-    current_student--;
-    return true;
+    return student_list.remove(student);
 }
 void Course::empty_student_list() {
-    Node<Student>* curr = nullptr;
-    while (student_list) {
-        curr = student_list;
-        student_list = student_list->next;
-        delete curr;
-    }
+    student_list.empty_list();
 }
 void Course::empty_score_list() {
-    Node<int>* curr = nullptr;
-    while (student_score) {
-        curr = student_score;
-        student_score = student_score->next;
-        delete curr;
-    }
+    student_score.empty_list();
 }
 bool operator == (const Course& course_1, const Course& course_2) {
     return course_1.id == course_2.id;
@@ -108,17 +84,25 @@ Course& Course::operator = (const Course& course) {
     setTeacherName(course.teacher_name);
     setTeachingTime(course.teaching_time);
     is_published = course.is_published;
-    Node<Student>* curr = course.student_list;
-    Node<int>* curr_1 = course.student_score;
-    while (curr) {
-        add_student(curr->data);
-        curr = curr->next;
-    }
-    while (curr_1) {
-        add_score(curr_1->data);
-        curr_1 = curr_1->next;
-    }
+    student_list = course.student_list;
+    student_score = course.student_score;
     return *this;
+}
+
+const Iterator<Student> Course::student_begin() {
+    return student_list.begin();
+}
+
+const Iterator<Student> Course::student_end() {
+    return student_list.end();
+}
+
+const Iterator<int> Course::score_begin() {
+    return student_score.begin();
+}
+
+const Iterator<int> Course::score_end() {
+    return student_score.end();
 }
 
 Course::~Course() {
