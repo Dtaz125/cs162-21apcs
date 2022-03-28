@@ -18,6 +18,8 @@ public:
 	void remove(const Linked_List<Semester>& list);
 	friend bool operator == (const SchoolYear& first, const SchoolYear& second);
 	friend bool operator != (const SchoolYear& first, const SchoolYear& second);
+	const Iterator<Semester> semester_begin();
+	const Iterator<Semester> semester_end();
 	~SchoolYear();
 };
 

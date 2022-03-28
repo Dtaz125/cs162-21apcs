@@ -30,6 +30,12 @@ bool operator == (const SchoolYear& first, const SchoolYear& second) {
 bool operator != (const SchoolYear& first, const SchoolYear& second) {
 	return first.name != second.name;
 }
+const Iterator<Semester> SchoolYear::semester_begin() {
+	return list_of_semesters.begin();
+}
+const Iterator<Semester> SchoolYear::semester_end() {
+	return list_of_semesters.end();
+}
 SchoolYear::~SchoolYear() {
 	list_of_semesters.empty_list();
 }
