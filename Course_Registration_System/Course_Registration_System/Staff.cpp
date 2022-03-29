@@ -44,11 +44,12 @@ bool Staff::add_semester_to_schoolyear(const Semester& new_semester, Node<School
 bool Staff::add_course_to_semester(const Course& new_course, Node<Semester>*& semester) {
 	return semester->data.add(new_course);
 }
-
+bool Staff::remove_course(const Course& course, Node<Semester>*& semester) {
+	return semester->data.remove(course);
+}
 bool operator == (const Staff& first, const Staff& second) {
 	return first.user_info.social_id == second.user_info.social_id;
 }
-
 bool operator != (const Staff& first, const Staff& second) {
 	return first.user_info.social_id != second.user_info.social_id;
 }

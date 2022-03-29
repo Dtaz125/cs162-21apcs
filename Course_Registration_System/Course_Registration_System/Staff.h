@@ -27,6 +27,7 @@ public:
 	Course& create_course(string __id, string __name, string __teacher_name, int credits);
 	bool add_semester_to_schoolyear(const Semester& new_semester, Node<SchoolYear>*& schoolyear);
 	bool add_course_to_semester(const Course& new_course, Node<Semester>*& semester);
+	bool remove_course(const Course& course, Node<Semester>*& semester);
 	friend bool operator == (const Staff& first, const Staff& second);
 	friend bool operator != (const Staff& first, const Staff& second);
 };
