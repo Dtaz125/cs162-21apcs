@@ -27,6 +27,16 @@ void Staff::setPassword(string pass) {
 void Staff::setInfo(const User& info) {
 	user_info = info;
 }
+Semester& Staff::create_semester(int order, const Date& start, const Date& end) {
+	Semester new_semester(start, end);
+	new_semester.setOrder(order);
+	return new_semester;
+}
+
+bool Staff::add_semester_to_schoolyear(const Semester& new_semester, Node<SchoolYear>*& schoolyear) {
+	return schoolyear->data.add(new_semester);
+}
+
 bool operator == (const Staff& first, const Staff& second) {
 	return first.user_info.social_id == second.user_info.social_id;
 }
