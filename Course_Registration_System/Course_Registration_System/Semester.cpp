@@ -21,11 +21,11 @@ void Semester::setStartDate(const Date& date) {
 void Semester::setEndDate(const Date& date) { 
     end_date = date;
 }
-void Semester::add(const Class& _class) {
-    list_of_classes.add(_class);
+bool Semester::add(const Class& _class) {
+    return list_of_classes.add(_class);
 }
-void Semester::add(const Course& _course) {
-    list_of_courses.add(_course);
+bool Semester::add(const Course& _course) {
+    return list_of_courses.add(_course);
 }
 Node<Course>* Semester::contains_course(const Course& _course) {
     return list_of_courses.contains(_course);

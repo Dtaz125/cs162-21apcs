@@ -32,9 +32,17 @@ Semester& Staff::create_semester(int order, const Date& start, const Date& end) 
 	new_semester.setOrder(order);
 	return new_semester;
 }
+Course& Staff::create_course(string __id, string __name, string __teacher_name, int credits) {
+	Course new_course(__id, __name, __teacher_name);
+	new_course.setCredits(credits);
+	return new_course;
+}
 
 bool Staff::add_semester_to_schoolyear(const Semester& new_semester, Node<SchoolYear>*& schoolyear) {
 	return schoolyear->data.add(new_semester);
+}
+bool Staff::add_course_to_semester(const Course& new_course, Node<Semester>*& semester) {
+	return semester->data.add(new_course);
 }
 
 bool operator == (const Staff& first, const Staff& second) {

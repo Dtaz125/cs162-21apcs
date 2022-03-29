@@ -23,8 +23,8 @@ public:
     void setOrder(int k);
     void setStartDate(const Date& date);
     void setEndDate(const Date& date);
-    void add(const Class& _class);
-    void add(const Course& _course);
+    bool add(const Class& _class);
+    bool add(const Course& _course);
     Node<Course>* contains_course(const Course& _course);
     Node<Class>* contains_class(const Class& _class);
     bool remove(const Class& _class);

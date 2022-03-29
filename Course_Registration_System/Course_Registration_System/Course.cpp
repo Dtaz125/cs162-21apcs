@@ -1,7 +1,7 @@
 #include"Course.h"
 #include"Student.h"
-Course::Course(string __id, string __name, string __teacher_name, string __teaching_time) : id(__id), 
-    name(__name), teacher_name(__teacher_name), teaching_time(__teaching_time) {
+Course::Course(string __id, string __name, string __teacher_name) : id(__id), 
+    name(__name), teacher_name(__teacher_name) {
     //empty
 }
 const string& Course::getID() { 
@@ -12,9 +12,6 @@ const string& Course::getCourseName() {
 }
 const string& Course::getTeacherName() { 
     return teacher_name; 
-}
-const string& Course::getTeachingTime() {
-    return teaching_time;
 }
 int Course::getStudent() { 
     return student_list.size();
@@ -37,8 +34,12 @@ void Course::setCourseName(const string& _name) {
 void Course::setTeacherName(const string& _name) { 
     teacher_name = _name;
 }
-void Course::setTeachingTime(const string& _time) { 
-    teaching_time = _time;
+void Course::setTeachingTime(const string& time_1, const string& time_2) { 
+    teaching_time.add(time_1);
+    teaching_time.add(time_2);
+}
+void Course::setTeachingTime(const Linked_List<string>& list) {
+    teaching_time = list;
 }
 void Course::setMaxStudent(int _number) { 
     max_student = _number;
@@ -88,7 +89,12 @@ Course& Course::operator = (const Course& course) {
     student_score = course.student_score;
     return *this;
 }
-
+const Iterator<string> Course::time_begin() {
+    return teaching_time.begin();
+}
+const Iterator<string> Course::time_end() {
+    return teaching_time.end();
+}
 const Iterator<Student> Course::student_begin() {
     return student_list.begin();
 }
