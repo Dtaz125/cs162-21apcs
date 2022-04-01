@@ -11,7 +11,7 @@ class Student : public Account {
 private:
 	string studentid;
 	string no;
-	float gpa;
+	float gpa = 0;			// initialized gpa to 0 to avoid warnings
 	Class* student_class = nullptr;
 	Linked_List<Course> list_of_courses;
 public:

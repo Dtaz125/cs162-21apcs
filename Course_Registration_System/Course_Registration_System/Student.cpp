@@ -7,7 +7,7 @@ Student::Student(string useracc, string pass, const User& info, string id, strin
 	//empty
 }
 Student::Student(const Student& student) {
-	Account::Account(student);
+	//Account::Account(student); to remove warning C26444
 	studentid = student.studentid;
 	no = student.no;
 	gpa = student.gpa;
@@ -35,7 +35,7 @@ void Student::setClass(Class* _class) {
 	student_class = _class;
 }
 void Student::calculateGPA() {
-
+	//input formulae for calculating GPA here
 }
 void Student::attend_course(const Course& course) {
 	list_of_courses.add(course);
