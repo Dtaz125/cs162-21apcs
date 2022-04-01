@@ -8,7 +8,7 @@ Class::Class(const string& _name, int _member) : name(_name) {
 }
 
 Class::Class(const Class& class_A):name(class_A.name), student_list(class_A.student_list) {
-
+    student_list.add(class_A.student_list);
 }
 int Class::getMember() { 
     return student_list.size();
