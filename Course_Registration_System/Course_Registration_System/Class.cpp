@@ -2,8 +2,9 @@
 Class::Class() {
 
 }
-Class::Class(const string& _name, int _member) : name(_name){
-
+Class::Class(const string& _name, int _member) : name(_name) {
+    student_list.list_size = _member;           // cannot access list_size from class Student. recommendation: make class Student "protected"
+                                                // or add a function to change list_size without inputting any data.
 }
 
 Class::Class(const Class& class_A):name(class_A.name), student_list(class_A.student_list) {
