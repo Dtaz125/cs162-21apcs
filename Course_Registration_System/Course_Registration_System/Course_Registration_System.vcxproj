@@ -158,6 +158,7 @@
     <ClCompile Include="Class.cpp" />
     <ClCompile Include="Course.cpp" />
     <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="RegistrationSystem.cpp" />
     <ClCompile Include="SchoolYear.cpp" />
     <ClCompile Include="Semester.cpp" />
