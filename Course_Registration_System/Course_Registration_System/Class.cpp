@@ -2,7 +2,7 @@
 Class::Class() {
 
 }
-Class::Class(const string& _name, int _member) : name(_name) {
+Class::Class(const string& _name, int _member) : name(_name), member(_member) {
     
 }
 
@@ -10,7 +10,8 @@ Class::Class(const Class& class_A):name(class_A.name), student_list(class_A.stud
     
 }
 int Class::getMember() { 
-    return student_list.size();
+    return member;                  //i changed this function to return a new int variable 'member' to represent the total students in a given class
+                                    //because there was no student_list.size() function anywhere in students.h
 }
 const string& Class::getName() {
     return name;

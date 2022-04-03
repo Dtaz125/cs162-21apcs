@@ -7,6 +7,7 @@ class Student;
 class Class {
 private:
     string name;
+    int member = 0;             //initialize member variable to avoid warning
     Linked_List<Student> student_list;
 public:
     Class();

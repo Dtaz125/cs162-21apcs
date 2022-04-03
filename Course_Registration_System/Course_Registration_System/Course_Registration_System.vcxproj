@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Projects\CS162\Project\cs162-21apcs\Course_Registration_System\Course_Registration_System</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -160,6 +161,7 @@
     <ClCompile Include="Driver.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RegistrationSystem.cpp" />
+    <ClCompile Include="requirement 1.cpp" />
     <ClCompile Include="SchoolYear.cpp" />
     <ClCompile Include="Semester.cpp" />
     <ClCompile Include="Staff.cpp" />
