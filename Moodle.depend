@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1649128636 source:d:\apcs\cs162\project\moodle\main.cpp
+	"MainGUI.h"
+	"Initialize.h"
+	"login.h"
+
+1649130319 d:\apcs\cs162\project\moodle\maingui.h
+	"Initialize.h"
+	"studentProfile.h"
+	"openCourseRegistration.h"
+	"closeCourseRegistration.h"
+	"studentScoreboard.h"
+
+1649092231 d:\apcs\cs162\project\moodle\initialize.h
+	<bits/stdc++.h>
+	<windows.h>
+	<conio.h>
+
+1649128944 d:\apcs\cs162\project\moodle\login.h
+	<iostream>
+
+1649127182 d:\apcs\cs162\project\moodle\student.h
+	"Account.h"
+	"Course.h"
+	"Class.h"
+	"Node.h"
+
+1649127272 d:\apcs\cs162\project\moodle\account.h
+	"User.h"
+
+1649127409 d:\apcs\cs162\project\moodle\user.h
+	<string>
+	"Date.h"
+
+1649127337 d:\apcs\cs162\project\moodle\date.h
+
+1649127457 d:\apcs\cs162\project\moodle\course.h
+	"Node.h"
+	"Student.h"
+
+1649127351 d:\apcs\cs162\project\moodle\node.h
+
+1649127290 d:\apcs\cs162\project\moodle\class.h
+	"Node.h"
+	"Student.h"
+
+1649130563 d:\apcs\cs162\project\moodle\studentprofile.h
+	<iostream>
+
+1649130221 d:\apcs\cs162\project\moodle\opencourseregistration.h
+	<iostream>
+
+1649130233 d:\apcs\cs162\project\moodle\closecourseregistration.h
+	<iostream>
+
+1649130256 d:\apcs\cs162\project\moodle\studentscoreboard.h
+	<iostream>
+
