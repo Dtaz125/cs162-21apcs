@@ -15,7 +15,7 @@ int convertStringToInt(string _string) {
 	return x;
 }
 
-void inputToVector(string _inputfile) {
+void inputToVector(Class *classname, string _inputfile) {
 	string inputFile = _inputfile;
 
 	vector<vector<string>> content;
@@ -37,20 +37,29 @@ void inputToVector(string _inputfile) {
 	else
 		cout << "Could not open the file." << endl;
 
-	for (int i = 0; i < content.size(); i++) {							//basically i read csv file into 2D vector.
-		for (int j = 0; j < content[i].size(); j++) {					//this code is for displaying all the information stored
-			cout << content[i][j] << " ";								//a loop in a loop
-		}																//note: this is only for demonstrating purposes and will not be included in the final commit		
-		cout << endl;
+
+	for (int i = 0; i < content.size(); i++) {							//loops for every line
+		Student new_stu;
+		new_stu.setNO(content[i][0]);
+		new_stu.setID(content[i][1]);
+
+		User new_user;													//the user_info member in Account class is private. so i have to create a new temp User varible
+		new_user.firstname = content[i][2];								//then use the setuser function in Account to set the information
+		new_user.lastname = content[i][3];
+		if (content[i][4] == "M") {										//0 if male. 1 if female
+			new_user.gender = 0;
+		}
+		else new_user.gender = 1;
+		new_user.birth.day = convertStringToInt(content[i][5]);			//this is where convert to string function is needed. because day month year members are all int datatype
+		new_user.birth.month = convertStringToInt(content[i][6]);
+		new_user.birth.year = convertStringToInt(content[i][7]);
+
+		new_stu.setInfo(new_user);
+		new_stu.setClass(classname);									//this should set the class of this new student
+
+		// now how do i add a new student in a linked list: list.add(new_stu)?
 	}
-
-	for (int i = 0; i < content.size(); i++) {							//first loop,
-		//add new student												//now, how do i add new student using linked list,
-																		//then i could input the data in, using loop for every student
-																		//bool add(const T& new_data) or void add(const Linked_List<T>& new_list)
-
-		//Student(content[i][0], content[i][1], content[i][2], content[i][3], content[i][3]);	
-	}																	
+		
 
 }
 
@@ -64,13 +73,14 @@ int main() {
 	string class20clc1string = "20CLC1";
 	string class20clc11string = "20CLC11";
 	string class20vpstring = "20VP";
-	Class class20apcs1(class20apcs1string,40);			//meaning 40 members in this class
-	Class class20apcs2(class20apcs2string, 40);
-	Class class20clc1(class20clc1string, 40);
-	Class class20clc11(class20clc11string, 40);
-	Class class20vp(class20vpstring, 40);
-
-	inputToVector("class20apcs1 student information.csv");
+	Class class20apcs1(class20apcs1string, 4);			//meaning 4 members in this class
+	Class class20apcs2(class20apcs2string, 4);
+	Class class20clc1(class20clc1string, 4);
+	Class class20clc11(class20clc11string, 4);
+	Class class20vp(class20vpstring, 4);
+	
+	Class* class20apcs1Pointer = &class20clc11;				//i have to create a pointer, in order to use the function void setClass(Class* _class) in Student Class
+	inputToVector(class20apcs1Pointer, "class20apcs1 student information.csv");
 
 
 }
