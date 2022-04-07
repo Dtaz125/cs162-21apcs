@@ -1,5 +1,12 @@
 #include"Staff.h"
-
+#include"Student.h"
+#include<fstream>
+#include<iostream>
+#include<sstream>
+#include<vector>
+using std::vector;
+using std::getline;
+using std::stringstream;
 Staff::Staff() {
 	//empty
 }
@@ -26,6 +33,68 @@ void Staff::setPassword(string pass) {
 }
 void Staff::setInfo(const User& info) {
 	user_info = info;
+}
+void Staff::readCSV(Node<SchoolYear>*& new_year, Class*& classname, const string& _inputfile) {
+	string inputFile = _inputfile;
+
+	vector<vector<string>> content;
+	vector<string> row;
+	string line, word;
+
+	fstream file(inputFile, ios::in);
+	if (file.is_open()) {
+		while (getline(file, line)) {
+			row.clear();
+
+			stringstream str(line);
+
+			while (getline(str, word, ','))
+				row.push_back(word);
+			content.push_back(row);
+		}
+	}
+
+	for (int i = 0; i < content.size(); i++) {							//loops for every line
+		Student new_stu;
+		new_stu.setNO(content[i][0]);
+		new_stu.setID(content[i][1]);
+
+		User new_user;													//the user_info member in Account class is private. so i have to create a new temp User varible
+		new_user.firstname = content[i][2];								//then use the setuser function in Account to set the information
+		new_user.lastname = content[i][3];
+		if (content[i][4] == "M") {										//0 if male. 1 if female
+			new_user.gender = 0;
+		}
+		else new_user.gender = 1;
+		new_user.birth.day = stoi(content[i][5]);			
+		new_user.birth.month = stoi(content[i][6]);
+		new_user.birth.year = stoi(content[i][7]);
+
+		new_stu.setInfo(new_user);
+		new_stu.setClass(classname);									
+	
+		new_year->data.access_semester(1)->data.contains_class(*classname)->data.add_student(new_stu);
+	}
+}
+Semester& Staff::create_semester(int order, const Date& start, const Date& end) {
+	Semester new_semester(start, end);
+	new_semester.setOrder(order);
+	return new_semester;
+}
+Course& Staff::create_course(string __id, string __name, string __teacher_name, int credits) {
+	Course new_course(__id, __name, __teacher_name);
+	new_course.setCredits(credits);
+	return new_course;
+}
+
+bool Staff::add_semester_to_schoolyear(const Semester& new_semester, Node<SchoolYear>*& schoolyear) {
+	return schoolyear->data.add(new_semester);
+}
+bool Staff::add_course_to_semester(const Course& new_course, Node<Semester>*& semester) {
+	return semester->data.add(new_course);
+}
+bool Staff::remove_course(const Course& course, Node<Semester>*& semester) {
+	return semester->data.remove(course);
 }
 bool operator == (const Staff& first, const Staff& second) {
 	return first.user_info.social_id == second.user_info.social_id;

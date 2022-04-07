@@ -12,6 +12,7 @@ public:
 	const string& getName();
 	bool contains(const Semester& _semester);
 	Node<Semester>* access_semester(const Semester& _semester);
+	Node<Semester>* access_semester(int order);
 	bool add(const Semester& _semester);
 	void add(const Linked_List<Semester>& list);
 	bool remove(const Semester& _semester);

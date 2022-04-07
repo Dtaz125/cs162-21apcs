@@ -46,3 +46,7 @@ const Iterator<Student> Class::student_begin() {
 const Iterator<Student> Class::student_end() {
     return student_list.end();
 }
+Class::~Class() {
+    student_list.empty_list();
+    name = "";
+}

@@ -16,7 +16,7 @@ private:
     Linked_List<int> student_score;
     bool is_published = false;
 public:
-    Course(string __id, string __name, string __teacher_name, string __teaching_time);
+    Course(string __id, string __name, string __teacher_name);
     const string& getID();
     const string& getCourseName();
     const string& getTeacherName();

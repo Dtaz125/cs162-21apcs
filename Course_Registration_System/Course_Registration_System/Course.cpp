@@ -1,7 +1,7 @@
 #include"Course.h"
 #include"Student.h"
-Course::Course(string __id, string __name, string __teacher_name, string __teaching_time) : id(__id), 
-    name(__name), teacher_name(__teacher_name), teaching_time(__teaching_time) {
+Course::Course(string __id, string __name, string __teacher_name) : id(__id), 
+    name(__name), teacher_name(__teacher_name){
     //empty
 }
 const string& Course::getID() { 

@@ -22,5 +22,6 @@ public:
     friend bool operator != (const Class& class_1, const Class& class_2);
     const Iterator<Student> student_begin();
     const Iterator<Student> student_end();
+    ~Class();
 };
 #endif // !CLASS_H
