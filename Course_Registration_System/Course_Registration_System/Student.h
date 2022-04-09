@@ -20,7 +20,7 @@ public:
 	Student(const Student& student);
 	const string& getStudentID();
 	const string& getNO();
-	const Class* getClass();
+	Class* getClass();
 	float getGPA();
 	void setID(const string& id);
 	void setNO(const string& NO);

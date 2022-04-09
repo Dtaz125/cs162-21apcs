@@ -141,16 +141,24 @@
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="Class.h" />
+    <ClInclude Include="closeCourseRegistration.h" />
     <ClInclude Include="Course.h" />
+    <ClInclude Include="courseActive.h" />
     <ClInclude Include="Date.h" />
+    <ClInclude Include="Initialize.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Linked_List.h" />
+    <ClInclude Include="Login.h" />
+    <ClInclude Include="MainGUI.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="openCourseRegistration.h" />
     <ClInclude Include="RegistrationSystem.h" />
     <ClInclude Include="SchoolYear.h" />
     <ClInclude Include="Semester.h" />
     <ClInclude Include="Staff.h" />
     <ClInclude Include="Student.h" />
+    <ClInclude Include="studentProfile.h" />
+    <ClInclude Include="studentScoreboard.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>

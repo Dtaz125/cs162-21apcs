@@ -3,6 +3,8 @@
 #include "Node.h"
 #include"Linked_List.h"
 #include"Student.h"
+#include<utility>
+using std::pair;
 class Student;
 class Course {
 private:
@@ -13,7 +15,7 @@ private:
     int max_student = 50;
     int credits;
     Linked_List<Student> student_list;
-    Linked_List<int> student_score;
+    Linked_List<pair<string,int>> student_score;
     bool is_published = false;
 public:
     Course(string __id, string __name, string __teacher_name);
@@ -34,6 +36,7 @@ public:
     void publishCourse();
     void add_student(const Student& student);
     void add_score(int k);
+    void update_score_board(Linked_List<int>& scorelist);
     Node<Student>* contains(const Student& student);
     bool remove(const Student& student);
     void empty_student_list();
@@ -43,8 +46,8 @@ public:
     Course& operator = (const Course& course);
     const Iterator<Student> student_begin();
     const Iterator<Student> student_end();
-    const Iterator<int> score_begin();
-    const Iterator<int> score_end();
+    const Iterator<pair<string, int>> score_begin();
+    const Iterator<pair<string, int>> score_end();
     ~Course();
 };
 #endif // !COURSE_H

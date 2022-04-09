@@ -58,7 +58,7 @@ void InitializeConsole() {
 int posCenter(string text) {
     return (g_APP_WIDTH - text.size()) / 2;
 }
-void drawText(int x, int y, auto text) {
+void drawText(int x, int y, string text) {
     gotoxy(x, y);
     cout << text;
 }

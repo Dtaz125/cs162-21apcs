@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-///#include "Student.h"
+#include<fstream>
+#include "Student.h"
 
 using namespace std;
 
@@ -13,12 +14,11 @@ bool matched(string username, string password, Student& st) {
 }
 
 /// Student login(){}
-void login() {
+void login(Student& st) {
     bool first = true;
     int baseX = 10, baseY = 3;
     string username;
     string password;
-    Student st;
 
     system("cls");
     cin.ignore();

@@ -98,13 +98,14 @@ public:
 			curr = curr->next;
 		}
 	}
+
 	Node<T>* contains(const T& data) {
 		Node<T>* curr = head;
 		while (curr && curr->data != data)
 			curr = curr->next;
 		return curr;
 	}
-	
+
 	void empty_list() {
 		if (list_size != 0) {
 			Node<T>* curr;

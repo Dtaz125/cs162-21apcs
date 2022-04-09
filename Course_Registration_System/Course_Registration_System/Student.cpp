@@ -4,10 +4,9 @@ Student::Student() : Account() {
 	//empty
 }
 Student::Student(string useracc, string pass, const User& info, string id, string NO) : Account(useracc, pass, info), studentid(id), no(NO) {
-	//empty
+	gpa = -1;
 }
-Student::Student(const Student& student) {
-	Account::Account(student);
+Student::Student(const Student& student): Account(student) {
 	studentid = student.studentid;
 	no = student.no;
 	gpa = student.gpa;
@@ -19,7 +18,7 @@ const string& Student::getStudentID() {
 const string& Student::getNO() { 
 	return no; 
 }
-const Class* Student::getClass() { 
+Class* Student::getClass() { 
 	return student_class;
 }
 float Student::getGPA() { 
