@@ -4,7 +4,7 @@ Student::Student() : Account() {
 	//empty
 }
 Student::Student(string useracc, string pass, const User& info, string id, string NO) : Account(useracc, pass, info), studentid(id), no(NO) {
-	gpa = -1;
+	//empty
 }
 Student::Student(const Student& student): Account(student) {
 	studentid = student.studentid;
@@ -22,6 +22,7 @@ Class* Student::getClass() {
 	return student_class;
 }
 float Student::getGPA() { 
+	calculateGPA();
 	return gpa; 
 }
 void Student::setID(const string& id) { 
@@ -34,7 +35,22 @@ void Student::setClass(Class* _class) {
 	student_class = _class;
 }
 void Student::calculateGPA() {
-
+	float sum = 0.0;
+	for (Iterator<Course> iter = list_of_courses.begin(); iter != list_of_courses.end(); iter++) {
+		Course current_course = *iter;
+		if (!current_course.isPublished()) {
+			gpa = 0;
+			return;
+		}
+		for (Iterator<pair<string, int>> iter_1 = current_course.score_begin(); iter_1 != current_course.score_end(); iter_1++) {
+			pair<string, int> p = *iter_1;
+			if (p.first == studentid) {
+				sum += p.second;
+				break;
+			}
+		}
+	}
+	gpa = sum / (float)(list_of_courses.size());
 }
 void Student::attend_course(const Course& course) {
 	list_of_courses.add(course);

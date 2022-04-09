@@ -53,10 +53,13 @@ void Course::add_student(const Student& student) {
     student_list.add(student);
 }
 void Course::update_score_board(Linked_List<int>& scorelist) {
-    for (Iterator<Student> iter_1 = student_list.begin(), Iterator<int> iter_2 = scorelist.begin(); iter_1 != student_list.end(); iter_1++, iter_2++) {
-        Student current_student = *iter_1;
-        pair<string, int> p = std::make_pair(current_student.getStudentID(), *iter_2);
+    Iterator<Student> iter_1 = student_list.begin();
+    Iterator<int> iter_2 = scorelist.begin();
+    while (iter_1 != student_list.end()) {
+        Student k = *iter_1;
+        pair<string, int> p = std::make_pair(k.getStudentID(), *iter_2);
         student_score.add(p);
+        iter_1++; iter_2++;
     }
 }
 Node<Student>* Course::contains(const Student& student) {

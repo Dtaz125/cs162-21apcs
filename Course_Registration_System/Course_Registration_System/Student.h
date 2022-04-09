@@ -11,9 +11,10 @@ class Student : public Account {
 private:
 	string studentid;
 	string no;
-	float gpa;
+	float gpa = 0;
 	Class* student_class = nullptr;
 	Linked_List<Course> list_of_courses;
+	void calculateGPA();
 public:
 	Student();
 	Student(string useracc, string pass, const User& info, string id, string NO);
@@ -25,7 +26,6 @@ public:
 	void setID(const string& id);
 	void setNO(const string& NO);
 	void setClass(Class* _class);
-	void calculateGPA();
 	void attend_course(const Course& course);
 	void empty_course();
 	bool is_in_course(const Course& course);
