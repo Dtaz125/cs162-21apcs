@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include"other.h"
 #include<sstream>
 using namespace std;
 
@@ -27,7 +28,7 @@ void changeName(Student& st) {
     cin.ignore();
     getline(cin, new_name);
     User tmp = st.getInfo();
-    int pos = - -1;
+    int pos = -1;
     for (int i = new_name.size() - 1; i >= 0; i--) {
         if (new_name[i] == ' ') {
             pos = i;
@@ -49,7 +50,11 @@ void changeBirthday(Student& st) {
     drawText(baseX, 5, "3. Birthday: ");
     cin.ignore();
     User info = st.getInfo();
-    cin >> info.birth.day >> info.birth.month >> info.birth.year;
+    string birth;
+    getline(cin, birth);
+    Date tmp;
+    if (!validDate(birth, tmp)) return;
+    info.birth = tmp;
     st.setInfo(info);
 }
 void changeGender(Student& st) {
@@ -72,6 +77,7 @@ void changeSocialID(Student& st) {
     st.setInfo(tmp);
 }
 void viewClass(Student st) {
+    system("cls");
     Class* new_class = st.getClass();
     drawText(baseX, 7, "Classname: " + new_class->getName()); cout << endl;
     drawText(baseX, 8, "Student list: "); cout << endl;
@@ -86,15 +92,17 @@ void viewGPA(Student st) {
 
 }
 void viewListofCourse(Student st) {
+    system("cls");
     int i = 7, index = 1;
     for (Iterator<Course> iter = st.course_begin(); iter != st.course_end(); iter++) {
         Course k = *iter;
         drawText(baseX, i++, to_string(index) + ". " + k.getCourseName() + " | Teacher: " + k.getTeacherName()); cout << endl;
+        index++;
     }
-    index++;
+    
 }
 
-void drawStudentProflie(Student& st) {
+void drawStudentProfile(Student& st) {
     system("cls");
     int id;
     do {
@@ -106,7 +114,7 @@ void drawStudentProflie(Student& st) {
         drawText(baseX, 7, "5. Social ID: "); cout << st.getInfo().social_id;
         drawText(baseX, 8, "6. GPA: "); cout << st.getGPA();
         drawText(baseX, 9, "7. Class: "); 
-        drawText(baseX, 10, "8. List of course : "); viewListofCourse(st);
+        drawText(baseX, 10, "8. List of course : "); 
         drawText(baseX, 11, "9. Exit");
         drawText(posCenter("Press a number to change/view information: "), 12, "Press a number to change/view information: ");
         cin >> id;

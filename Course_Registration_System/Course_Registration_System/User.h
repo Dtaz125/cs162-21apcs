@@ -9,7 +9,7 @@ struct User {
 	string lastname;
 	bool gender;
 	string social_id;
-	Date birth;
+	Date birth = { 0,0,0 };
 };
 
 #endif // !USER_H

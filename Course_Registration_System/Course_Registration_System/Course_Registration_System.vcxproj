@@ -102,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,10 +153,12 @@
     <ClInclude Include="MainGUI.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="openCourseRegistration.h" />
+    <ClInclude Include="other.h" />
     <ClInclude Include="RegistrationSystem.h" />
     <ClInclude Include="SchoolYear.h" />
     <ClInclude Include="Semester.h" />
     <ClInclude Include="Staff.h" />
+    <ClInclude Include="staffProfile.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="studentProfile.h" />
     <ClInclude Include="studentScoreboard.h" />

@@ -78,6 +78,12 @@
     <ClInclude Include="studentScoreboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="other.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="staffProfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp">

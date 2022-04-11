@@ -2,6 +2,7 @@
 #include <iostream>
 #include<fstream>
 #include "Student.h"
+#include "Staff.h"
 
 using namespace std;
 
@@ -13,8 +14,14 @@ bool matched(string username, string password, Student& st) {
     return ok;
 }
 
-/// Student login(){}
-void login(Student& st) {
+bool matched(string username, string password, Staff& st) {
+    ifstream inp(nameFile);
+    bool ok; cin >> ok;
+    return ok;
+}
+
+/// Student/staff login(){}
+void login(auto& st) {
     bool first = true;
     int baseX = 10, baseY = 3;
     string username;
@@ -22,7 +29,6 @@ void login(Student& st) {
 
     system("cls");
     cin.ignore();
-
 
     while (first || !matched(username, password, st)) {
         system("cls");
@@ -38,5 +44,4 @@ void login(Student& st) {
         drawText(baseX + 9, baseY + 2, " "); cin >> password;
     }
     system("cls");
-    /// return st;
 }

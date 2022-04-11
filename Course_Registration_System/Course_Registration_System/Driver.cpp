@@ -1,15 +1,20 @@
 #include "MainGUI.h"
 #include "Initialize.h"
 #include "login.h"
+#include "other.h"
 int main()
 {
     InitializeConsole();
-    bool isStudent = true; /// cin >> isStudent;
+    bool isStudent;  cin >> isStudent;
+    Student stu;
+    Staff sta;
     if (isStudent) {
-        Student st;
-        ///st = login();
-        login(st);
-        drawMainGUI(st);
+        login(stu);
+        drawMainGUI(stu, 1);
+    }
+    else {
+        login(sta);
+        drawMainGUI(sta, 0);
     }
     return 0;
 }
