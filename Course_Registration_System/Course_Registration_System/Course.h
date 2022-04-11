@@ -35,7 +35,7 @@ public:
     void setCredits(int _credit);
     void publishCourse();
     void add_student(const Student& student);
-    void add_score(int k);
+    void add_score(pair<string,int> k);
     void update_score_board(Linked_List<int>& scorelist);
     Node<Student>* contains(const Student& student);
     bool remove(const Student& student);

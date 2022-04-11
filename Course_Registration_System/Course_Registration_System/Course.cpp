@@ -52,6 +52,9 @@ void Course::publishCourse() {
 void Course::add_student(const Student& student) {
     student_list.add(student);
 }
+void Course::add_score(pair<string, int> k) {
+    student_score.add(k);
+}
 void Course::update_score_board(Linked_List<int>& scorelist) {
     Iterator<Student> iter_1 = student_list.begin();
     Iterator<int> iter_2 = scorelist.begin();

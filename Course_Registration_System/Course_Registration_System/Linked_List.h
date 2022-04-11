@@ -99,6 +99,17 @@ public:
 		}
 	}
 
+	Node<T>* operator [](int k) {
+		if (k >= list_size) return nullptr;
+		int i = 0;
+		Node<T>* curr = head;
+		while (i < k) {
+			curr = curr->next;
+			i++;
+		}
+		return curr;
+	}
+
 	Node<T>* contains(const T& data) {
 		Node<T>* curr = head;
 		while (curr && curr->data != data)
