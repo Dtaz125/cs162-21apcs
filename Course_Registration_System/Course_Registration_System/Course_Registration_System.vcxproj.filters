@@ -24,9 +24,6 @@
     <ClInclude Include="User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Account.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -86,9 +83,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
     <ClCompile Include="Student.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
@@ -106,9 +100,6 @@
     </ClCompile>
     <ClCompile Include="Driver.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RegistrationSystem.cpp">
-      <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="SchoolYear.cpp">
       <Filter>Resource Files</Filter>

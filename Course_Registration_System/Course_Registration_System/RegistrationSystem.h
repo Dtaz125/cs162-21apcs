@@ -3,9 +3,9 @@
 #include"Staff.h"
 #include"SchoolYear.h"
 #include"Student.h"
-class Staff;
-class SchoolYear;
-class Student;
+struct Staff;
+struct SchoolYear;
+struct Student;
 struct RegistrationSystem {
 	string name;
 	Linked_List<Student> students;

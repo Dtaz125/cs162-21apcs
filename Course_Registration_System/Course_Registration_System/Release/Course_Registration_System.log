@@ -1,7 +1,10 @@
-﻿  Student.cpp
+﻿  Course.cpp
+  SchoolYear.cpp
   Generating code
-  2 of 274 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    16 functions had inline decision re-evaluated but remain unchanged
+C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\Iterator.h(25): warning C4715: 'Iterator<Course>::operator*': not all control paths return a value
+C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\Iterator.h(25): warning C4715: 'Iterator<Student>::operator*': not all control paths return a value
+  297 of 342 functions (86.8%) were compiled, the rest were copied from previous compilation.
+    67 functions were new in current compilation
+    21 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Course_Registration_System.vcxproj -> C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\Release\Course_Registration_System.exe

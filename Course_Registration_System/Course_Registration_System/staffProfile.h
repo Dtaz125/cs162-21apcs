@@ -15,7 +15,7 @@ using namespace std;
 };*/
 
 string getGender(Staff st) {
-    if (st.getInfo().gender == 0) return "Male";
+    if (st.user_info.gender == 0) return "Male";
     return "Female";
 }
 
@@ -25,7 +25,7 @@ void changeName(Staff& st) {
     drawText(baseX, 4, "1. Full name: ");
     cin.ignore();
     getline(cin, new_name);
-    User tmp = st.getInfo();
+    User tmp = st.user_info;
     int pos = -1;
     for (int i = new_name.size() - 1; i >= 0; i--) {
         if (new_name[i] == ' ') {
@@ -40,37 +40,37 @@ void changeName(Staff& st) {
     for (int i = pos + 1; i < new_name.size(); i++)
         tmp.lastname += new_name[i];
 
-    st.setInfo(tmp);
+    st.user_info = tmp;
 }
 
 void changeBirthday(Staff& st) {
     drawText(baseX, 5, "2. Birthday: " + blank);
     drawText(baseX, 5, "2. Birthday: ");
     cin.ignore();
-    User info = st.getInfo();
+    User info = st.user_info;
     string birth;
     getline(cin, birth);
     if (!validDate(birth, info.birth)) return;
-    st.setInfo(info);
+    st.user_info = info;
 }
 void changeGender(Staff& st) {
     string new_gen;
     drawText(baseX, 6, "3. Gender(Male/Female): " + blank);
     drawText(baseX, 6, "3. Gender(Male/Female): ");
     cin >> new_gen;
-    User tmp = st.getInfo();
+    User tmp = st.user_info;
     if (new_gen == "Male") tmp.gender = 0;
     else tmp.gender = 1;
-    st.setInfo(tmp);
+    st.user_info = tmp;
 }
 void changeSocialID(Staff& st) {
     string new_ID;
     drawText(baseX, 7, "4. Social ID: " + blank);
     drawText(baseX, 7, "4. Social ID: ");
     cin >> new_ID;
-    User tmp = st.getInfo();
+    User tmp = st.user_info;
     tmp.social_id = new_ID;
-    st.setInfo(tmp);
+    st.user_info = tmp;
 }
 void viewClass(Staff st) {
 
@@ -86,10 +86,10 @@ void drawStaffProfile(Staff& st)
     int id;
     do {
         drawText(posCenter("Staff Profile: "), 1, "Staff Profile: ");
-        drawText(baseX, 4, "1. Full name: "); cout << st.getInfo().firstname << " " << st.getInfo().lastname;
-        drawText(baseX, 5, "2. Birthday: "); cout << st.getInfo().birth.day << "/" << st.getInfo().birth.month << "/" << st.getInfo().birth.year;
+        drawText(baseX, 4, "1. Full name: "); cout << st.user_info.firstname << " " << st.user_info.lastname;
+        drawText(baseX, 5, "2. Birthday: "); cout << st.user_info.birth.day << "/" << st.user_info.birth.month << "/" << st.user_info.birth.year;
         drawText(baseX, 6, "3. Gender(Male/Female): "); cout << getGender(st);
-        drawText(baseX, 7, "4. Social ID: "); cout << st.getInfo().social_id;
+        drawText(baseX, 7, "4. Social ID: "); cout << st.user_info.social_id;
         drawText(baseX, 8, "5. Class: ");
         drawText(baseX, 9, "6. List of course : ");
         drawText(baseX, 10, "7. Exit");
