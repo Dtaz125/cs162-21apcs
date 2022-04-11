@@ -1,0 +1,221 @@
+# depslib dependency file v1.0
+1649648415 source:d:\apcs\cs162\project\moodle\main.cpp
+	"MainGUI.h"
+	"Initialize.h"
+	"login.h"
+	"other.h"
+
+1649400138 d:\apcs\cs162\project\moodle\maingui.h
+	<typeinfo>
+	"Initialize.h"
+	"studentProfile.h"
+	"staffProfile.h"
+	"openCourseRegistration.h"
+	"closeCourseRegistration.h"
+	"studentScoreboard.h"
+	"Student.h"
+	"Staff.h"
+
+1649092231 d:\apcs\cs162\project\moodle\initialize.h
+	<bits/stdc++.h>
+	<windows.h>
+	<conio.h>
+
+1649398366 d:\apcs\cs162\project\moodle\login.h
+	<iostream>
+	"Student.h"
+	"Staff.h"
+
+1649649386 d:\apcs\cs162\project\moodle\student.h
+	"Linked_List.h"
+	"Account.h"
+	"Class.h"
+	"Course.h"
+
+1649350131 d:\apcs\cs162\project\moodle\account.h
+	"User.h"
+
+1648463988 d:\apcs\cs162\project\moodle\user.h
+	<string>
+	"Date.h"
+
+1648463988 d:\apcs\cs162\project\moodle\date.h
+
+1648463988 d:\apcs\cs162\project\moodle\course.h
+	"Node.h"
+	"Linked_List.h"
+	"Student.h"
+
+1648463988 d:\apcs\cs162\project\moodle\node.h
+
+1649649545 d:\apcs\cs162\project\moodle\class.h
+	"Iterator.h"
+	"Linked_List.h"
+	"Student.h"
+
+1649647135 d:\apcs\cs162\project\moodle\studentprofile.h
+	<iostream>
+	"other.h"
+	<sstream>
+	"Student.h"
+	"Initialize.h"
+
+1649399224 d:\apcs\cs162\project\moodle\opencourseregistration.h
+	<iostream>
+
+1649399229 d:\apcs\cs162\project\moodle\closecourseregistration.h
+	<iostream>
+
+1649399232 d:\apcs\cs162\project\moodle\studentscoreboard.h
+	<iostream>
+
+1648463988 source:d:\apcs\cs162\project\moodle\git\account.cpp
+	"Account.h"
+	"Student.h"
+
+1649350131 d:\apcs\cs162\project\moodle\git\account.h
+	"User.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\user.h
+	<string>
+	"Date.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\date.h
+
+1648463988 d:\apcs\cs162\project\moodle\git\student.h
+	"Linked_List.h"
+	"Account.h"
+	"Class.h"
+	"Course.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\linked_list.h
+	"Node.h"
+	"Iterator.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\node.h
+
+1648463988 d:\apcs\cs162\project\moodle\git\iterator.h
+	"Node.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\class.h
+	"Iterator.h"
+	"Linked_List.h"
+	"Student.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\course.h
+	"Node.h"
+	"Linked_List.h"
+	"Student.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\git\class.cpp
+	"Class.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\git\course.cpp
+	"Course.h"
+	"Student.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\git\driver.cpp
+	<iostream>
+	<string>
+	"Student.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\git\registrationsystem.cpp
+	"RegistrationSystem.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\registrationsystem.h
+	"Linked_List.h"
+	"Staff.h"
+	"SchoolYear.h"
+	"Student.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\staff.h
+	"Account.h"
+
+1648463988 d:\apcs\cs162\project\moodle\git\schoolyear.h
+	"Linked_List.h"
+	"Semester.h"
+	<string>
+
+1648463988 d:\apcs\cs162\project\moodle\git\semester.h
+	"Linked_List.h"
+	"Class.h"
+	"Course.h"
+	"Date.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\git\schoolyear.cpp
+	"SchoolYear.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\git\semester.cpp
+	"Semester.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\git\staff.cpp
+	"Staff.h"
+
+1649351025 source:d:\apcs\cs162\project\moodle\git\student.cpp
+	"Student.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\account.cpp
+	"Account.h"
+	"Student.h"
+
+1648463988 d:\apcs\cs162\project\moodle\linked_list.h
+	"Node.h"
+	"Iterator.h"
+
+1648463988 d:\apcs\cs162\project\moodle\iterator.h
+	"Node.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\class.cpp
+	"Class.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\course.cpp
+	"Course.h"
+	"Student.h"
+
+1649353683 source:d:\apcs\cs162\project\moodle\driver.cpp
+	<string>
+	"Student.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\registrationsystem.cpp
+	"RegistrationSystem.h"
+
+1648463988 d:\apcs\cs162\project\moodle\registrationsystem.h
+	"Linked_List.h"
+	"Staff.h"
+	"SchoolYear.h"
+	"Student.h"
+
+1648463988 d:\apcs\cs162\project\moodle\staff.h
+	"Account.h"
+
+1648463988 d:\apcs\cs162\project\moodle\schoolyear.h
+	"Linked_List.h"
+	"Semester.h"
+	<string>
+
+1648463988 d:\apcs\cs162\project\moodle\semester.h
+	"Linked_List.h"
+	"Class.h"
+	"Course.h"
+	"Date.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\schoolyear.cpp
+	"SchoolYear.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\semester.cpp
+	"Semester.h"
+
+1648463988 source:d:\apcs\cs162\project\moodle\staff.cpp
+	"Staff.h"
+
+1649600565 source:d:\apcs\cs162\project\moodle\student.cpp
+	"Student.h"
+
+1649647708 d:\apcs\cs162\project\moodle\staffprofile.h
+	<iostream>
+	"Staff.h"
+
+1649648761 d:\apcs\cs162\project\moodle\other.h
+	<iostream>
+	"Date.h"
+
