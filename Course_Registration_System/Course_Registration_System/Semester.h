@@ -9,9 +9,9 @@ struct Course;
 struct Semester {
 	Linked_List<Class> list_of_classes;
 	Linked_List<Course> list_of_courses;
-	int order;
-	Date start_date;
-	Date end_date;
+	int order = 0;
+	Date start_date = { 0,0,0 };
+	Date end_date = { 0,0,0 };
 };
 
 bool operator == (const Semester& first, const Semester& second);
