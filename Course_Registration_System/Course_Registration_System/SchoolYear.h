@@ -4,7 +4,7 @@
 #include<string>
 struct Semester;
 struct SchoolYear {
-	string name;
+	string name = "";
 	Linked_List<Semester> list_of_semesters;
 };
 bool operator == (const SchoolYear& first, const SchoolYear& second);
