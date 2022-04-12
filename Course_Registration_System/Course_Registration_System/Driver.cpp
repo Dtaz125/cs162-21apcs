@@ -1,23 +1,19 @@
-#include "MainGUI.h"
-#include "Initialize.h"
-#include "login.h"
-#include "other.h"
-int main()
-{
-    InitializeConsole();
+/*#include<iostream>
+#include<string>
+#include"Student.h"
+using namespace std;
+int main() {
+	Class myclass;
+	Student stu, stu_1, stu_2, stu_3;
+	stu.setID("21125054");
+	stu_1.setID("21125055");
+	stu_2.setID("21125056");
+	stu_3.setID("21125057");
+	myclass.add_student(stu);
+	myclass.add_student(stu_1);
+	myclass.add_student(stu_2);
+	myclass.add_student(stu_3);
+	cout << "This class has: " << myclass.getMember() << endl;
 
-    bool isStudent = false;
-    drawText(posCenter("Course Registration System(Staff/Student): "), 10, "Course Registration System(Staff/Student): ");
-    cin >> isStudent;
-    Student stu;
-    Staff sta;
-    if (isStudent) {
-        login(stu);
-        drawMainGUI(stu, 1);
-    }
-    else {
-        login(sta);
-        drawMainGUI(sta, 0);
-    }
-    return 0;
-}
+	return 0;
+}*/
