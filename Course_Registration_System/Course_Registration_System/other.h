@@ -1,9 +1,11 @@
 #pragma once
 #include <iostream>
+#include<string>
 #include "Date.h"
-#include "Student.h"
 using namespace std;
-
+const int baseY = 7;
+const int baseX = 30;
+const string blank = "                                                     ";
 string getGender(auto& st) {
     if (st.user_info.gender == 0) return "Male";
     else return "Female";
