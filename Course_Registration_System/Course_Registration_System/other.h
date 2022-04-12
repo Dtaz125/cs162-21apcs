@@ -1,7 +1,13 @@
 #pragma once
 #include <iostream>
 #include "Date.h"
+#include "Student.h"
 using namespace std;
+
+string getGender(Student st) {
+    if (st.user_info.gender == 0) return "Male";
+    return "Female";
+}
 
 bool isdigit(char ch) {
     return '0' <= ch && ch <= '9';
