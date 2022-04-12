@@ -1,6 +1,6 @@
 #ifndef INITIALIZE_H_INCLUDED
 #define INITIALIZE_H_INCLUDED
-
+#pragma once
 #include <bits/stdc++.h>
 #define _WIN32_WINNT 0x0500
 #include<windows.h>
