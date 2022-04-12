@@ -1,7 +1,7 @@
 #ifndef INITIALIZE_H_INCLUDED
 #define INITIALIZE_H_INCLUDED
 
-#include <iostream>
+#include <bits/stdc++.h>
 #define _WIN32_WINNT 0x0500
 #include<windows.h>
 #include <conio.h>
@@ -9,13 +9,15 @@ using namespace std;
 
 const int g_APP_WIDTH = 100;
 const int g_APP_HEIGHT = 25;
+const int baseX = 30, baseY = 4;
+const string blank = "                                                 ";
 
 void gotoxy(int x, int y)
 {
     static HANDLE h = NULL;
     if (!h) h = GetStdHandle(STD_OUTPUT_HANDLE);
     COORD c = { x, y };
-    SetConsoleCursorPosition(h, c);
+    SetConsoleCursorPosition(h,c);
 }
 void SetWindowSize(SHORT width, SHORT height)
 {
@@ -49,16 +51,16 @@ void ShowScrollbar(BOOL Show)
     HWND hWnd = GetConsoleWindow();
     ShowScrollBar(hWnd, SB_BOTH, Show);
 }
-void InitializeConsole() {
+void InitializeConsole(){
     SetWindowSize(g_APP_WIDTH, g_APP_HEIGHT);
     SetScreenBufferSize(g_APP_WIDTH, g_APP_HEIGHT);
     DisableResizeWindow();
     ShowScrollbar(0);
 }
-int posCenter(string text) {
+int posCenter(string text){
     return (g_APP_WIDTH - text.size()) / 2;
 }
-void drawText(int x, int y, string text) {
+void drawText(int x, int y, auto text){
     gotoxy(x, y);
     cout << text;
 }
