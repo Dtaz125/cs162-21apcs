@@ -13,7 +13,7 @@ void changeID(Student& st) {
     drawText(baseX, 3, "1. ID: " + blank);
     drawText(baseX, 3, "1. ID: ");
     cin >> new_ID;
-     st.studentid = new_ID;
+    st.studentid = new_ID;
 }
 
 void changeName(Student& st) {
@@ -71,7 +71,6 @@ void changeSocialID(Student& st) {
     tmp.social_id = new_ID;
     st.user_info = tmp;
 }
-
 void viewClass(Student st) {
     system("cls");
     Class* new_class = st.student_class;
@@ -83,14 +82,14 @@ void viewClass(Student st) {
         drawText(baseX + 1, i++, to_string(index) + ". " + k.user_info.firstname + " " + k.user_info.lastname); cout << endl;
         index++;
     }
-    getch();
+    //getch();
     system("cls");
 }
 void viewGPA(Student st) {
 
 }
 
-void changePassword(Student &st){
+void changePassword(Student& st) {
     string new_password;
     drawText(baseX, 9, "7. Change Password: ");
     cin >> new_password;
@@ -105,9 +104,10 @@ void viewListofCourse(Student st) {
         drawText(baseX, i++, to_string(index) + ". " + k.name + " | Teacher: " + k.teacher_name); cout << endl;
         index++;
     }
-    getch();
-    system("cls");
+
 }
+
+
 
 void drawStudentProfile(Student& st) {
     system("cls");
@@ -133,8 +133,8 @@ void drawStudentProfile(Student& st) {
         else if (id == 3) { changeBirthday(st); }
         else if (id == 4) { changeGender(st); }
         else if (id == 5) { changeSocialID(st); }
-        else if (id == 6) { viewGPA(st);}
-        else if (id == 7) { changePassword(st);}
+        else if (id == 6) { viewGPA(st); }
+        else if (id == 7) { changePassword(st); }
         else if (id == 8) { viewClass(st); }
         else if (id == 9) { viewListofCourse(st); }
         system("cls");
