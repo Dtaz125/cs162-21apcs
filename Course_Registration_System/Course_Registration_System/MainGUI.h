@@ -12,9 +12,10 @@
 #include "Student.h"
 #include "Staff.h"
 
-void drawMainGUI(Student& st, bool isStudent) {
+
+void drawMainGUI(Student& st, bool isStudent){
     int baseX = 30, id;
-    while (1) {
+    while (1){
         drawText(posCenter("Course Registration System"), 1, "Course Registration System");
         drawText(baseX, 3, "1. Profile");
         drawText(baseX, 4, "2. Open course registration");
@@ -30,24 +31,24 @@ void drawMainGUI(Student& st, bool isStudent) {
         cin >> id;
         system("cls");
 
-        if (id == 1) {
+        if (id == 1){
             drawStudentProfile(st);
         }
-        else if (id == 2) { drawOpenCourse(st); }
-        else if (id == 3) { drawCloseCourse(st); }
-        else if (id == 4) { drawScoreboard(st); }
-        else if (id == 5) {}
-        else if (id == 6) {}
-        else if (id == 7) {}
+        else if (id == 2){drawOpenCourse(st);}
+        else if (id == 3){drawCloseCourse(st);}
+        else if (id == 4){drawScoreboard(st);}
+        else if (id == 5){}
+        else if (id == 6){}
+        else if (id == 7){}
         else {
-            return;
+            return ;
         }
     }
 }
 
-void drawMainGUI(Staff& st, bool isStudent) {
+void drawMainGUI(Staff& st, bool isStudent){
     int baseX = 30, id;
-    while (1) {
+    while (1){
         drawText(posCenter("Course Registration System"), 1, "Course Registration System");
         drawText(baseX, 3, "1. Profile");
         drawText(baseX, 4, "2. Open course registration");
@@ -63,17 +64,17 @@ void drawMainGUI(Staff& st, bool isStudent) {
         cin >> id;
         system("cls");
 
-        if (id == 1) {
+        if (id == 1){
             drawStaffProfile(st);
         }
         /*else if (id == 2){drawOpenCourse(st);}
         else if (id == 3){drawCloseCourse(st);}
         else if (id == 4){drawScoreboard(st);}
-        */else if (id == 5) {}
-        else if (id == 6) {}
-        else if (id == 7) {}
+        */else if (id == 5){}
+        else if (id == 6){}
+        else if (id == 7){}
         else {
-            return;
+            return ;
         }
     }
 }
