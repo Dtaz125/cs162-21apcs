@@ -72,18 +72,18 @@ void changeSocialID(Student& st) {
     st.user_info = tmp;
 }
 void viewClass(Student st) {
-    system("cls");
-    Class* new_class = st.student_class;
-    drawText(baseX, 7, "Classname: " + new_class->name); cout << endl;
-    drawText(baseX, 8, "Student list: "); cout << endl;
-    int i = 9, index = 1;
-    for (Iterator<Student> iter = new_class->student_list.begin(); iter != new_class->student_list.end(); iter++) {
-        Student k = *iter;
-        drawText(baseX + 1, i++, to_string(index) + ". " + k.user_info.firstname + " " + k.user_info.lastname); cout << endl;
-        index++;
-    }
-    //getch();
-    system("cls");
+    //system("cls");
+    //Class* new_class = st.student_class;
+    //drawText(baseX, 7, "Classname: " + new_class->name); cout << endl;
+    //drawText(baseX, 8, "Student list: "); cout << endl;
+    //int i = 9, index = 1;
+    //for (Iterator<Student> iter = new_class->student_list.begin(); iter != new_class->student_list.end(); iter++) {
+    //    Student k = *iter;
+    //    drawText(baseX + 1, i++, to_string(index) + ". " + k.user_info.firstname + " " + k.user_info.lastname); cout << endl;
+    //    index++;
+    //}
+    ////getch();
+    //system("cls");
 }
 void viewGPA(Student st) {
 
@@ -97,13 +97,13 @@ void changePassword(Student& st) {
 }
 
 void viewListofCourse(Student st) {
-    system("cls");
+    /*system("cls");
     int i = 7, index = 1;
     for (Iterator<Course> iter = st.list_of_courses.begin(); iter != st.list_of_courses.end(); iter++) {
         Course k = *iter;
         drawText(baseX, i++, to_string(index) + ". " + k.name + " | Teacher: " + k.teacher_name); cout << endl;
         index++;
-    }
+    }*/
 
 }
 

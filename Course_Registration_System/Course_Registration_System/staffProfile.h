@@ -5,12 +5,6 @@
 using namespace std;
 
 #include "Staff.h"
-/*struct Staff{
-    string name = "Vinh";
-    string id = "21125030";
-    string gender = "Male";
-    string socialID = "192108211";
-};*/
 
 string getGender(Staff& st) {
     if (st.user_info.gender == 0) return "Male";

@@ -4,6 +4,7 @@
 #include"Staff.h"
 #include"closeCourseRegistration.h"
 #include"Initialize.h"
+#include"other.h"
 using namespace std;
 
 void drawCloseCourse(const Student& st) {

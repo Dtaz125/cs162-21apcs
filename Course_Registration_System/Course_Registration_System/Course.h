@@ -14,8 +14,8 @@ struct Course {
     string teaching_time;
     int max_student = 50;
     int credits;
-    Linked_List<Student> student_list;
-    Linked_List<pair<string, int>> student_score;
+    Linked_List<pair<string, string>> student_list; // ID - Fullname
+    Linked_List<pair<string, int>> student_score; //ID - score
     bool is_published = false;
 };
 

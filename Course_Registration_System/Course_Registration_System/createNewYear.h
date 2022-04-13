@@ -46,14 +46,14 @@ void createSemester(SchoolYear& ny) {
         drawText(baseX, baseY + 0, "1. Order: "); cout << new_sem.order;
         drawText(baseX, baseY + 1, "2. Start Date: "); cout << new_sem.start_date.day << "/" << new_sem.start_date.month << "/" << new_sem.start_date.year;
         drawText(baseX, baseY + 2, "3. End Date: "); cout << new_sem.end_date.day << "/" << new_sem.end_date.month << "/" << new_sem.end_date.year;
-        drawText(baseX, baseY + 3, "4. Create and Continue:"); 
+        drawText(baseX, baseY + 3, "4. Create and Continue:");
         drawText(baseX, baseY + 4, "5. Create and Exit:");
         drawText(posCenter("Press a number to change/view information: "), baseY + 5, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeOrder(new_sem); }
         else if (id == 2) { changeStartDate(new_sem); }
         else if (id == 3) { changeEndDate(new_sem); }
-        else { 
+        else {
             //do something here
         }
         system("cls");

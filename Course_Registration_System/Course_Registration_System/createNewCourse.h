@@ -15,7 +15,7 @@ void changeName(Course& c) {
 
 void changeID(Course& c) {
     string new_id;
-    drawText(baseX, baseY + 1, "2. ID: "+blank);
+    drawText(baseX, baseY + 1, "2. ID: " + blank);
     drawText(baseX, baseY + 1, "2. ID: ");
     cin.ignore();
     getline(cin, new_id);
@@ -42,7 +42,7 @@ void changeTeachingTime(Course& c) {
 
 void chanegMaxStudent(Course& c) {
     int new_number;
-    drawText(baseX, baseY + 4, "5. Maximum Students: "+blank);
+    drawText(baseX, baseY + 4, "5. Maximum Students: " + blank);
     drawText(baseX, baseY + 4, "5. Maximum Students: ");
     cin >> new_number;
     c.max_student = new_number;
@@ -56,9 +56,9 @@ void changeCredits(Course& c) {
     c.credits = new_number;
 }
 void createNewCourse(const Staff& st) {
-	int id;
+    int id;
     Course new_c;
-	do {
+    do {
         drawText(posCenter("Create Course: "), 1, "Create Course: ");
         drawText(baseX, baseY + 0, "1. Name: "); cout << new_c.name;
         drawText(baseX, baseY + 1, "2. ID: "); cout << new_c.id;
@@ -68,7 +68,7 @@ void createNewCourse(const Staff& st) {
         drawText(baseX, baseY + 5, "6. Credits: "); cout << new_c.credits;
         drawText(baseX, baseY + 6, "7. Continue to create: ");
         drawText(baseX, baseY + 7, "8. Exit: ");
-        drawText(posCenter("Press a number to change/view information: "), baseY+8, "Press a number to change/view information: ");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 8, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeName(new_c); }
         else if (id == 2) { changeID(new_c); }
@@ -80,5 +80,5 @@ void createNewCourse(const Staff& st) {
             //do something here
         }
         system("cls");
-	} while (id != 8);
+    } while (id != 8);
 }

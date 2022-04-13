@@ -3,12 +3,13 @@
 #include"Class.h"
 #include"Course.h"
 #include"Date.h"
+#include<utility>
 using namespace std;
 struct Class;
 struct Course;
 struct Semester {
-	Linked_List<Class> list_of_classes;
-	Linked_List<Course> list_of_courses;
+	Linked_List<string> list_of_classes; //Just the name of the classes
+	Linked_List<pair<string, string>> list_of_courses; //CourseID - Course name
 	int order = 0;
 	Date start_date = { 0,0,0 };
 	Date end_date = { 0,0,0 };

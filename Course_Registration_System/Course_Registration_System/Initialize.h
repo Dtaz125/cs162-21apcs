@@ -1,16 +1,15 @@
 #ifndef INITIALIZE_H_INCLUDED
 #define INITIALIZE_H_INCLUDED
 #pragma once
-#include <bits/stdc++.h>
+#include <iostream>
 #define _WIN32_WINNT 0x0500
 #include<windows.h>
 #include <conio.h>
+#include"other.h"
 using namespace std;
 
 const int g_APP_WIDTH = 100;
 const int g_APP_HEIGHT = 25;
-const int baseX = 30, baseY = 4;
-const string blank = "                                                 ";
 
 void gotoxy(int x, int y)
 {

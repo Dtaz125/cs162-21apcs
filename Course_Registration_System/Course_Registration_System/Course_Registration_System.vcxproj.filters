@@ -72,13 +72,28 @@
     <ClInclude Include="studentProfile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="studentScoreboard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="other.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="staffProfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CourseRegistration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="updateStudentResults.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="viewScoreBoard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="createNewYear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="createNewCourse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="studentScoreboard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

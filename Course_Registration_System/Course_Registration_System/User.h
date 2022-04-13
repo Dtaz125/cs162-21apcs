@@ -5,10 +5,10 @@
 using std::string;
 
 struct User {
-	string firstname;
-	string lastname;
+	string firstname = "";
+	string lastname = "";
 	bool gender;
-	string social_id;
+	string social_id ="";
 	Date birth = { 0,0,0 };
 };
 

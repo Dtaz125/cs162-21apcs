@@ -145,6 +145,9 @@
     <ClInclude Include="closeCourseRegistration.h" />
     <ClInclude Include="Course.h" />
     <ClInclude Include="courseActive.h" />
+    <ClInclude Include="CourseRegistration.h" />
+    <ClInclude Include="createNewCourse.h" />
+    <ClInclude Include="createNewYear.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="Initialize.h" />
     <ClInclude Include="Iterator.h" />
@@ -162,7 +165,9 @@
     <ClInclude Include="Student.h" />
     <ClInclude Include="studentProfile.h" />
     <ClInclude Include="studentScoreboard.h" />
+    <ClInclude Include="updateStudentResults.h" />
     <ClInclude Include="User.h" />
+    <ClInclude Include="viewScoreBoard.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Class.cpp" />

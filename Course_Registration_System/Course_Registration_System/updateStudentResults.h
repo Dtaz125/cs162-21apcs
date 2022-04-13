@@ -1,5 +1,5 @@
 #pragma once
 #include"Staff.h"
-void viewScoreBoard(const Staff& st) {
+void updateStudentResults(const Staff& st) {
 
 }

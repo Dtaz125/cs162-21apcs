@@ -45,33 +45,33 @@ void readCSV(Node<SchoolYear>*& new_year, Class*& classname, const string& _inpu
 		new_user.birth.year = stoi(content[i][7]);
 
 		new_stu.user_info = new_user;
-		new_stu.student_class = classname;
+		new_stu.student_class = content[i][8];
 
-		new_year->data.list_of_semesters[new_year->data.list_of_semesters.size() - 1]->data.list_of_classes.contains(*classname)->data.student_list.add(new_stu);
+		//new_year->data.list_of_semesters[new_year->data.list_of_semesters.size() - 1]->data.list_of_classes.contains(*classname)->data.student_list.add(new_stu);
 	}
 }
 
-void writeCSV(Node<Course>*& _course, const string& _outputfile) {
-	fstream file;
-	file.open(_outputfile, ios::out);
-
-	if (file.is_open()) {
-		file << _course->data.student_list.no << ",";
-		file << _course->data.student_list.studentid << ",";
-		file << _course->data.student_list.user_info.firstname << ",";
-		file << _course->data.student_list.user_info.lastname << ",";
-		if (_course->data.student_list.user_info.lastname == "0") {										//M if male. F if female
-			file << "M,";
-		}
-		else file << "F,";
-		file << _course->data.student_list.user_info.birth.day << ",";
-		file << _course->data.student_list.user_info.birth.month << ",";
-		file << _course->data.student_list.user_info.birth.year << ",\n";
-
-		//i couldnt try to run the code due to other errors in the project
-		//i need ideas to get to next node of students
-	}
-}
+//void writeCSV(Node<Course>*& _course, const string& _outputfile) {
+//	fstream file;
+//	file.open(_outputfile, ios::out);
+//
+//	if (file.is_open()) {
+//		file << _course->data.student_list.no << ",";
+//		file << _course->data.student_list.studentid << ",";
+//		file << _course->data.student_list.user_info.firstname << ",";
+//		file << _course->data.student_list.user_info.lastname << ",";
+//		if (_course->data.student_list.user_info.lastname == "0") {										//M if male. F if female
+//			file << "M,";
+//		}
+//		else file << "F,";
+//		file << _course->data.student_list.user_info.birth.day << ",";
+//		file << _course->data.student_list.user_info.birth.month << ",";
+//		file << _course->data.student_list.user_info.birth.year << ",\n";
+//
+//		//i couldnt try to run the code due to other errors in the project
+//		//i need ideas to get to next node of students
+//	}
+//}
 
 bool operator == (const Staff& first, const Staff& second) {
 	return first.user_info.social_id == second.user_info.social_id;
