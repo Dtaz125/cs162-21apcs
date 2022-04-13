@@ -51,6 +51,25 @@ void readCSV(Node<SchoolYear>*& new_year, Class*& classname, const string& _inpu
 	}
 }
 
+void writeCSV(Node<Course>*& _course, const string& _outputfile) {
+	fstream file;
+	file.open(_outputfile, ios::out);
+
+	if (file.is_open()) {
+		file << _course->data.student_list.no << ",";
+		file << _course->data.student_list.studentid << ",";
+		file << _course->data.student_list.user_info.firstname << ",";
+		file << _course->data.student_list.user_info.lastname << ",";
+		if (_course->data.student_list.user_info.lastname == "0") {										//M if male. F if female
+			file << "M,";
+		}
+		else file << "F,";
+		file << _course->data.student_list.user_info.birth.day << ",";
+		file << _course->data.student_list.user_info.birth.month << ",";
+		file << _course->data.student_list.user_info.birth.year << ",\n";
+	} 
+}
+
 bool operator == (const Staff& first, const Staff& second) {
 	return first.user_info.social_id == second.user_info.social_id;
 }

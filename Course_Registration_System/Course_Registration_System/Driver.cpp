@@ -4,7 +4,7 @@
 #include "other.h"
 int main()
 {
-    InitializeConsole();
+    /* InitializeConsole();
 
     bool isStudent = false;
     drawText(posCenter("Course Registration System(Staff/Student): "), 10, "Course Registration System(Staff/Student): ");
@@ -19,5 +19,6 @@ int main()
         login(sta);
         drawMainGUI(sta, 0);
     }
-    return 0;
+    return 0; */
+
 }

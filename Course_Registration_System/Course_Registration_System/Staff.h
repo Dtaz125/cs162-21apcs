@@ -13,6 +13,9 @@ bool operator == (const Staff& first, const Staff& second);
 bool operator != (const Staff& first, const Staff& second);
 
 void readCSV(Node<SchoolYear>*& new_year, Class*& classname, const string& _inputfile);
+
+void writeCSV(Course*& _course, const string& _outputfile);
+
 //class Staff {
 //private:
 
