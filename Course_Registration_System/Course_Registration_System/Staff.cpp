@@ -67,7 +67,10 @@ void writeCSV(Node<Course>*& _course, const string& _outputfile) {
 		file << _course->data.student_list.user_info.birth.day << ",";
 		file << _course->data.student_list.user_info.birth.month << ",";
 		file << _course->data.student_list.user_info.birth.year << ",\n";
-	} 
+
+		//i couldnt try to run the code due to other errors in the project
+		//i need ideas to get to next node of students
+	}
 }
 
 bool operator == (const Staff& first, const Staff& second) {
