@@ -2,12 +2,8 @@
 #include"Staff.h"
 #include"Initialize.h"
 #include"other.h"
-struct Link {
-    string year = "";
-    int semester = 0;
-    string courseID = "";
-    string link = "";
-};
+#include"Link.h"
+
 
 void changeYear(Link& link) {
     string new_link;

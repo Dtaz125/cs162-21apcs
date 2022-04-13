@@ -61,7 +61,7 @@ void drawMainGUI(Staff& st, bool isStudent) {
         else if (id == 3) drawCloseCourse(st); //done
         else if (id == 4) createNewYear(st); //done
         else if (id == 5) createNewCourse(st); //done
-        else if (id == 6) updateStudentResults(st);
+        else if (id == 6) updateStudentResults(st); //done
         else if (id == 7) viewScoreBoard(st);
         else {
             return;
