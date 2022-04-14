@@ -48,15 +48,57 @@ void readCSV(Class& classname, string _inputfile) {
 
 		classname.student_list.add(new_stu);							//add new_stu to this class as linkedlist of students
 	}
+	file.close();
+}
+
+void readCSV_Scoreboard(Course& _course, const string& _inputfile) {
+	string inputFile = _inputfile;
+
+	vector<vector<string>> content;
+	vector<string> row;
+	string line, word;
+
+	fstream file(inputFile, ios::in);
+	if (file.is_open()) {
+		while (getline(file, line)) {
+			row.clear();
+
+			stringstream str(line);
+
+			while (getline(str, word, ','))
+				row.push_back(word);
+			content.push_back(row);
+		}
+	}
+
+	for (int i = 0; i < content.size(); i++) {
+		Score s;
+		s.no = content[i][0];
+		s.id = content[i][1];
+		s.fullname = content[i][2];
+		s.total_mark = stof(content[i][3]);
+		s.final_mark = stof(content[i][4]);
+		s.midterm_mark = stof(content[i][5]);
+		int length = 0;
+		for (int j = 6; j < content[i].size(); j++) {
+			s.other_score[j - 6] = stoi(content[i][j]);
+			length++;
+		}
+		s.number_of_other_score = length;
+		_course.student_score.add(s);
+	}
+
+	file.close();
 }
 
 void writeCSV(Course& _course, const string& _outputfile) {
 	fstream file;
 	file.open(_outputfile, ios::out);
-	for (Iterator<Score> iter = _course.student_score.begin(); iter != _course.student_score.end(); iter++) {
-		Score g = *iter;
-		file << g.no<< "," << g.id <<","<<g.fullname<<"\n";
+	for (int i = 0; i < _course.student_score.size(); i++) {
+		Node<Score>* g = _course.student_score[i];
+		file << g->data.no << "," << g->data.id << "," << g->data.fullname << "\n";
 	}
+	file.close();
 }
 
 bool operator == (const Staff& first, const Staff& second) {

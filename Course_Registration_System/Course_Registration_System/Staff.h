@@ -14,5 +14,6 @@ bool operator != (const Staff& first, const Staff& second);
 
 void readCSV(Class& classname, string _inputfile);
 
-void writeCSV(Node<Course>*& _course, const string& _outputfile);
+void writeCSV(Course& _course, const string& _outputfile);
 
+void readCSV_Scoreboard(Course& _course, const string& _inputfile);

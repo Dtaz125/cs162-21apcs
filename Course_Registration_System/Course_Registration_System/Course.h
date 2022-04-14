@@ -14,7 +14,9 @@ struct Score {
     float final_mark = 0;
     float midterm_mark = 0;
     float total_mark = 0;
-    Linked_List<float> other_score;
+    float  other_score[20];
+    int number_of_other_score = 0;
+    Score& operator = (Score& scr) { return scr; }
 };
 struct Course {
     string id;
@@ -32,3 +34,7 @@ struct Course {
 bool operator == (const Course& course_1, const Course& course_2);
 
 bool operator != (const Course& course_1, const Course& course_2);
+
+bool operator == (const Score& score_1, const Score& score_2);
+
+bool operator != (const Score& score_1, const Score& score_2);
