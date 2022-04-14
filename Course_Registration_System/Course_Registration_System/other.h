@@ -2,6 +2,7 @@
 #include <iostream>
 #include<string>
 #include "Date.h"
+#include "Staff.h"
 using namespace std;
 const int baseY = 7;
 const int baseX = 30;
@@ -65,4 +66,44 @@ bool validDate(string birth, Date& dt) {
     }
     if (dt.day > 31 || dt.month > 12 || dt.day == 0 || dt.month == 0) return false;
     return true;
+}
+
+void changeName(auto& st, string new_name) {
+    User tmp = st.user_info;
+    int pos = -1;
+    for (int i = new_name.size() - 1; i >= 0; i--) {
+        if (new_name[i] == ' ') {
+            pos = i;
+            break;
+        }
+    }
+    tmp.firstname = "";
+    tmp.lastname = "";
+    for (int i = 0; i < pos; i++)
+        tmp.firstname += new_name[i];
+    for (int i = pos + 1; i < new_name.size(); i++)
+        tmp.lastname += new_name[i];
+
+    st.user_info = tmp;
+}
+void changeBirthday(auto& st, string birth) {
+    User info = st.user_info;
+    if (!validDate(birth, info.birth)) return;
+    st.user_info = info;
+}
+void changeGender(auto& st, bool gender) {
+    User tmp = st.user_info;
+    tmp.gender = gender;
+    st.user_info = tmp;
+}
+
+void changeGender(auto& st, string gender) {
+    if (gender == "0") changeGender(st, 0);
+    else changeGender(st, 1);
+}
+
+void changeSocialID(auto& st, string new_ID) {
+    User tmp = st.user_info;
+    tmp.social_id = new_ID;
+    st.user_info = tmp;
 }

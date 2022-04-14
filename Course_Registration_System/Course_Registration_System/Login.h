@@ -3,20 +3,56 @@
 #include<fstream>
 #include "Student.h"
 #include "Staff.h"
-
+#include "getData.h"
 using namespace std;
 
-const string nameFile = "data.txt";
-
 bool matched(string username, string password, Student& st) {
-    ifstream inp(nameFile);
-    bool ok; cin >> ok;
+    string accFile = "system/students/accounts.txt";
+    ifstream acc(accFile);
+    /// open File
+    string id, us, pass;
+    bool ok = false;
+    ///
+    while (!acc.eof()){
+        /// search for accounts
+        getline(acc, id, '\n');
+        getline(acc, us, '\n');
+        getline(acc, pass, '\n');
+        /// get information
+        if (username == us && password == pass) {
+            getProfile(st, id);
+            ok = true;
+            drawText(baseX + 15, baseY, "Accepted!");
+            getch();
+            break;
+        }
+    }
+    acc.close();
     return ok;
 }
 
 bool matched(string username, string password, Staff& st) {
-    ifstream inp(nameFile);
-    bool ok; cin >> ok;
+    string accFile = "system/staffs/accounts.txt";
+    ifstream acc(accFile);
+    /// open File
+    string id, us, pass;
+    bool ok = false;
+    ///
+    while (!acc.eof()){
+        /// search for accounts
+        getline(acc, id, '\n');
+        getline(acc, us, '\n');
+        getline(acc, pass, '\n');
+        /// get information
+        if (username == us && password == pass) {
+            getProfile(st, id);
+            ok = true;
+            drawText(baseX + 15, baseY, "Accepted!");
+            getch();
+            break;
+        }
+    }
+    acc.close();
     return ok;
 }
 
