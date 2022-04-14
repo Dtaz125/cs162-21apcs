@@ -13,6 +13,8 @@ struct Semester {
 	int order = 0;
 	Date start_date = { 0,0,0 };
 	Date end_date = { 0,0,0 };
+
+	Semester& operator = (Semester& sem) { return sem; }
 };
 
 bool operator == (const Semester& first, const Semester& second);

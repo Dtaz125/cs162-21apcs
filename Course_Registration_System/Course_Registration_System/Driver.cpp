@@ -2,6 +2,9 @@
 #include "Initialize.h"
 #include "login.h"
 #include "other.h"
+#include"Class.h"
+#include<fstream>
+using std::make_pair;
 
 int main()
 {
@@ -20,9 +23,7 @@ int main()
         login(sta);
         drawMainGUI(sta, 0);
     }
-
-   
-
+    
     return 0; 
 
 }
