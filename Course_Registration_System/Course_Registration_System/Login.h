@@ -23,7 +23,7 @@ bool matched(string username, string password, Student& st) {
             getProfile(st, id);
             ok = true;
             drawText(baseX + 15, baseY, "Accepted!");
-            getch();
+            _getch();
             break;
         }
     }
@@ -48,7 +48,7 @@ bool matched(string username, string password, Staff& st) {
             getProfile(st, id);
             ok = true;
             drawText(baseX + 15, baseY, "Accepted!");
-            getch();
+            _getch();
             break;
         }
     }
