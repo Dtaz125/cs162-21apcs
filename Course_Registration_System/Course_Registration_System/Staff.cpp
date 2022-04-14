@@ -8,7 +8,8 @@ using std::vector;
 using std::getline;
 using std::stringstream;
 
-void readCSV(Node<SchoolYear>*& new_year, Class*& classname, const string& _inputfile) {
+//void readCSV(Node<SchoolYear>*& new_year, Class*& classname, const string& _inputfile) {
+void readCSV(Class*& classname, const string& _inputfile) {
 	string inputFile = _inputfile;
 
 	vector<vector<string>> content;
@@ -28,15 +29,15 @@ void readCSV(Node<SchoolYear>*& new_year, Class*& classname, const string& _inpu
 		}
 	}
 
-	for (int i = 0; i < content.size(); i++) {							//loops for every line
+	for (int i = 0; i < content.size(); i++) {
 		Student new_stu;
 		new_stu.no = content[i][0];
 		new_stu.studentid = content[i][1];
 
-		User new_user;													//the user_info member in Account class is private. so i have to create a new temp User varible
-		new_user.firstname = content[i][2];								//then use the setuser function in Account to set the information
+		User new_user;
+		new_user.firstname = content[i][2];
 		new_user.lastname = content[i][3];
-		if (content[i][4] == "M") {										//0 if male. 1 if female
+		if (content[i][4] == "M") {
 			new_user.gender = 0;
 		}
 		else new_user.gender = 1;
@@ -45,33 +46,29 @@ void readCSV(Node<SchoolYear>*& new_year, Class*& classname, const string& _inpu
 		new_user.birth.year = stoi(content[i][7]);
 
 		new_stu.user_info = new_user;
-		new_stu.student_class = content[i][8];
+		new_stu.student_class = content[i][8];							// we will input class as string using csv file
+
+		classname->student_list.add(new_stu);							//add new_stu to this class as linkedlist of students
 
 		//new_year->data.list_of_semesters[new_year->data.list_of_semesters.size() - 1]->data.list_of_classes.contains(*classname)->data.student_list.add(new_stu);
 	}
 }
 
-//void writeCSV(Node<Course>*& _course, const string& _outputfile) {
-//	fstream file;
-//	file.open(_outputfile, ios::out);
-//
-//	if (file.is_open()) {
-//		file << _course->data.student_list.no << ",";
-//		file << _course->data.student_list.studentid << ",";
-//		file << _course->data.student_list.user_info.firstname << ",";
-//		file << _course->data.student_list.user_info.lastname << ",";
-//		if (_course->data.student_list.user_info.lastname == "0") {										//M if male. F if female
-//			file << "M,";
-//		}
-//		else file << "F,";
-//		file << _course->data.student_list.user_info.birth.day << ",";
-//		file << _course->data.student_list.user_info.birth.month << ",";
-//		file << _course->data.student_list.user_info.birth.year << ",\n";
-//
-//		//i couldnt try to run the code due to other errors in the project
-//		//i need ideas to get to next node of students
-//	}
-//}
+void writeCSV(Node<Course>*& _course, const string& _outputfile) {
+	fstream file;
+	file.open(_outputfile, ios::out);
+
+	for (Iterator<pair<string, string>> iter = _course->data.student_list.begin(); iter != _course->data.student_list.end(); iter++) {
+		pair<string, string> g = *iter;
+		/* file << g.no << "," << g.studentid << "," << g.user_info.firstname << "," << g.user_info.lastname << ",";
+		if (g.user_info.gender == 0)
+			file << "M,";
+		else file << "F,";
+		file << to_string(g.user_info.birth.day) << "," << to_string(g.user_info.birth.month) << "," 
+			<< to_string(g.user_info.birth.year) << "," << g.student_class << "\n"; */
+		file << g.first << "," << g.second << "\n";
+	}
+}
 
 bool operator == (const Staff& first, const Staff& second) {
 	return first.user_info.social_id == second.user_info.social_id;
