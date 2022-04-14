@@ -2,6 +2,7 @@
 #include "Initialize.h"
 #include "login.h"
 #include "other.h"
+
 int main()
 {
      InitializeConsole();
@@ -19,6 +20,9 @@ int main()
         login(sta);
         drawMainGUI(sta, 0);
     }
+
+   
+
     return 0; 
 
 }

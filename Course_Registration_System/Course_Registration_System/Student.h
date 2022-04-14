@@ -1,10 +1,11 @@
 #pragma once
 #include"User.h"
 #include"Linked_List.h"
-#include"Course.h"
-#include"Class.h"
 #include<utility>
+#include<fstream>
 using std::pair;
+using std::ofstream;
+using std::ifstream;
 struct Course;
 struct Class;
 struct Student {
@@ -20,3 +21,7 @@ struct Student {
 bool operator == (const Student& student_1, const Student& student_2);
 
 bool operator != (const Student& student_1, const Student& student_2);
+
+ofstream& operator << (ofstream & out_file, Student & student);
+
+ifstream& operator >> (ifstream& in_file, Student& student);
