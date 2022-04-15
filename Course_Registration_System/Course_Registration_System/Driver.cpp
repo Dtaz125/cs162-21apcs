@@ -2,7 +2,6 @@
 #include "Initialize.h"
 #include "login.h"
 #include "other.h"
-
 using namespace std;
 int main()
 {

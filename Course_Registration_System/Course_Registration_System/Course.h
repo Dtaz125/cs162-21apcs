@@ -4,8 +4,10 @@
 #include"Student.h"
 #include<string>
 #include<utility>
+#include<fstream>
 using std::pair;
 using std::string;
+using std::getline;
 struct Student;
 struct Score {
     string id = "";
@@ -38,3 +40,7 @@ bool operator != (const Course& course_1, const Course& course_2);
 bool operator == (const Score& score_1, const Score& score_2);
 
 bool operator != (const Score& score_1, const Score& score_2);
+
+ofstream& operator << (ofstream& out_file, Course& course);
+
+ifstream& operator >> (ifstream& in_file, Course& course);
