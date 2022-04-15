@@ -42,7 +42,7 @@ void createSemester(SchoolYear& ny) {
     int id;
     Semester new_sem;
     do {
-        drawText(posCenter("Adding Semester to New School Year: "), 1, "Adding Semester to New School Year: ");
+        drawText(posCenter("ADDING SEMESTER"), 1, "ADDING SEMESTER");
         drawText(baseX, baseY + 0, "1. Order: "); cout << new_sem.order;
         drawText(baseX, baseY + 1, "2. Start Date: "); cout << new_sem.start_date.day << "/" << new_sem.start_date.month << "/" << new_sem.start_date.year;
         drawText(baseX, baseY + 2, "3. End Date: "); cout << new_sem.end_date.day << "/" << new_sem.end_date.month << "/" << new_sem.end_date.year;
@@ -67,7 +67,7 @@ void createNewYear(const Staff& st) {
     int id;
     SchoolYear new_year;
     do {
-        drawText(posCenter("New School Year: "), 1, "New School Year: ");
+        drawText(posCenter("NEW SCHOOL YEAR"), 1, "NEW SCHOOL YEAR");
         drawText(baseX, baseY + 0, "1. Name: "); cout << new_year.name;
         drawText(baseX, baseY + 1, "2. Continue to create semester: ");
         drawText(baseX, baseY + 2, "3. Create this school year: ");

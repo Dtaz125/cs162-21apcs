@@ -42,7 +42,7 @@ void drawOpenCourse(const Staff& st) {
     int id;
     CourseRegistration new_c;
     do {
-        drawText(posCenter("Create Course Registration: "), 1, "Create Course Registration: ");
+        drawText(posCenter("CREATE COURSE REGISTRATION"), 1, "CREATE COURSE REGISTRATION");
         drawText(baseX, baseY + 0, "1. Name: "); cout << new_c.name;
         drawText(baseX, baseY + 1, "2. Start Date: "); cout << new_c.start_date.day << "/" << new_c.start_date.month << "/" << new_c.start_date.year;
         drawText(baseX, baseY + 2, "3. End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;

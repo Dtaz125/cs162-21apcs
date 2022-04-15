@@ -14,10 +14,11 @@
 #include"createNewCourse.h"
 #include"updateStudentResults.h"
 #include"viewScoreBoard.h"
+#include"publishCourse.h"
 void drawMainGUI(Student& st, bool isStudent) {
     int baseX = 30, id;
     while (1) {
-        drawText(posCenter("Course Registration System"), 1, "Course Registration System");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), 1, "COURSE REGISTRATION SYSTEM");
         drawText(baseX, 3, "1. Profile"); //done
         drawText(baseX, 4, "2. Course Registration"); 
         drawText(baseX, 5, "3. Exit");
@@ -39,15 +40,16 @@ void drawMainGUI(Student& st, bool isStudent) {
 void drawMainGUI(Staff& st, bool isStudent) {
     int baseX = 30, id;
     while (1) {
-        drawText(posCenter("Course Registration System"), 1, "Course Registration System");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), 1, "COURSE REGISTRATION SYSTEM");
         drawText(baseX, 3, "1. Profile");
-        drawText(baseX, 4, "2. Open course registration");
-        drawText(baseX, 5, "3. Close course registration");
+        drawText(baseX, 4, "2. Open Course Registration");
+        drawText(baseX, 5, "3. Close Course Registration");
         drawText(baseX, 6, "4. Create New School Year");
         drawText(baseX, 7, "5. Create New Course");
-        drawText(baseX, 8, "6. Update a student result");
-        drawText(baseX, 9, "7. View the scoreboard of a class");
-        drawText(baseX, 10, "8. Exit");
+        drawText(baseX, 8, "6. Update Student Results");
+        drawText(baseX, 9, "7. View Scoreboard of A Class");
+        drawText(baseX, 10, "8. Publish Course");
+        drawText(baseX, 11, "9. Exit");
 
         drawText(posCenter("Press a number: : "), 12, "Press a number: : ");
 
@@ -63,6 +65,7 @@ void drawMainGUI(Staff& st, bool isStudent) {
         else if (id == 5) createNewCourse(st); //done
         else if (id == 6) updateStudentResults(st); //done
         else if (id == 7) viewScoreBoard(st);
+        else if (id == 8) publishCourse(st);
         else {
             return;
         }

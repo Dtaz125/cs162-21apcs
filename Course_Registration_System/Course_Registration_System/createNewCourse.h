@@ -59,7 +59,7 @@ void createNewCourse(const Staff& st) {
     int id;
     Course new_c;
     do {
-        drawText(posCenter("Create Course: "), 1, "Create Course: ");
+        drawText(posCenter("NEW COURSE"), 1, "NEW COURSE");
         drawText(baseX, baseY + 0, "1. Name: "); cout << new_c.name;
         drawText(baseX, baseY + 1, "2. ID: "); cout << new_c.id;
         drawText(baseX, baseY + 2, "3. Teacher name: "); cout << new_c.teacher_name;

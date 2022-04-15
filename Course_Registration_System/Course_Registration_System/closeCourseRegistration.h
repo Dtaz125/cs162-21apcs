@@ -15,7 +15,7 @@ void drawCloseCourse(const Staff& st) {
     int id;
     CourseRegistration new_c;
     do {
-        drawText(posCenter("Close Course Registration: "), 1, "Close Course Registration: ");
+        drawText(posCenter("CLOSING COURSE REGISTRATION"), 1, "CLOSING COURSE REGISTRATION");
         drawText(baseX, baseY + 0, "1. Name: "); cout << new_c.name;
         /*drawText(baseX, baseY + 1, "2. Start Date: "); cout << new_c.start_date.day << "/" << new_c.start_date.month << "/" << new_c.start_date.year;
         drawText(baseX, baseY + 2, "3. End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;*/

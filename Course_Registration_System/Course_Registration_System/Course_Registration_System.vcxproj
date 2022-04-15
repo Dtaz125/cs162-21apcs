@@ -158,6 +158,7 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="openCourseRegistration.h" />
     <ClInclude Include="other.h" />
+    <ClInclude Include="publishCourse.h" />
     <ClInclude Include="RegistrationSystem.h" />
     <ClInclude Include="SchoolYear.h" />
     <ClInclude Include="Semester.h" />

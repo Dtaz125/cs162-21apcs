@@ -21,12 +21,12 @@ struct Score {
     Score& operator = (Score& scr) { return scr; }
 };
 struct Course {
-    string id;
-    string name;
-    string teacher_name;
-    string teaching_time;
+    string id = "";
+    string name = "";
+    string teacher_name = "";
+    string teaching_time = "";
     int max_student = 50;
-    int credits;
+    int credits = 4;
     Linked_List<Score> student_score;
     bool is_published = false;
 

@@ -81,7 +81,7 @@ void readCSV_Scoreboard(Course& _course, const string& _inputfile) {
 		s.midterm_mark = stof(content[i][5]);
 		int length = 0;
 		for (int j = 6; j < content[i].size(); j++) {
-			s.other_score[j - 6] = stoi(content[i][j]);
+			s.other_score[j - 6] = stof(content[i][j]);
 			length++;
 		}
 		s.number_of_other_score = length;

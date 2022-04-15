@@ -99,6 +99,9 @@
     <ClInclude Include="Link.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="publishCourse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Student.cpp">

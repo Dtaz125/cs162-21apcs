@@ -69,10 +69,10 @@ void login(auto& st) {
     while (first || !matched(username, password, st)) {
         system("cls");
         if (!first) {
-            drawText(posCenter("Invalid username or password"), baseY + 5, "Invalid username or password");
+            drawText(posCenter("Invalid username or password!"), baseY + 5, "Invalid username or password!");
         }
         first = false;
-        drawText(posCenter("Log in to the system: "), 1, "Log in to the system:");
+        drawText(posCenter("LOGIN TO THE SYSTEM"), 1, "LOGIN TO THE SYSTEM");
         drawText(baseX, baseY + 1, "Username: ");
         drawText(baseX, baseY + 2, "Password: ");
 

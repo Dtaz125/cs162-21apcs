@@ -84,7 +84,7 @@ void drawStaffProfile(Staff& st)
     system("cls");
     int id;
     do {
-        drawText(posCenter("Staff Profile: "), 1, "Staff Profile: ");
+        drawText(posCenter("STAFF PROFILE"), 1, "STAFF PROFILE");
         drawText(baseX, baseY + 0, "1. Full name: "); cout << st.user_info.firstname << " " << st.user_info.lastname;
         drawText(baseX, baseY + 1, "2. Birthday: "); cout << st.user_info.birth.day << "/" << st.user_info.birth.month << "/" << st.user_info.birth.year;
         drawText(baseX, baseY + 2, "3. Gender(Male/Female): "); cout << getGender(st);

@@ -46,7 +46,7 @@ void updateStudentResults(const Staff& st) {
     int id;
     Link link;
     do {
-        drawText(posCenter("Update Results: "), 1, "Update Results: ");
+        drawText(posCenter("UPDATE RESULTS"), 1, "UPDATE RESULTS");
         drawText(baseX, 3, "1. School Year: ");  cout << link.year;
         drawText(baseX, 4, "2. Semester: "); cout << link.semester;
         drawText(baseX, 5, "3. Course ID: "); cout << link.courseID;

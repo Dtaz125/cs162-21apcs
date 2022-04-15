@@ -18,7 +18,7 @@ void findCourse(Link& link) {
     system("cls");
     int id;
     do {
-        drawText(posCenter("View Score Board: "), 1, "View Score Board: ");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), 1, "VIEW COURSE SCOREBOARD");
         drawText(baseX, 3, "1. School Year: "); cout << link.year;
         drawText(baseX, 4, "2. Semester: "); cout << link.semester;
         drawText(baseX, 5, "3. Course ID: "); cout << link.courseID;
@@ -41,7 +41,7 @@ void findClass(Link& link) {
     system("cls");
     int id;
     do {
-        drawText(posCenter("View Score Board: "), 1, "View Score Board: ");
+        drawText(posCenter("VIEW CLASS SCOREBOARD"), 1, "VIEW CLASS SCOREBOARD");
         drawText(baseX, 3, "1. School Year: "); cout << link.year;
         drawText(baseX, 4, "2. Class: "); cout << link.classname;
         drawText(baseX, 5, "3. Continue: ");
@@ -62,7 +62,7 @@ void viewScoreBoard(const Staff& st) {
     int id;
     Link link;
     do {
-        drawText(posCenter("View Score Board: "), 1, "View Score Board: ");
+        drawText(posCenter("VIEW SCOREBOARD"), 1, "VIEW SCOREBOARD");
         drawText(baseX, 3, "1. Course: ");  
         drawText(baseX, 4, "2. Class: "); 
         drawText(baseX, 5, "3. Exit");
