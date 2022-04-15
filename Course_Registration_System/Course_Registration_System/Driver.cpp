@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-     InitializeConsole();
+    InitializeConsole();
 
     bool isStudent = false;
     drawText(posCenter("COURSE REGISTRATION SYSTEM(Staff/Student): "), 10, "COURSE REGISTRATION SYSTEM(Staff/Student): ");
