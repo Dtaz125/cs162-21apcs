@@ -20,5 +20,5 @@ int main()
         login(sta);
         drawMainGUI(sta, 0);
     }
-    return 0; 
+    return 0;
 }
