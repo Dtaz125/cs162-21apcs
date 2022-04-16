@@ -6,8 +6,8 @@
 
 void changeName(Course& c) {
     string new_name;
-    drawText(baseX, baseY + 0, "1. Name: " + blank);
-    drawText(baseX, baseY + 0, "1. Name: ");
+    drawText(baseX, baseY - 1, "1. Name: " + blank);
+    drawText(baseX, baseY - 1, "1. Name: ");
     cin.ignore();
     getline(cin, new_name);
     c.name = new_name;
@@ -24,8 +24,8 @@ void changeID(Course& c) {
 
 void changeTeacherName(Course& c) {
     string new_teacher;
-    drawText(baseX, baseY + 2, "3. Teacher name: " + blank);
-    drawText(baseX, baseY + 2, "3. Teacher name: ");
+    drawText(baseX, baseY + 3, "3. Teacher name: " + blank);
+    drawText(baseX, baseY + 3, "3. Teacher name: ");
     cin.ignore();
     getline(cin, new_teacher);
     c.teacher_name = new_teacher;
@@ -33,8 +33,8 @@ void changeTeacherName(Course& c) {
 
 void changeTeachingTime(Course& c) {
     string new_teacher;
-    drawText(baseX, baseY + 3, "4. Teaching time: " + blank);
-    drawText(baseX, baseY + 3, "4. Teaching time: ");
+    drawText(baseX, baseY + 4, "4. Teaching time: " + blank);
+    drawText(baseX, baseY + 4, "4. Teaching time: ");
     cin.ignore();
     getline(cin, new_teacher);
     c.teaching_time = new_teacher;
@@ -42,35 +42,35 @@ void changeTeachingTime(Course& c) {
 
 void chanegMaxStudent(Course& c) {
     int new_number;
-    drawText(baseX, baseY + 4, "5. Maximum Students: " + blank);
-    drawText(baseX, baseY + 4, "5. Maximum Students: ");
+    drawText(baseX, baseY + 7, "5. Maximum Students: " + blank);
+    drawText(baseX, baseY + 7, "5. Maximum Students: ");
     cin >> new_number;
     c.max_student = new_number;
 }
 
 void changeCredits(Course& c) {
     int new_number;
-    drawText(baseX, baseY + 5, "6. Credits: " + blank);
-    drawText(baseX, baseY + 5, "6. Credits: ");
+    drawText(baseX, baseY + 9, "6. Credits: " + blank);
+    drawText(baseX, baseY + 9, "6. Credits: ");
     cin >> new_number;
     c.credits = new_number;
 }
 void createNewCourse(const SchoolYear& st) {
-    int id;
+    int id, baseY=3;
     Course new_c;
     do {
         system("cls");
-        drawText(posCenter("NEW COURSE"), 1, "NEW COURSE");
-        drawText(baseX, baseY + 0, "1. Course Name: "); cout << new_c.name;
-        drawText(baseX, baseY + 1, "2. Course ID: "); cout << new_c.id;
-        drawText(baseX, baseY + 2, "3. Teacher: "); cout << new_c.teacher_name;
-        drawText(baseX, baseY + 3, "4. Teaching Time: "); cout << new_c.teaching_time; 
-        drawText(baseX, baseY + 4, "5. Maximum Students: "); cout << new_c.max_student;
-        drawText(baseX, baseY + 5, "6. Credits: "); cout << new_c.credits;
-        drawText(baseX, baseY + 6, "7. Create");
-        drawText(baseX, baseY + 7, "8. Exit");
+        drawText(posCenter("NEW COURSE"), baseY+1, "NEW COURSE");
+        drawText(baseX, baseY + 3, "1. Course Name: "); cout << new_c.name;
+        drawText(baseX, baseY + 5, "2. Course ID: "); cout << new_c.id;
+        drawText(baseX, baseY + 7, "3. Teacher: "); cout << new_c.teacher_name;
+        drawText(baseX, baseY + 9, "4. Teaching Time: "); cout << new_c.teaching_time; 
+        drawText(baseX, baseY + 11, "5. Maximum Students: "); cout << new_c.max_student;
+        drawText(baseX, baseY + 13, "6. Credits: "); cout << new_c.credits;
+        drawText(baseX, baseY + 15, "7. Create");
+        drawText(baseX, baseY + 17, "8. Exit");
         //display course have created here
-        drawText(posCenter("Press a number to change/view information: "), baseY + 8, "Press a number to change/view information: ");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 19, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeName(new_c); }
         else if (id == 2) { changeID(new_c); }
