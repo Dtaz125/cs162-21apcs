@@ -26,8 +26,8 @@ void changeID(Course& c) {
 
 void changeTeacherName(Course& c) {
     string new_teacher;
-    drawText(baseX, baseY + 3, "3. Teacher name: " + blank);
-    drawText(baseX, baseY + 3, "3. Teacher name: ");
+    drawText(baseX, baseY + 3, "3. Teacher Name: " + blank);
+    drawText(baseX, baseY + 3, "3. Teacher Name: ");
     cin.ignore();
     getline(cin, new_teacher);
     c.teacher_name = new_teacher;
@@ -35,8 +35,8 @@ void changeTeacherName(Course& c) {
 
 void changeTeachingTime(Course& c) {
     string new_teacher;
-    drawText(baseX, baseY + 4, "4. Teaching time: " + blank);
-    drawText(baseX, baseY + 4, "4. Teaching time: ");
+    drawText(baseX, baseY + 4, "4. Teaching Time: " + blank);
+    drawText(baseX, baseY + 4, "4. Teaching Time: ");
     cin.ignore();
     getline(cin, new_teacher);
     c.teaching_time = new_teacher;
