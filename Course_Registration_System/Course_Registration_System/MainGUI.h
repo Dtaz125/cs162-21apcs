@@ -18,15 +18,15 @@
 #include"viewClass.h"
 #include"viewCourse.h"
 void drawMainGUI(Student& st, bool isStudent) {
-    int baseX = 30, id;
+    int baseX = 30, id, baseY=3;
     while (1) {
-        drawText(posCenter("COURSE REGISTRATION SYSTEM"), 1, "COURSE REGISTRATION SYSTEM");
-        drawText(baseX, 3, "1. Your Profile"); //done
-        drawText(baseX, 4, "2. Your Class");
-        drawText(baseX, 5, "3. Your Courses");
-        drawText(baseX, 6, "4. View Course Registration"); 
-        drawText(baseX, 7, "5. Exit");
-        drawText(posCenter("Your Choice: "), 8, "Your Choice: ");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 1, "COURSE REGISTRATION SYSTEM");
+        drawText(baseX, baseY + 3, "1. Your Profile"); //done
+        drawText(baseX, baseY + 5, "2. Your Class");
+        drawText(baseX, baseY + 7, "3. Your Courses");
+        drawText(baseX, baseY + 9, "4. View Course Registration");
+        drawText(baseX, baseY + 11, "5. Exit");
+        drawText(posCenter("Your Choice: "), baseY + 13, "Your Choice: ");
 
         cin >> id;
         system("cls");
