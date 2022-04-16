@@ -7,8 +7,8 @@
 
 void changeClass(Link& link) {
     string new_link;
-    drawText(baseX, 4, "2. Class: " + blank);
-    drawText(baseX, 4, "2. Class: ");
+    drawText(baseX, 8, "2. Class: " + blank);
+    drawText(baseX, 8, "2. Class: ");
     cin.ignore();
     getline(cin, new_link);
     link.classname = new_link;
