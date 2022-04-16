@@ -36,8 +36,8 @@ void changeName(Staff& st) {
 }
 
 void changeBirthday(Staff& st) {
-    drawText(baseX, baseY + 1, "2. Birthday: " + blank);
-    drawText(baseX, baseY + 1, "2. Birthday: ");
+    drawText(baseX, baseY + 2, "2. Birthday: " + blank);
+    drawText(baseX, baseY + 2, "2. Birthday: ");
     cin.ignore();
     User info = st.user_info;
     string birth;
@@ -47,8 +47,8 @@ void changeBirthday(Staff& st) {
 }
 void changeGender(Staff& st) {
     string new_gen;
-    drawText(baseX, baseY + 2, "3. Gender(Male/Female): " + blank);
-    drawText(baseX, baseY + 2, "3. Gender(Male/Female): ");
+    drawText(baseX, baseY + 5, "3. Gender(Male/Female): " + blank);
+    drawText(baseX, baseY + 5, "3. Gender(Male/Female): ");
     cin >> new_gen;
     User tmp = st.user_info;
     if (new_gen == "Male") tmp.gender = 0;
@@ -57,8 +57,8 @@ void changeGender(Staff& st) {
 }
 void changeSocialID(Staff& st) {
     string new_ID;
-    drawText(baseX, baseY + 3, "4. Social ID: " + blank);
-    drawText(baseX, baseY + 3, "4. Social ID: ");
+    drawText(baseX, baseY + 6, "4. Social ID: " + blank);
+    drawText(baseX, baseY + 6, "4. Social ID: ");
     cin >> new_ID;
     User tmp = st.user_info;
     tmp.social_id = new_ID;
@@ -74,7 +74,7 @@ void viewListofCourse(Staff& st) {
 
 void changePassword(Staff& st) {
     string new_password;
-    drawText(baseX, baseY + 4, "5. Change Password: ");
+    drawText(baseX, baseY + 8, "5. Change Password: ");
     cin >> new_password;
     st.password = new_password;
 }
