@@ -2,11 +2,9 @@
 #include <iostream>
 #include "other.h"
 #include<sstream>
-using namespace std;
-
-
 #include "Student.h"
 #include"Initialize.h"
+using namespace std;
 
 void changeID(Student& st) {
     string new_ID;
