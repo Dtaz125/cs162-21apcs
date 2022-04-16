@@ -4,16 +4,6 @@
 #include"other.h"
 #include"Link.h"
 
-
-void changeClass(Link& link) {
-    string new_link;
-    drawText(baseX, 8, "2. Class: " + blank);
-    drawText(baseX, 8, "2. Class: ");
-    cin.ignore();
-    getline(cin, new_link);
-    link.classname = new_link;
-}
-
 void findCourse(Link& link) {
     system("cls");
     int id, baseY=3;
@@ -26,9 +16,9 @@ void findCourse(Link& link) {
         drawText(baseX, baseY + 11, "5. Exit: ");
         drawText(posCenter("Press a number to change/view information: "), baseY + 13, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) changeYear(link);
-        else if (id == 2) { changeSemester(link); }
-        else if (id == 3) { changeCourseID(link); }
+        if (id == 1) changeYear(link, baseX, baseY+3, "1. School Year: ");
+        else if (id == 2) { changeSemester(link, baseX, baseY + 5, "2. Semester: "); }
+        else if (id == 3) { changeCourseID(link, baseX, baseY + 7, "3. Course ID: "); }
         else if (id == 4){
 
         }
@@ -48,8 +38,8 @@ void findClass(Link& link) {
         drawText(baseX, baseY + 9, "4. Exit: ");
         drawText(posCenter("Press a number to change/view information: "), baseY + 11, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) changeYear(link);
-        else if (id == 2) { changeClass(link); }
+        if (id == 1) changeYear(link, baseX, baseY + 3, "1. School Year: ");
+        else if (id == 2) { changeClass(link, baseX, baseY + 5, "2. Class: "); }
         else if (id == 3) {
 
         }
@@ -57,6 +47,7 @@ void findClass(Link& link) {
     } while (id != 4);
     system("cls");
 }
+
 void viewScoreBoard(const Staff& st) {
     system("cls");
     int id;

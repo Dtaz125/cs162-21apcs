@@ -2,7 +2,7 @@
 #include <iostream>
 #include"Student.h"
 #include"Staff.h"
-#include"closeCourseRegistration.h"
+#include"CourseRegistration.h"
 #include"Initialize.h"
 #include"other.h"
 using namespace std;
@@ -23,7 +23,7 @@ void drawCloseCourse(const Staff& st) {
         drawText(baseX, baseY + 8, "3. Exit: ");
         drawText(posCenter("Press a number to change/view information: "), baseY + 10, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) { changeName(new_c); }
+        if (id == 1) { changeName(new_c, baseX, baseY+4, "1. Name: "); }
         /*else if (id == 2) { changeStartDate(new_c); }
         else if (id == 3) { changeEndDate(new_c); }*/
         else {

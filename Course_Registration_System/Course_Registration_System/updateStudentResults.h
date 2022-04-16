@@ -3,44 +3,6 @@
 #include"Initialize.h"
 #include"other.h"
 #include"Link.h"
-
-
-void changeYear(Link& link) {
-    string new_link;
-    drawText(baseX, 6, "1. School Year: " + blank);
-    drawText(baseX, 6, "1. School Year: ");
-    cin.ignore();
-    getline(cin, new_link);
-    link.year = new_link;
-}
-
-void changeSemester(Link& link) {
-    int new_link;
-    drawText(baseX, 8, "2. Semester: " + blank);
-    drawText(baseX, 8, "2. Semester: ");
-    cin.ignore();
-    cin >> new_link;
-    link.semester = new_link;
-}
-
-void changeCourseID(Link& link) {
-    string new_link;
-    drawText(baseX, 8, "3. Course ID: " + blank);
-    drawText(baseX, 8, "3. Course ID: ");
-    cin.ignore();
-    getline(cin, new_link);
-    link.courseID = new_link;
-}
-
-void changeLinkCSV(Link& link) {
-    string new_link;
-    drawText(baseX, 10, "4. Link CSV: " + blank);
-    drawText(baseX, 10, "4. Link CSV: ");
-    cin.ignore();
-    getline(cin, new_link);
-    link.link = new_link;
-}
-
 void updateStudentResults(const Staff& st) {
     system("cls");
     int id, baseY=3;
@@ -54,9 +16,9 @@ void updateStudentResults(const Staff& st) {
         drawText(baseX, baseY + 11, "5. Exit");
         drawText(posCenter("Press a number to change/view information: "), baseY + 13, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) changeYear(link);
-        else if (id == 2) { changeCourseID(link); }
-        else if (id == 3) { changeLinkCSV(link); }
+        if (id == 1) changeYear(link, baseX, baseY+3, "1. Enter School Year: ");
+        else if (id == 2) { changeCourseID(link, baseX, baseY + 5, "2. Course ID: "); }
+        else if (id == 3) { changeLinkCSV(link, baseX, baseY + 7, "3. Link CSV: "); }
         else if (id == 4) { 
             //do something here
         }
