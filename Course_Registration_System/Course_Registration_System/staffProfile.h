@@ -82,16 +82,16 @@ void changePassword(Staff& st) {
 void drawStaffProfile(Staff& st)
 {
     system("cls");
-    int id;
+    int id, baseY=3;
     do {
-        drawText(posCenter("STAFF PROFILE"), 1, "STAFF PROFILE");
-        drawText(baseX, baseY + 0, "1. Full name: "); cout << st.user_info.firstname << " " << st.user_info.lastname;
-        drawText(baseX, baseY + 1, "2. Birthday: "); cout << st.user_info.birth.day << "/" << st.user_info.birth.month << "/" << st.user_info.birth.year;
-        drawText(baseX, baseY + 2, "3. Gender(Male/Female): "); cout << getGender(st);
-        drawText(baseX, baseY + 3, "4. Social ID: "); cout << st.user_info.social_id;
-        drawText(baseX, baseY + 4, "5. Change Password: ");
-        drawText(baseX, baseY + 5, "6. Exit");
-        drawText(posCenter("Press a number to change/view information: "), baseY+6, "Press a number to change/view information: ");
+        drawText(posCenter("STAFF PROFILE"), baseY+1, "STAFF PROFILE");
+        drawText(baseX, baseY + 4, "1. Full name: "); cout << st.user_info.firstname << " " << st.user_info.lastname;
+        drawText(baseX, baseY + 6, "2. Birthday: "); cout << st.user_info.birth.day << "/" << st.user_info.birth.month << "/" << st.user_info.birth.year;
+        drawText(baseX, baseY + 8, "3. Gender(Male/Female): "); cout << getGender(st);
+        drawText(baseX, baseY + 10, "4. Social ID: "); cout << st.user_info.social_id;
+        drawText(baseX, baseY + 12, "5. Change Password: ");
+        drawText(baseX, baseY + 14, "6. Exit");
+        drawText(posCenter("Press a number to change/view information: "), baseY+16, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeName(st); }
         else if (id == 2) { changeBirthday(st); }
