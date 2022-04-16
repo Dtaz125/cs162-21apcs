@@ -43,16 +43,16 @@ void changeLinkCSV(Link& link) {
 
 void updateStudentResults(const Staff& st) {
     system("cls");
-    int id;
+    int id, baseY=3;
     Link link;
     do {
-        drawText(posCenter("UPDATE RESULTS"), 1, "UPDATE RESULTS");
-        drawText(baseX, 3, "1. Enter School Year: ");  cout << link.year;
-        drawText(baseX, 4, "2. Course ID: "); cout << link.courseID;
-        drawText(baseX, 5, "3. Link CSV: "); cout << link.link;
-        drawText(baseX, 6, "4. Continue");
-        drawText(baseX, 7, "5. Exit");
-        drawText(posCenter("Press a number to change/view information: "), 8, "Press a number to change/view information: ");
+        drawText(posCenter("UPDATE RESULTS"), baseY+1, "UPDATE RESULTS");
+        drawText(baseX, baseY + 3, "1. Enter School Year: ");  cout << link.year;
+        drawText(baseX, baseY + 5, "2. Course ID: "); cout << link.courseID;
+        drawText(baseX, baseY + 7, "3. Link CSV: "); cout << link.link;
+        drawText(baseX, baseY + 9, "4. Continue");
+        drawText(baseX, baseY + 11, "5. Exit");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 13, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) changeYear(link);
         else if (id == 2) { changeCourseID(link); }
