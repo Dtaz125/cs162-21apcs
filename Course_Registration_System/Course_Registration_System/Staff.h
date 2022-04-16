@@ -4,6 +4,7 @@
 #include"SchoolYear.h"
 
 struct Staff {
+	string id;
 	string username;
 	string password;
 	User user_info;

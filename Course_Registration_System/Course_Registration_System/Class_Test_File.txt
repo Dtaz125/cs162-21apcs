@@ -1,0 +1,27 @@
+
+21CTT1
+2
+Phat
+Tran
+07920303623
+21125054
+12
+21CTT1
+2
+CS162
+Introduction to CS II
+MTH252
+Calculus II
+5 3 2003 0 10
+Phuc
+Tran
+07920303633
+21125055
+123
+21CTT2
+2
+CS161
+Introduction to CS I
+MTH251
+Calculus I
+6 7 2002 0 10
