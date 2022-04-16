@@ -73,8 +73,8 @@ void login(auto& st) {
         }
         first = false;
         drawText(posCenter("LOGIN TO THE SYSTEM"), 10, "LOGIN TO THE SYSTEM");
-        drawText(baseX+3, baseY + 6, "Username: ");
-        drawText(baseX+3, baseY + 7, "Password: ");
+        drawText(baseX+5, baseY + 10, "Username: ");
+        drawText(baseX+5, baseY + 10, "Password: ");
 
         drawText(baseX + 9, baseY + 1, " "); cin >> username;
         drawText(baseX + 9, baseY + 2, " "); cin >> password;

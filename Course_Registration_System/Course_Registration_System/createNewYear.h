@@ -6,8 +6,8 @@
 #include"createNewCourse.h"
 void changeYearName(SchoolYear& ny) {
     string new_name;
-    drawText(baseX, baseY + 0, "1. Name: " + blank);
-    drawText(baseX, baseY + 0, "1. Name: ");
+    drawText(baseX, baseY + 0, "1. Year: " + blank);
+    drawText(baseX, baseY + 0, "1. Year: ");
     cin.ignore();
     getline(cin, new_name);
     ny.name = new_name;
