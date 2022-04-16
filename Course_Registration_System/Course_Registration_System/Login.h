@@ -22,7 +22,7 @@ bool matched(string username, string password, Student& st) {
         if (username == us && password == pass) {
             getProfile(st, id);
             ok = true;
-            drawText(baseX + 15, baseY, "Accepted!");
+            drawText(baseX + 17, baseY+1, "Accepted!");
             _getch();
             break;
         }
