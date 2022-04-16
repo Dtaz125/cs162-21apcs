@@ -20,6 +20,8 @@
 void drawMainGUI(Student& st, bool isStudent) {
     int baseX = 30, id, baseY=3;
     while (1) {
+        drawText(baseX * 2 + 10, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
+        drawText(baseX * 2 + 10, baseY + 22, "University of Natural Science");
         drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 1, "COURSE REGISTRATION SYSTEM");
         drawText(baseX, baseY + 3, "1. Your Profile"); //done
         drawText(baseX, baseY + 5, "2. Your Class");
@@ -46,6 +48,8 @@ void drawMainGUI(Student& st, bool isStudent) {
 void drawMainGUI(Staff& st, bool isStudent) {
     int baseX = 30, id, baseY=3;
     while (1) {
+        drawText(baseX * 2 + 10, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
+        drawText(baseX * 2 + 10, baseY + 22, "University of Natural Science");
         drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY , "COURSE REGISTRATION SYSTEM");
         drawText(baseX, baseY + 3, "1. Your Profile");
         drawText(baseX, baseY + 5, "2. Open Course Registration");
@@ -57,7 +61,7 @@ void drawMainGUI(Staff& st, bool isStudent) {
         drawText(baseX, baseY + 17, "8. Exit");
 
         drawText(posCenter("Your Choice: "), baseY+19, "Your Choice: ");
-
+        
         cin >> id;
         system("cls");
 

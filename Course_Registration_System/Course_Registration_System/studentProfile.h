@@ -95,7 +95,7 @@ void drawStudentProfile(Student& st) {
         drawText(baseX, baseY + 13, "6. GPA: "); cout << st.gpa;
         drawText(baseX, baseY + 15, "7. Change Password: ");
         drawText(baseX, baseY + 17, "8. Exit");
-        drawText(posCenter("Press a number to change/view information: "), 19, "Press a number to change/view information: ");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 19, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) {
             changeID(st);
