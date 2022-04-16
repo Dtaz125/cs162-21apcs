@@ -7,8 +7,8 @@
 
 void changeYear(Link& link) {
     string new_link;
-    drawText(baseX, 3, "1. School Year: " + blank);
-    drawText(baseX, 3, "1. School Year: ");
+    drawText(baseX, 6, "1. School Year: " + blank);
+    drawText(baseX, 6, "1. School Year: ");
     cin.ignore();
     getline(cin, new_link);
     link.year = new_link;
@@ -25,8 +25,8 @@ void changeSemester(Link& link) {
 
 void changeCourseID(Link& link) {
     string new_link;
-    drawText(baseX, 5, "3. Course ID: " + blank);
-    drawText(baseX, 5, "3. Course ID: ");
+    drawText(baseX, 8, "3. Course ID: " + blank);
+    drawText(baseX, 8, "3. Course ID: ");
     cin.ignore();
     getline(cin, new_link);
     link.courseID = new_link;
@@ -34,8 +34,8 @@ void changeCourseID(Link& link) {
 
 void changeLinkCSV(Link& link) {
     string new_link;
-    drawText(baseX, 6, "4. Link CSV: " + blank);
-    drawText(baseX, 6, "4. Link CSV: ");
+    drawText(baseX, 10, "4. Link CSV: " + blank);
+    drawText(baseX, 10, "4. Link CSV: ");
     cin.ignore();
     getline(cin, new_link);
     link.link = new_link;
