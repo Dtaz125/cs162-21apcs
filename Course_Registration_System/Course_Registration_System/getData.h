@@ -17,6 +17,7 @@ void getProfile(Student& st, string id){
         getline(user, gender, '\n');
         getline(user, socialID, '\n');
         if (id == cur_id) {
+            changeID(st, cur_id);
             changeName(st, fullName);
             changeBirthday(st, birth);
             changeGender(st, gender);
@@ -42,6 +43,7 @@ void getProfile(Staff& st, string id){
         getline(user, gender, '\n');
         getline(user, socialID, '\n');
         if (id == cur_id) {
+            changeID(st, cur_id);
             changeName(st, fullName);
             changeBirthday(st, birth);
             changeGender(st, gender);

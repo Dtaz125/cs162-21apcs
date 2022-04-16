@@ -68,6 +68,14 @@ bool validDate(string birth, Date& dt) {
     return true;
 }
 
+void changeID(Student &st, string new_ID){
+    st.studentid = new_ID;
+}
+
+void changeID(Staff &st, string new_ID){
+    st.id = new_ID;
+}
+
 void changeName(auto& st, string new_name) {
     User tmp = st.user_info;
     int pos = -1;
