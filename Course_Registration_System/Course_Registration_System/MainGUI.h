@@ -44,19 +44,19 @@ void drawMainGUI(Student& st, bool isStudent) {
 }
 
 void drawMainGUI(Staff& st, bool isStudent) {
-    int baseX = 30, id;
+    int baseX = 30, id, baseY=3;
     while (1) {
-        drawText(posCenter("COURSE REGISTRATION SYSTEM"), 1, "COURSE REGISTRATION SYSTEM");
-        drawText(baseX, 3, "1. Your Profile");
-        drawText(baseX, 4, "2. Open Course Registration");
-        drawText(baseX, 5, "3. Close Course Registration");
-        drawText(baseX, 6, "4. Create New School Year");
-        drawText(baseX, 7, "5. Update Student Results");
-        drawText(baseX, 8, "6. View Score Board");
-        drawText(baseX, 9, "7. Publish Course");
-        drawText(baseX, 10, "8. Exit");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY , "COURSE REGISTRATION SYSTEM");
+        drawText(baseX, baseY + 3, "1. Your Profile");
+        drawText(baseX, baseY + 5, "2. Open Course Registration");
+        drawText(baseX, baseY + 7, "3. Close Course Registration");
+        drawText(baseX, baseY + 9, "4. Create New School Year");
+        drawText(baseX, baseY + 11, "5. Update Student Results");
+        drawText(baseX, baseY + 13, "6. View Score Board");
+        drawText(baseX, baseY + 15, "7. Publish Course");
+        drawText(baseX, baseY + 17, "8. Exit");
 
-        drawText(posCenter("Your Choice: "), 11, "Your Choice: ");
+        drawText(posCenter("Your Choice: "), baseY+19, "Your Choice: ");
 
         cin >> id;
         system("cls");
