@@ -55,19 +55,20 @@ void changeCredits(Course& c) {
     cin >> new_number;
     c.credits = new_number;
 }
-void createNewCourse(const Staff& st) {
+void createNewCourse(const SchoolYear& st) {
     int id;
     Course new_c;
     do {
         drawText(posCenter("NEW COURSE"), 1, "NEW COURSE");
-        drawText(baseX, baseY + 0, "1. Name: "); cout << new_c.name;
-        drawText(baseX, baseY + 1, "2. ID: "); cout << new_c.id;
-        drawText(baseX, baseY + 2, "3. Teacher name: "); cout << new_c.teacher_name;
-        drawText(baseX, baseY + 3, "4. Teaching time: "); cout << new_c.teaching_time;
+        drawText(baseX, baseY + 0, "1. Course Name: "); cout << new_c.name;
+        drawText(baseX, baseY + 1, "2. Course ID: "); cout << new_c.id;
+        drawText(baseX, baseY + 2, "3. Teacher: "); cout << new_c.teacher_name;
+        drawText(baseX, baseY + 3, "4. Teaching Time: "); cout << new_c.teaching_time; 
         drawText(baseX, baseY + 4, "5. Maximum Students: "); cout << new_c.max_student;
         drawText(baseX, baseY + 5, "6. Credits: "); cout << new_c.credits;
-        drawText(baseX, baseY + 6, "7. Continue to create: ");
-        drawText(baseX, baseY + 7, "8. Exit: ");
+        drawText(baseX, baseY + 6, "7. Create");
+        drawText(baseX, baseY + 7, "8. Exit");
+        //display course have created here
         drawText(posCenter("Press a number to change/view information: "), baseY + 8, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeName(new_c); }

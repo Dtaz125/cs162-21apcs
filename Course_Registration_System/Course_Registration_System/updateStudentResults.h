@@ -47,22 +47,20 @@ void updateStudentResults(const Staff& st) {
     Link link;
     do {
         drawText(posCenter("UPDATE RESULTS"), 1, "UPDATE RESULTS");
-        drawText(baseX, 3, "1. School Year: ");  cout << link.year;
-        drawText(baseX, 4, "2. Semester: "); cout << link.semester;
-        drawText(baseX, 5, "3. Course ID: "); cout << link.courseID;
-        drawText(baseX, 6, "4. Link CSV: "); cout << link.link;
-        drawText(baseX, 7, "5. Continue");
-        drawText(baseX, 8, "6. Exit");
-        drawText(posCenter("Press a number to change/view information: "), 9, "Press a number to change/view information: ");
+        drawText(baseX, 3, "1. Enter School Year: ");  cout << link.year;
+        drawText(baseX, 4, "2. Course ID: "); cout << link.courseID;
+        drawText(baseX, 5, "3. Link CSV: "); cout << link.link;
+        drawText(baseX, 6, "4. Continue");
+        drawText(baseX, 7, "5. Exit");
+        drawText(posCenter("Press a number to change/view information: "), 8, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) changeYear(link);
-        else if (id == 2) { changeSemester(link); }
-        else if (id == 3) { changeCourseID(link); }
-        else if (id == 4) { changeLinkCSV(link); }
-        else if (id == 5) { 
+        else if (id == 2) { changeCourseID(link); }
+        else if (id == 3) { changeLinkCSV(link); }
+        else if (id == 4) { 
             //do something here
         }
         system("cls");
-    } while (id != 6);
+    } while (id != 5);
     system("cls");
 }

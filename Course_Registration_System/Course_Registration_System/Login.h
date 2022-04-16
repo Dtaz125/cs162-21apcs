@@ -72,9 +72,9 @@ void login(auto& st) {
             drawText(posCenter("Invalid username or password!"), baseY + 5, "Invalid username or password!");
         }
         first = false;
-        drawText(posCenter("LOGIN TO THE SYSTEM"), 1, "LOGIN TO THE SYSTEM");
-        drawText(baseX, baseY + 1, "Username: ");
-        drawText(baseX, baseY + 2, "Password: ");
+        drawText(posCenter("LOGIN TO THE SYSTEM"), 10, "LOGIN TO THE SYSTEM");
+        drawText(baseX+3, baseY + 6, "Username: ");
+        drawText(baseX+3, baseY + 7, "Password: ");
 
         drawText(baseX + 9, baseY + 1, " "); cin >> username;
         drawText(baseX + 9, baseY + 2, " "); cin >> password;

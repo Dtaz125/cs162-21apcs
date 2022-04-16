@@ -3,7 +3,7 @@
 #include"SchoolYear.h"
 #include"Staff.h"
 #include"other.h"
-
+#include"createNewCourse.h"
 void changeYearName(SchoolYear& ny) {
     string new_name;
     drawText(baseX, baseY + 0, "1. Name: " + blank);
@@ -43,19 +43,16 @@ void createSemester(SchoolYear& ny) {
     Semester new_sem;
     do {
         drawText(posCenter("ADDING SEMESTER"), 1, "ADDING SEMESTER");
-        drawText(baseX, baseY + 0, "1. Order: "); cout << new_sem.order;
+        drawText(baseX, baseY + 0, "1. Order : "); cout << new_sem.order;
         drawText(baseX, baseY + 1, "2. Start Date: "); cout << new_sem.start_date.day << "/" << new_sem.start_date.month << "/" << new_sem.start_date.year;
         drawText(baseX, baseY + 2, "3. End Date: "); cout << new_sem.end_date.day << "/" << new_sem.end_date.month << "/" << new_sem.end_date.year;
-        drawText(baseX, baseY + 3, "4. Create and Continue:");
-        drawText(baseX, baseY + 4, "5. Create and Exit:");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 5, "Press a number to change/view information: ");
+        drawText(baseX, baseY + 3, "4. Next");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 4, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeOrder(new_sem); }
         else if (id == 2) { changeStartDate(new_sem); }
         else if (id == 3) { changeEndDate(new_sem); }
-        else {
-            //do something here
-        }
+        else if (id == 4) { createNewCourse(ny); }
         system("cls");
     } while (id != 5);
     system("cls");
@@ -68,11 +65,11 @@ void createNewYear(const Staff& st) {
     SchoolYear new_year;
     do {
         drawText(posCenter("NEW SCHOOL YEAR"), 1, "NEW SCHOOL YEAR");
-        drawText(baseX, baseY + 0, "1. Name: "); cout << new_year.name;
-        drawText(baseX, baseY + 1, "2. Continue to create semester: ");
-        drawText(baseX, baseY + 2, "3. Create this school year: ");
-        drawText(baseX, baseY + 3, "4. Exit");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 4, "Press a number to change/view information: ");
+        drawText(baseX, baseY + 0, "1. Enter Year Name: "); cout << new_year.name;
+        drawText(baseX, baseY + 1, "2. Next ");
+        //drawText(baseX, baseY + 2, "3. Create this school year: ");
+        drawText(baseX, baseY + 2, "3. Exit");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 3, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeYearName(new_year); }
         else if (id == 2) { createSemester(new_year); }

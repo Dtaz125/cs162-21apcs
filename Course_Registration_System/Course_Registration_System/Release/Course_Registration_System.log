@@ -1,6 +1,4 @@
-﻿  Class.cpp
-  Course.cpp
-  Driver.cpp
+﻿  Driver.cpp
 C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\other.h(20,23): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\other.h(31,17): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\other.h(45,17): warning C4018: '<': signed/unsigned mismatch
@@ -15,16 +13,9 @@ C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs
           [
               _T0=Student
           ]
-  SchoolYear.cpp
-  Semester.cpp
-  Staff.cpp
-C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\Staff.cpp(31,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\Staff.cpp(74,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\Staff.cpp(83,21): warning C4018: '<': signed/unsigned mismatch
-  Student.cpp
   Generating code
-  1 of 341 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+  2 of 341 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    56 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Course_Registration_System.vcxproj -> C:\Users\Phat K.Tran\OneDrive - VNU-HCMUS\APCS\Year I\2nd\CS162\Final Project\cs162-21apcs\Course_Registration_System\Course_Registration_System\Release\Course_Registration_System.exe

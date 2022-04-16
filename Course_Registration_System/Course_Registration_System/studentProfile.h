@@ -71,20 +71,7 @@ void changeSocialID(Student& st) {
     tmp.social_id = new_ID;
     st.user_info = tmp;
 }
-void viewClass(Student st) {
-    //system("cls");
-    //Class* new_class = st.student_class;
-    //drawText(baseX, 7, "Classname: " + new_class->name); cout << endl;
-    //drawText(baseX, 8, "Student list: "); cout << endl;
-    //int i = 9, index = 1;
-    //for (Iterator<Student> iter = new_class->student_list.begin(); iter != new_class->student_list.end(); iter++) {
-    //    Student k = *iter;
-    //    drawText(baseX + 1, i++, to_string(index) + ". " + k.user_info.firstname + " " + k.user_info.lastname); cout << endl;
-    //    index++;
-    //}
-    ////getch();
-    //system("cls");
-}
+
 void viewGPA(Student st) {
 
 }
@@ -95,18 +82,6 @@ void changePassword(Student& st) {
     cin >> new_password;
     st.password = new_password;
 }
-
-void viewListofCourse(Student st) {
-    /*system("cls");
-    int i = 7, index = 1;
-    for (Iterator<Course> iter = st.list_of_courses.begin(); iter != st.list_of_courses.end(); iter++) {
-        Course k = *iter;
-        drawText(baseX, i++, to_string(index) + ". " + k.name + " | Teacher: " + k.teacher_name); cout << endl;
-        index++;
-    }*/
-
-}
-
 
 
 void drawStudentProfile(Student& st) {
@@ -121,10 +96,8 @@ void drawStudentProfile(Student& st) {
         drawText(baseX, 7, "5. Social ID: "); cout << st.user_info.social_id;
         drawText(baseX, 8, "6. GPA: "); cout << st.gpa;
         drawText(baseX, 9, "7. Change Password: ");
-        drawText(baseX, 10, "8. Class: ");
-        drawText(baseX, 11, "9. List of course : ");
-        drawText(baseX, 12, "10. Exit");
-        drawText(posCenter("Press a number to change/view information: "), 13, "Press a number to change/view information: ");
+        drawText(baseX, 10, "8. Exit");
+        drawText(posCenter("Press a number to change/view information: "), 11, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) {
             changeID(st);
@@ -135,9 +108,7 @@ void drawStudentProfile(Student& st) {
         else if (id == 5) { changeSocialID(st); }
         else if (id == 6) { viewGPA(st); }
         else if (id == 7) { changePassword(st); }
-        else if (id == 8) { viewClass(st); }
-        else if (id == 9) { viewListofCourse(st); }
         system("cls");
-    } while (id != 10);
+    } while (id != 8);
     system("cls");
 }

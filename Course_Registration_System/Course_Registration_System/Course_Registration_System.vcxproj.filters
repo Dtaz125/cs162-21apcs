@@ -102,6 +102,12 @@
     <ClInclude Include="publishCourse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="viewClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="viewCourse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Student.cpp">

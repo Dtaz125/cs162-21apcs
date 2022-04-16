@@ -169,6 +169,8 @@
     <ClInclude Include="studentScoreboard.h" />
     <ClInclude Include="updateStudentResults.h" />
     <ClInclude Include="User.h" />
+    <ClInclude Include="viewClass.h" />
+    <ClInclude Include="viewCourse.h" />
     <ClInclude Include="viewScoreBoard.h" />
   </ItemGroup>
   <ItemGroup>
