@@ -39,16 +39,16 @@ void drawOpenCourse(const Student& st) {
 }
 
 void drawOpenCourse(const Staff& st) {
-    int id;
+    int id,baseY=3;
     CourseRegistration new_c;
     do {
-        drawText(posCenter("CREATE COURSE REGISTRATION"), 1, "CREATE COURSE REGISTRATION");
-        drawText(baseX, baseY + 0, "1. Name: "); cout << new_c.name;
-        drawText(baseX, baseY + 1, "2. Start Date: "); cout << new_c.start_date.day << "/" << new_c.start_date.month << "/" << new_c.start_date.year;
-        drawText(baseX, baseY + 2, "3. End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;
-        drawText(baseX, baseY + 3, "4. Continue to create: ");
-        drawText(baseX, baseY + 4, "5. Exit: ");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 5, "Press a number to change/view information: ");
+        drawText(posCenter("CREATE COURSE REGISTRATION"), baseY+1, "CREATE COURSE REGISTRATION");
+        drawText(baseX, baseY + 4, "1. Name: "); cout << new_c.name;
+        drawText(baseX, baseY + 6, "2. Start Date: "); cout << new_c.start_date.day << "/" << new_c.start_date.month << "/" << new_c.start_date.year;
+        drawText(baseX, baseY + 8, "3. End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;
+        drawText(baseX, baseY + 10, "4. Continue to create: ");
+        drawText(baseX, baseY + 12, "5. Exit: ");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 14, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeName(new_c); }
         else if (id == 2) { changeStartDate(new_c); }
