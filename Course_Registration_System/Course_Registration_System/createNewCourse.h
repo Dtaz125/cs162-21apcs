@@ -3,6 +3,8 @@
 #include"Staff.h"
 #include"Initialize.h"
 #include"other.h"
+#include<algorithm>
+#include<string>
 
 void changeName(Course& c) {
     string new_name;
@@ -83,4 +85,47 @@ void createNewCourse(const SchoolYear& st) {
         }
         system("cls");
     } while (id != 8);
+}
+
+string toUpperCase(string& str) {                          //utility to change to uppercase
+    transform(str.begin(), str.end(), str.begin(), ::toupper);
+
+    return str;
+}
+
+string converting_time(string input) {
+    string sub = input.substr(1, 1);                            //S1 -> 1
+    int date = stoi(sub);                                       //convert string "1" to int
+    string sub2;
+
+    switch (date) {
+    case 1: {
+        sub2 = "7h30";
+        break;
+    }
+    case 2: {
+        sub2 = "9h30";
+        break;
+    }
+    case 3: {
+        sub2 = "13h30";
+        break;
+    }
+    case 4: {
+        sub2 = "15h30";
+        break;
+    }
+    }
+
+    return sub2;
+}
+
+string convert_teachingtime(string input) {                     //TueS1 - ThuS2
+    string sub1 = input.substr(0, 3);                           //Tue
+    string sub2 = input.substr(3, 2);                           //S1
+    string sub3 = input.substr(8, 3);                           //Thu
+    string sub4 = input.substr(11, 2);                          //S2
+    string sub5 = toUpperCase(sub1) + " - " + converting_time(sub2) + " / " + toUpperCase(sub3) + " - " + converting_time(sub4);
+
+    return sub5;                                                //TUE - 7:30 / THU - 9:30
 }
