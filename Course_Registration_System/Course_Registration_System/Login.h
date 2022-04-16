@@ -48,7 +48,7 @@ bool matched(string username, string password, Staff& st) {
         if (username == us && password == pass) {
             getProfile(st, id);
             ok = true;
-            drawText(baseX + 15, baseY+5, "Accepted!");
+            drawText(baseX + 17, baseY+5, "Accepted!");
             _getch();
             break;
         }
