@@ -19,9 +19,6 @@ struct Student {
 	Linked_List<pair<string, string>> list_of_courses; //CourseID - Full name
 	Student& operator = (Student& stu) { return stu; }
 };
-
-
-
 bool operator == (const Student& student_1, const Student& student_2);
 
 bool operator != (const Student& student_1, const Student& student_2);

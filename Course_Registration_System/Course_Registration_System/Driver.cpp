@@ -5,6 +5,7 @@
 using namespace std;
 int main()
 {
+    system("Color 9F");
     InitializeConsole();
 
     bool isStudent = false;
