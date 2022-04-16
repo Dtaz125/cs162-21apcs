@@ -81,8 +81,8 @@ void login(auto& st) {
         drawText(baseX+24, baseY + 3, "| Password:                       |");
         drawText(baseX + 24, baseY + 4, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-        drawText(baseX + 34, baseY + 2, " "); cin >> username;
-        drawText(baseX + 34, baseY + 3, " "); cin >> password;
+        drawText(baseX + 35, baseY + 2, " "); cin >> username;
+        drawText(baseX + 35, baseY + 3, " "); cin >> password;
     }
     system("cls");
 }
