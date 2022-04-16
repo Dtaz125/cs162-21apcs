@@ -18,8 +18,8 @@ void changeName(CourseRegistration& new_c) {
 
 void changeStartDate(CourseRegistration& new_c) {
     string new_date;
-    drawText(baseX, baseY + 1, "2. Start Date: " + blank);
-    drawText(baseX, baseY + 1, "2. Start Date: ");
+    drawText(baseX, baseY + 2, "2. Start Date: " + blank);
+    drawText(baseX, baseY + 2, "2. Start Date: ");
     cin.ignore();
     getline(cin, new_date);
     validDate(new_date, new_c.start_date);
@@ -27,8 +27,8 @@ void changeStartDate(CourseRegistration& new_c) {
 
 void changeEndDate(CourseRegistration& new_c) {
     string new_date;
-    drawText(baseX, baseY + 2, "3. End Date: " + blank);
-    drawText(baseX, baseY + 2, "3. End Date: ");
+    drawText(baseX, baseY + 4, "3. End Date: " + blank);
+    drawText(baseX, baseY + 4, "3. End Date: ");
     cin.ignore();
     getline(cin, new_date);
     validDate(new_date, new_c.end_date);
