@@ -16,8 +16,8 @@ void changeYear(Link& link) {
 
 void changeSemester(Link& link) {
     int new_link;
-    drawText(baseX, 4, "2. Semester: " + blank);
-    drawText(baseX, 4, "2. Semester: ");
+    drawText(baseX, 8, "2. Semester: " + blank);
+    drawText(baseX, 8, "2. Semester: ");
     cin.ignore();
     cin >> new_link;
     link.semester = new_link;
