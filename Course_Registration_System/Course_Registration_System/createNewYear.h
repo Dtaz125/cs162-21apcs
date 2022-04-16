@@ -14,15 +14,15 @@ void changeYearName(SchoolYear& ny) {
 }
 
 void changeOrder(Semester& new_c) {
-    drawText(baseX, baseY + 0, "1. Order: " + blank);
-    drawText(baseX, baseY + 0, "1. Order: ");
+    drawText(baseX, baseY + 7, "1. Order: " + blank);
+    drawText(baseX, baseY + 7, "1. Order: ");
     cin >> new_c.order;
 }
 
 void changeStartDate(Semester& new_c) {
     string new_date;
-    drawText(baseX, baseY + 1, "2. Start Date: " + blank);
-    drawText(baseX, baseY + 1, "2. Start Date: ");
+    drawText(baseX, baseY + 2, "2. Start Date: " + blank);
+    drawText(baseX, baseY + 2, "2. Start Date: ");
     cin.ignore();
     getline(cin, new_date);
     validDate(new_date, new_c.start_date);
@@ -30,8 +30,8 @@ void changeStartDate(Semester& new_c) {
 
 void changeEndDate(Semester& new_c) {
     string new_date;
-    drawText(baseX, baseY + 2, "3. End Date: " + blank);
-    drawText(baseX, baseY + 2, "3. End Date: ");
+    drawText(baseX, baseY + 4, "3. End Date: " + blank);
+    drawText(baseX, baseY + 4, "3. End Date: ");
     cin.ignore();
     getline(cin, new_date);
     validDate(new_date, new_c.end_date);
