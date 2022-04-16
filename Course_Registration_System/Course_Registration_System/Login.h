@@ -48,7 +48,7 @@ bool matched(string username, string password, Staff& st) {
         if (username == us && password == pass) {
             getProfile(st, id);
             ok = true;
-            drawText(baseX + 15, baseY+3, "Accepted!");
+            drawText(baseX + 15, baseY+5, "Accepted!");
             _getch();
             break;
         }
@@ -70,15 +70,19 @@ void login(auto& st) {
     while (first || !matched(username, password, st)) {
         system("cls");
         if (!first) {
-            drawText(posCenter("Invalid username or password!"), baseY + 3, "Invalid username or password!");
+            drawText(posCenter("Invalid username or password!"), baseY + 5, "Invalid username or password!");
         }
         first = false;
-        drawText(posCenter("LOGIN TO THE SYSTEM"), 10, "LOGIN TO THE SYSTEM");
-        drawText(baseX+3, baseY + 6, "Username: ");
-        drawText(baseX+3, baseY + 7, "Password: ");
+        drawText(posCenter("LOGIN TO THE SYSTEM"), 9, "-----------------------");
+        drawText(posCenter("LOGIN TO THE SYSTEM"), 10, "| LOGIN TO THE SYSTEM |");
+        drawText(posCenter("LOGIN TO THE SYSTEM"), 11, "-----------------------");
+        drawText(baseX + 24, baseY + 1, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        drawText(baseX+24, baseY + 2, "| Username:                       |");
+        drawText(baseX+24, baseY + 3, "| Password:                       |");
+        drawText(baseX + 24, baseY + 4, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-        drawText(baseX + 34, baseY + 1, " "); cin >> username;
-        drawText(baseX + 34, baseY + 2, " "); cin >> password;
+        drawText(baseX + 34, baseY + 2, " "); cin >> username;
+        drawText(baseX + 34, baseY + 3, " "); cin >> password;
     }
     system("cls");
 }
