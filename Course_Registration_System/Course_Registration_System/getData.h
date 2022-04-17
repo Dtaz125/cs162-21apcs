@@ -28,6 +28,17 @@ void getProfile(Student& st, string id){
     user.close();
 }
 
+void outputStudent(Student& st, string id){
+    string userFile = "system/students/students.txt";
+    ofstream user(userFile, ios::app);
+    user.close();
+}
+void outputStaff(Staff& st, string id){
+    string userFile = "system/students/students.txt";
+    ofstream user(userFile, ios::app);
+    user.close();
+}
+
 void getProfile(Staff& st, string id){
     string userFile = "system/staffs/staffs.txt";
     ifstream user(userFile);
