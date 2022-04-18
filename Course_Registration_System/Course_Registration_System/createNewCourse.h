@@ -38,15 +38,36 @@ string converting_time(string input) {
     return sub2;
 }
 
+static inline void ltrim(std::string& s) {                                          //left trim
+    s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](unsigned char ch) {
+        return !std::isspace(ch);
+        }));
+}
+
+static inline void rtrim(std::string& s) {                                          //right trim
+    s.erase(std::find_if(s.rbegin(), s.rend(), [](unsigned char ch) {
+        return !std::isspace(ch);
+        }).base(), s.end());
+}
+
+static inline std::string trim_copy(std::string s) {                                //use this function to trim strings
+    ltrim(s);
+    rtrim(s);
+
+    return s;
+}
+
 string convert_teachingtime(string input) {                     //TueS1 - ThuS2
-    string sub1 = input.substr(0, 3);                           //Tue
-    string sub2 = input.substr(3, 2);                           //S1
-    string sub3 = input.substr(8, 3);                           //Thu
-    string sub4 = input.substr(11, 2);                          //S2
+    string trimmed = trim_copy(input);                            //trimming string
+    string sub1 = trimmed.substr(0, 3);                           //Tue
+    string sub2 = trimmed.substr(3, 2);                           //S1
+    string sub3 = trimmed.substr(8, 3);                           //Thu
+    string sub4 = trimmed.substr(11, 2);                          //S2
     string sub5 = toUpperCase(sub1) + " - " + converting_time(sub2) + " / " + toUpperCase(sub3) + " - " + converting_time(sub4);
 
     return sub5;                                                //TUE - 7:30 / THU - 9:30
 }
+
 void changeName(Course& c) {
     string new_name;
     drawText(baseX, baseY - 1, "1. Name: " + blank);
