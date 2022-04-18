@@ -8,7 +8,9 @@ void findCourse(Link& link) {
     system("cls");
     int id, baseY=3;
     do {
-        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY+1, "VIEW COURSE SCOREBOARD");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY, "--------------------------");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY + 1, "| VIEW COURSE SCOREBOARD |");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY + 2, "--------------------------");
         drawText(baseX, baseY + 3, "1. School Year: "); cout << link.year;
         drawText(baseX, baseY + 5, "2. Semester: "); cout << link.semester;
         drawText(baseX, baseY + 7, "3. Course ID: "); cout << link.courseID;
@@ -31,7 +33,9 @@ void findClass(Link& link) {
     system("cls");
     int id;
     do {
-        drawText(posCenter("VIEW CLASS SCOREBOARD"), baseY + 1, "VIEW CLASS SCOREBOARD");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY, "-------------------------");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY + 1, "| VIEW CLASS SCOREBOARD |");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY + 2, "-------------------------");
         drawText(baseX, baseY + 3, "1. School Year: "); cout << link.year;
         drawText(baseX, baseY + 5, "2. Class: "); cout << link.classname;
         drawText(baseX, baseY + 7, "3. Continue: ");
@@ -53,7 +57,9 @@ void viewScoreBoard(const Staff& st) {
     int id;
     Link link;
     do {
-        drawText(posCenter("VIEW SCOREBOARD"), baseY + 1, "VIEW SCOREBOARD");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY, "-------------------");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY + 1, "| VIEW SCOREBOARD |");
+        drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY + 2, "-------------------");
         drawText(baseX, baseY + 3, "1. Course: ");
         drawText(baseX, baseY + 5, "2. Class: ");
         drawText(baseX, baseY + 7, "3. Exit");
