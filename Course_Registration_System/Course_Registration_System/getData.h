@@ -31,11 +31,13 @@ void getProfile(Student& st, string id){
 void outputStudent(Student& st, string id){
     string userFile = "system/students/students.txt";
     ofstream user(userFile, ios::app);
+    user << st;
     user.close();
 }
 void outputStaff(Staff& st, string id){
     string userFile = "system/students/students.txt";
     ofstream user(userFile, ios::app);
+    
     user.close();
 }
 
