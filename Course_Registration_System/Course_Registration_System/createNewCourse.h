@@ -103,7 +103,9 @@ void createNewCourse(const SchoolYear& st) {
     Course new_c;
     do {
         system("cls");
-        drawText(posCenter("NEW COURSE"), baseY+1, "NEW COURSE");
+        drawText(posCenter("NEW COURSE"), baseY, "--------------");
+        drawText(posCenter("NEW COURSE"), baseY + 1, "| NEW COURSE |");
+        drawText(posCenter("NEW COURSE"), baseY + 2, "--------------");
         drawText(baseX, baseY + 3, "1. Course Name: "); cout << new_c.name;
         drawText(baseX, baseY + 5, "2. Course ID: "); cout << new_c.id;
         drawText(baseX, baseY + 7, "3. Teacher: "); cout << new_c.teacher_name;
