@@ -6,7 +6,9 @@ void publishCourse(Staff& st) {
     int baseY = 3, id;
     Link link;
     while (1) {
-        drawText(posCenter("PUBLISHING COURSE"), baseY + 1, "PUBLISHING COURSE");
+        drawText(posCenter("PUBLISHING COURSE"), baseY , "---------------------");
+        drawText(posCenter("PUBLISHING COURSE"), baseY + 1, "| PUBLISHING COURSE |");
+        drawText(posCenter("PUBLISHING COURSE"), baseY + 2, "---------------------");
         drawText(baseX, baseY + 4, "1. School Year: ");
         drawText(baseX, baseY + 6, "2. Semester: ");
         drawText(baseX, baseY + 8, "3. Course ID: ");
