@@ -86,7 +86,9 @@ void drawStudentProfile(Student& st) {
     system("cls");
     int id, baseY=3;
     do {
-        drawText(posCenter("STUDENT PROFILE"), baseY+1, "STUDENT PROFILE");
+        drawText(posCenter("STUDENT PROFILE"), baseY , "-------------------");
+        drawText(posCenter("STUDENT PROFILE"), baseY + 1, "| STUDENT PROFILE |");
+        drawText(posCenter("STUDENT PROFILE"), baseY + 2, "-------------------");
         drawText(baseX, baseY + 3, "1. ID: ");  cout << st.studentid;
         drawText(baseX, baseY + 5, "2. Full name: "); cout << st.user_info.firstname << " " << st.user_info.lastname;
         drawText(baseX, baseY + 7, "3. Birthday: "); cout << st.user_info.birth.day << "/" << st.user_info.birth.month << "/" << st.user_info.birth.year;
