@@ -8,7 +8,9 @@ void updateStudentResults(const Staff& st) {
     int id, baseY=3;
     Link link;
     do {
-        drawText(posCenter("UPDATE RESULTS"), baseY+1, "UPDATE RESULTS");
+        drawText(posCenter("UPDATE RESULTS"), baseY, "------------------");
+        drawText(posCenter("UPDATE RESULTS"), baseY + 1, "| UPDATE RESULTS |");
+        drawText(posCenter("UPDATE RESULTS"), baseY + 2, "------------------");
         drawText(baseX, baseY + 3, "1. Enter School Year: ");  cout << link.year;
         drawText(baseX, baseY + 5, "2. Course ID: "); cout << link.courseID;
         drawText(baseX, baseY + 7, "3. Link CSV: "); cout << link.link;
