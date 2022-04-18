@@ -22,7 +22,9 @@ void drawMainGUI(Student& st, bool isStudent) {
     while (1) {
         drawText(baseX * 2 + 10, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
         drawText(baseX * 2 + 10, baseY + 22, "University of Natural Science");
-        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 1, "COURSE REGISTRATION SYSTEM");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY , "------------------------------");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 1, "| COURSE REGISTRATION SYSTEM |");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 2, "------------------------------");
         drawText(baseX, baseY + 3, "1. Your Profile"); //done
         drawText(baseX, baseY + 5, "2. Your Class");
         drawText(baseX, baseY + 7, "3. Your Courses");
@@ -50,7 +52,9 @@ void drawMainGUI(Staff& st, bool isStudent) {
     while (1) {
         drawText(baseX * 2 + 10, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
         drawText(baseX * 2 + 10, baseY + 22, "University of Natural Science");
-        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY , "COURSE REGISTRATION SYSTEM");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY - 1, "------------------------------");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY ,    "| COURSE REGISTRATION SYSTEM |");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 1, "------------------------------");
         drawText(baseX, baseY + 3, "1. Your Profile");
         drawText(baseX, baseY + 5, "2. Open Course Registration");
         drawText(baseX, baseY + 7, "3. Close Course Registration");
