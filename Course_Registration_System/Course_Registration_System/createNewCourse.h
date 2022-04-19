@@ -99,8 +99,8 @@ void changeTeacherName(Course& c) {
 
 void changeTeachingTime(Course& c) {
     string new_teacher;
-    drawText(baseX, baseY + 4, "4. Teaching Time: " + blank);
-    drawText(baseX, baseY + 4, "4. Teaching Time: ");
+    drawText(baseX, baseY + 5, "4. Teaching Time: " + blank);
+    drawText(baseX, baseY + 5, "4. Teaching Time: ");
     cin.ignore();
     getline(cin, new_teacher);
     c.teaching_time = convert_teachingtime(new_teacher);
