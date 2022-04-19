@@ -4,8 +4,8 @@
 #include"other.h"
 #include"Initialize.h"
 void changeOrder(Semester& new_c) {
-    drawText(baseX, baseY + 7, "1. Order: " + blank);
-    drawText(baseX, baseY + 7, "1. Order: ");
+    drawText(baseX, baseY + 0, "1. Order: " + blank);
+    drawText(baseX, baseY + 0, "1. Order: ");
     cin >> new_c.order;
 }
 
