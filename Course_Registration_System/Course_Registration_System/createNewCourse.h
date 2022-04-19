@@ -4,6 +4,8 @@
 #include"Initialize.h"
 #include"other.h"
 #include<algorithm>
+#include<cctype>
+#include<locale>
 #include<string>
 string toUpperCase(string& str) {                          //utility to change to uppercase
     transform(str.begin(), str.end(), str.begin(), ::toupper);
