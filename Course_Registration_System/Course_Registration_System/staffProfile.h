@@ -47,8 +47,8 @@ void changeBirthday(Staff& st) {
 }
 void changeGender(Staff& st) {
     string new_gen;
-    drawText(baseX, baseY + 5, "3. Gender(Male/Female): " + blank);
-    drawText(baseX, baseY + 5, "3. Gender(Male/Female): ");
+    drawText(baseX, baseY + 4, "3. Gender(Male/Female): " + blank);
+    drawText(baseX, baseY + 4, "3. Gender(Male/Female): ");
     cin >> new_gen;
     User tmp = st.user_info;
     if (new_gen == "Male") tmp.gender = 0;
