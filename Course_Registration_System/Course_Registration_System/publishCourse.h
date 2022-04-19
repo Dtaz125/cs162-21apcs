@@ -5,19 +5,20 @@
 void publishCourse(Staff& st) {
     int baseY = 3, id;
     Link link;
-    while (1) {
-        drawText(posCenter("PUBLISHING COURSE"), baseY , "---------------------");
-        drawText(posCenter("PUBLISHING COURSE"), baseY + 1, "| PUBLISHING COURSE |");
+    do {
+        system("cls");
+        drawText(posCenter("PUBLISHING COURSE"), baseY, "---------------------"); 
+        drawText(posCenter("PUBLISHING COURSE"), baseY + 1, "| PUBLISHING COURSE |"); 
         drawText(posCenter("PUBLISHING COURSE"), baseY + 2, "---------------------");
-        drawText(baseX, baseY + 4, "1. School Year: ");
-        drawText(baseX, baseY + 6, "2. Semester: ");
-        drawText(baseX, baseY + 8, "3. Course ID: ");
+        drawText(baseX, baseY + 4, "1. School Year: "); cout << link.year;
+        drawText(baseX, baseY + 6, "2. Semester: "); cout << link.semester;
+        drawText(baseX, baseY + 8, "3. Course ID: "); cout << link.courseID;
         drawText(baseX, baseY + 10, "4. Publish: ");
         drawText(baseX, baseY + 12, "5. Exit: ");
         drawText(posCenter("Press a number: : "), baseY + 14, "Press a number: : ");
 
         cin >> id;
-        system("cls");
+        
 
         if (id == 1) changeYear(link, baseX, baseY + 4, "1. School Year: "); //done
         else if (id == 2) changeSemester(link, baseX, baseY + 6, "2. Semester: "); //done
@@ -26,7 +27,8 @@ void publishCourse(Staff& st) {
             //do something here
         }
         else {
+            system("cls");
             return;
         }
-    }
+    } while (id != 5);
 }
