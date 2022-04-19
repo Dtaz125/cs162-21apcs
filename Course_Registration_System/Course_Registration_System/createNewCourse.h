@@ -65,8 +65,8 @@ string convert_teachingtime(string input) {                     //TueS1 - ThuS2
     string trimmed = trim_copy(input);                            //trimming string
     string sub1 = trimmed.substr(0, 3);                           //Tue
     string sub2 = trimmed.substr(3, 2);                           //S1
-    string sub3 = trimmed.substr(8, 3);                           //Thu
-    string sub4 = trimmed.substr(11, 2);                          //S2
+    string sub3 = trimmed.substr(6, 3);                           //Thu
+    string sub4 = trimmed.substr(9, 2);                           //S2
     string sub5 = toUpperCase(sub1) + " - " + converting_time(sub2) + " / " + toUpperCase(sub3) + " - " + converting_time(sub4);
 
     return sub5;                                                //TUE - 7:30 / THU - 9:30
