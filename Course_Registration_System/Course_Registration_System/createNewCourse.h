@@ -7,6 +7,8 @@
 #include<cctype>
 #include<locale>
 #include<string>
+#include<iostream>
+using namespace std;
 string toUpperCase(string& str) {                          //utility to change to uppercase
     transform(str.begin(), str.end(), str.begin(), ::toupper);
 
