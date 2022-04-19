@@ -3,7 +3,7 @@
 #include<fstream>
 #include "Student.h"
 #include "Staff.h"
-#include "getData.h"
+#include "studentData.h"
 using namespace std;
 
 bool matched(string username, string password, Student& st) {
