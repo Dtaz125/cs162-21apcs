@@ -102,10 +102,10 @@ void writeCSV(Course& _course, const string& _outputfile) {
 }
 
 bool operator == (const Staff& first, const Staff& second) {
-	return first.user_info.social_id == second.user_info.social_id;
+	return first.username == second.user_info.social_id;
 }
 
 bool operator != (const Staff& first, const Staff& second) {
-	return first.user_info.social_id != second.user_info.social_id;
+	return first.username != second.username;
 }
 
