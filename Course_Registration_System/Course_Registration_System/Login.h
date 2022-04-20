@@ -4,6 +4,7 @@
 #include "Student.h"
 #include "Staff.h"
 #include "studentData.h"
+#include "staffData.h"
 using namespace std;
 
 bool matched(string username, string password, Student& st) {
@@ -48,6 +49,7 @@ bool matched(string username, string password, Staff& st) {
         if (username == us && password == pass) {
             getProfile(st, id);
             ok = true;
+            drawText(baseX + 17, baseY+5, blank);
             drawText(baseX + 17, baseY+5, "Accepted!");
             _getch();
             break;

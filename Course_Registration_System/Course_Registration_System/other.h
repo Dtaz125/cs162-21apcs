@@ -115,3 +115,11 @@ void changeSocialID(auto& st, string new_ID) {
     tmp.social_id = new_ID;
     st.user_info = tmp;
 }
+
+void changeUsername(auto &st, string username){
+    st.username = username;
+}
+
+void changePassword(auto &st, string password){
+    st.password = password;
+}

@@ -1,6 +1,7 @@
 #pragma once
 #include"Node.h"
 #include"Iterator.h"
+#define travel(it, var) for(auto it = var.begin(); it != var.end(); it++)
 template<class T>
 class Iterator;
 template<class T>
