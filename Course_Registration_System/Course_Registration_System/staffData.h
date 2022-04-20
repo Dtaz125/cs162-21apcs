@@ -45,8 +45,10 @@ void inputStaffData(Class &HCMUS){
         changeSocialID(st, socialID);
         changeUsername(st, us);
         changePassword(st, pass);
+        cout << st.id << " " << st.username << " " << st.password << endl;
         HCMUS.staff_list.add(st);
-        cout << cur_id << endl;
+        cout << cur_id << " " << HCMUS.staff_list.size() << endl;
+
     }
     user.close();
     acc.close();
