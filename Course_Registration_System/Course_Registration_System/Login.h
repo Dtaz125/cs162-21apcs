@@ -7,7 +7,7 @@
 #include "staffData.h"
 using namespace std;
 
-bool matched(string username, string password, Student& st) {
+bool matched(Class& HCMUS, string username, string password, Student& st) {
     string accFile = "system/students/accounts.txt";
     ifstream acc(accFile);
     /// open File
@@ -32,35 +32,31 @@ bool matched(string username, string password, Student& st) {
     return ok;
 }
 
-bool matched(string username, string password, Staff& st) {
-    string accFile = "system/staffs/accounts.txt";
-    ifstream acc(accFile);
-    /// open File
+bool matched(Class& HCMUS, string username, string password, Staff& st) {
     string id, us, pass;
     bool ok = false;
     ///
     int baseY = 11;
-    while (!acc.eof()){
+    travel(it, HCMUS.staff_list){
         /// search for accounts
-        getline(acc, id, '\n');
-        getline(acc, us, '\n');
-        getline(acc, pass, '\n');
+        id = (*it).id;
+        us = (*it).username;
+        pass = (*it).password;
         /// get information
         if (username == us && password == pass) {
-            getProfile(st, id);
+            st = (*it);
             ok = true;
-            drawText(baseX + 17, baseY+5, blank);
+            drawText(baseX + 5, baseY+5, blank);
             drawText(baseX + 17, baseY+5, "Accepted!");
             _getch();
             break;
         }
     }
-    acc.close();
     return ok;
 }
 
 /// Student/staff login(){}
-void login(auto& st) {
+void login(Class& HCMUS, auto& st) {
     bool first = true;
     int baseX = 10, baseY = 11;
     string username;
@@ -69,7 +65,7 @@ void login(auto& st) {
     system("cls");
     cin.ignore();
 
-    while (first || !matched(username, password, st)) {
+    while (first || !matched(HCMUS, username, password, st)) {
         system("cls");
         if (!first) {
             drawText(posCenter("Invalid username or password!"), baseY + 5, "Invalid username or password!");

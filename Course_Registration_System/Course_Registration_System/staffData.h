@@ -27,9 +27,8 @@ void inputStaffData(Class &HCMUS){
     string cur_id, us, pass;
     string gender, fullName, birth, socialID;
     ///
-    Staff st;
     while (getline(user, cur_id)){
-
+        Staff st;
         /// search for accounts
         getline(user, fullName);
         getline(user, birth);
@@ -45,9 +44,9 @@ void inputStaffData(Class &HCMUS){
         changeSocialID(st, socialID);
         changeUsername(st, us);
         changePassword(st, pass);
-        cout << st.id << " " << st.username << " " << st.password << endl;
+        //cout << st.id << " " << st.username << " " << st.password << endl;
         HCMUS.staff_list.add(st);
-        cout << cur_id << " " << HCMUS.staff_list.size() << endl;
+        //cout << cur_id << " " << HCMUS.staff_list.size() << endl;
 
     }
     user.close();

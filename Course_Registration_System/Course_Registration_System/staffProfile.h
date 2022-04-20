@@ -2,6 +2,7 @@
 #include <iostream>
 #include"Initialize.h"
 #include"other.h"
+#include "getData.h"
 using namespace std;
 
 #include "Staff.h"
@@ -79,7 +80,7 @@ void changePassword(Staff& st) {
     st.password = new_password;
 }
 
-void drawStaffProfile(Staff& st)
+void drawStaffProfile(Class& HCMUS, Staff& st)
 {
     system("cls");
     int id, baseY=3;
@@ -92,7 +93,7 @@ void drawStaffProfile(Staff& st)
         drawText(baseX, baseY + 8, "3. Gender(Male/Female): "); cout << getGender(st);
         drawText(baseX, baseY + 10, "4. Social ID: "); cout << st.user_info.social_id;
         drawText(baseX, baseY + 12, "5. Change Password: ");
-        drawText(baseX, baseY + 14, "6. Exit");
+        drawText(baseX, baseY + 14, "6. Save and exit");
         drawText(posCenter("Press a number to change/view information: "), baseY+16, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeName(st); }
@@ -100,6 +101,10 @@ void drawStaffProfile(Staff& st)
         else if (id == 3) { changeGender(st); }
         else if (id == 4) { changeSocialID(st); }
         else if (id == 5) { changePassword(st); }
+        else if (id == 6) {
+            updateClass(HCMUS, st);
+            outputStaffData(HCMUS);
+        }
         system("cls");
     } while (id != 6);
     system("cls");

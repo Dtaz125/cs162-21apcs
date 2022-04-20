@@ -6,11 +6,13 @@
 #include "testDatafile.h"
 #define travel(it, var) for(auto it = var.begin(); it != var.end(); it++)
 using namespace std;
+
 int main()
 {
     Class HCMUS = {"HCMUS"};
-    testDataFunction(HCMUS);
-    return 0;
+    inputAllData(HCMUS);
+//    testDataFunction(HCMUS);
+//    return 0;
     system("Color 9F");
     InitializeConsole();
     bool isStudent = false;
@@ -19,12 +21,12 @@ int main()
     Student stu;
     Staff sta;
     if (isStudent) {
-        login(stu);
+        login(HCMUS, stu);
         drawMainGUI(stu, 1);
     }
     else {
-        login(sta);
-        drawMainGUI(sta, 0);
+        login(HCMUS, sta);
+        drawMainGUI(HCMUS, sta, 0);
     }
     return 0;
 }

@@ -47,10 +47,10 @@ void drawMainGUI(Student& st, bool isStudent) {
     }
 }
 
-void drawMainGUI(Staff& st, bool isStudent) {
+void drawMainGUI(Class& HCMUS, Staff& st, bool isStudent) {
     int baseX = 30, id, baseY=3;
     while (1) {
-        drawText(baseX * 2 + 10, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
+        drawText(baseX * 2 + 8, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
         drawText(baseX * 2 + 10, baseY + 22, "University of Natural Science");
         drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY - 1, "------------------------------");
         drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY ,    "| COURSE REGISTRATION SYSTEM |");
@@ -65,12 +65,12 @@ void drawMainGUI(Staff& st, bool isStudent) {
         drawText(baseX, baseY + 17, "8. Exit");
 
         drawText(posCenter("Your Choice: "), baseY+19, "Your Choice: ");
-        
+
         cin >> id;
         system("cls");
 
         if (id == 1) {
-            drawStaffProfile(st); //done
+            drawStaffProfile(HCMUS, st); //done
         }
         else if (id == 2) drawOpenCourse(st); //done
         else if (id == 3) drawCloseCourse(st); //done
