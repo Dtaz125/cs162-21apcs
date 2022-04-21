@@ -8,27 +8,24 @@
 using namespace std;
 
 bool matched(Class& HCMUS, string username, string password, Student& st) {
-    string accFile = "system/students/accounts.txt";
-    ifstream acc(accFile);
-    /// open File
     string id, us, pass;
     bool ok = false;
     ///
-    while (!acc.eof()){
+    travel(it, HCMUS.student_list){
         /// search for accounts
-        getline(acc, id, '\n');
-        getline(acc, us, '\n');
-        getline(acc, pass, '\n');
+        id = (*it).id;
+        us = (*it).username;
+        pass = (*it).password;
         /// get information
         if (username == us && password == pass) {
-            getProfile(st, id);
+            st = (*it);
             ok = true;
+            drawText(baseX + 5, baseY+9, blank);
             drawText(baseX + 17, baseY+9, "Accepted!");
             _getch();
             break;
         }
     }
-    acc.close();
     return ok;
 }
 

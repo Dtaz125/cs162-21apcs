@@ -12,12 +12,12 @@ struct Student {
 	string username;
 	string password;
 	User user_info = { "","",1,"", {0,0,0} };
-	string studentid = "";
+	string id = "";
 	string no = "";
 	float gpa = 0;
 	string student_class = ""; //name of the class
 	Linked_List<pair<string, string>> list_of_courses; //CourseID - Full name
-	Student& operator = (Student& stu) { return stu; }
+	//Student& operator = (Student& stu) { return stu; }
 };
 bool operator == (const Student& student_1, const Student& student_2);
 

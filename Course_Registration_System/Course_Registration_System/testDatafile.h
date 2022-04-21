@@ -9,5 +9,11 @@ void testDataFunction(Class& HCMUS){
     travel(it, HCMUS.staff_list){
         cout << (*it).id << " " << (*it).username << " " << (*it).password << endl;
     }
-    outputStaffData(HCMUS);
+    cout << HCMUS.student_list.size() << endl;
+    travel(it, HCMUS.student_list){
+        cout << (*it).id << " " << (*it).username << " " << (*it).password << endl;
+    }
+
+    //outputStaffData(HCMUS);
+    outputStudentData(HCMUS);
 }

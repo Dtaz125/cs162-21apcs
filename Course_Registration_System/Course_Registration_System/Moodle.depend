@@ -18,7 +18,7 @@
 	"Node.h"
 	"Iterator.h"
 
-1650350052 d:\apcs\cs162\project\19_04_22\moodle\student.h
+1650536378 d:\apcs\cs162\project\19_04_22\moodle\student.h
 	"User.h"
 	"Linked_List.h"
 	<utility>
@@ -43,7 +43,7 @@
 
 1650385229 source:d:\apcs\cs162\project\19_04_22\moodle\main.cpp
 
-1650475916 source:d:\apcs\cs162\project\19_04_22\moodle\driver.cpp
+1650538051 source:d:\apcs\cs162\project\19_04_22\moodle\driver.cpp
 	"MainGUI.h"
 	"Initialize.h"
 	"login.h"
@@ -51,7 +51,7 @@
 	"getData.h"
 	"testDatafile.h"
 
-1650477184 d:\apcs\cs162\project\19_04_22\moodle\maingui.h
+1650537143 d:\apcs\cs162\project\19_04_22\moodle\maingui.h
 	<typeinfo>
 	"Initialize.h"
 	"studentProfile.h"
@@ -75,7 +75,7 @@
 	<conio.h>
 	"other.h"
 
-1650454622 d:\apcs\cs162\project\19_04_22\moodle\other.h
+1650534247 d:\apcs\cs162\project\19_04_22\moodle\other.h
 	<iostream>
 	<string>
 	"Date.h"
@@ -99,12 +99,13 @@
 	<fstream>
 	<utility>
 
-1650350052 d:\apcs\cs162\project\19_04_22\moodle\studentprofile.h
+1650537466 d:\apcs\cs162\project\19_04_22\moodle\studentprofile.h
 	<iostream>
 	"other.h"
 	<sstream>
 	"Student.h"
 	"Initialize.h"
+	"getData.h"
 
 1650476696 d:\apcs\cs162\project\19_04_22\moodle\staffprofile.h
 	<iostream>
@@ -113,7 +114,7 @@
 	"getData.h"
 	"Staff.h"
 
-1650350052 d:\apcs\cs162\project\19_04_22\moodle\opencourseregistration.h
+1650538474 d:\apcs\cs162\project\19_04_22\moodle\opencourseregistration.h
 	<iostream>
 	"Student.h"
 	"Staff.h"
@@ -188,7 +189,7 @@
 1650350052 d:\apcs\cs162\project\19_04_22\moodle\viewcourse.h
 	"Student.h"
 
-1650477019 d:\apcs\cs162\project\19_04_22\moodle\login.h
+1650536825 d:\apcs\cs162\project\19_04_22\moodle\login.h
 	<iostream>
 	<fstream>
 	"Student.h"
@@ -196,8 +197,9 @@
 	"studentData.h"
 	"staffData.h"
 
-1650450073 d:\apcs\cs162\project\19_04_22\moodle\studentdata.h
+1650536339 d:\apcs\cs162\project\19_04_22\moodle\studentdata.h
 	<iostream>
+	"Class.h"
 
 1650350052 source:d:\apcs\cs162\project\19_04_22\moodle\schoolyear.cpp
 	"SchoolYear.h"
@@ -205,7 +207,7 @@
 1650350052 source:d:\apcs\cs162\project\19_04_22\moodle\semester.cpp
 	"Semester.h"
 
-1650473803 source:d:\apcs\cs162\project\19_04_22\moodle\staff.cpp
+1650534247 source:d:\apcs\cs162\project\19_04_22\moodle\staff.cpp
 	"Staff.h"
 	"Student.h"
 	<fstream>
@@ -213,17 +215,18 @@
 	<sstream>
 	<vector>
 
-1650350052 source:d:\apcs\cs162\project\19_04_22\moodle\student.cpp
+1650534247 source:d:\apcs\cs162\project\19_04_22\moodle\student.cpp
 	"Student.h"
 
 1650474383 d:\apcs\cs162\project\19_04_22\moodle\staffdata.h
 	<iostream>
 
-1650476722 d:\apcs\cs162\project\19_04_22\moodle\getdata.h
+1650537741 d:\apcs\cs162\project\19_04_22\moodle\getdata.h
 	"Class.h"
 	"staffData.h"
+	"studentData.h"
 	<iostream>
 
-1650474403 d:\apcs\cs162\project\19_04_22\moodle\testdatafile.h
+1650535244 d:\apcs\cs162\project\19_04_22\moodle\testdatafile.h
 	<iostream>
 

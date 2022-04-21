@@ -69,7 +69,7 @@ bool validDate(string birth, Date& dt) {
 }
 
 void changeID(Student &st, string new_ID){
-    st.studentid = new_ID;
+    st.id = new_ID;
 }
 
 void changeID(Staff &st, string new_ID){

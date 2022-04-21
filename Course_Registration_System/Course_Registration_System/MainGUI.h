@@ -17,7 +17,7 @@
 #include"publishCourse.h"
 #include"viewClass.h"
 #include"viewCourse.h"
-void drawMainGUI(Student& st, bool isStudent) {
+void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
     int baseX = 30, id, baseY=3;
     while (1) {
         drawText(baseX * 2 + 10, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
@@ -36,7 +36,7 @@ void drawMainGUI(Student& st, bool isStudent) {
         system("cls");
 
         if (id == 1) {
-            drawStudentProfile(st);
+            drawStudentProfile(HCMUS, st);
         }
         else if (id == 2) { viewClass(st); }
         else if (id == 3) { viewCourse(st); }

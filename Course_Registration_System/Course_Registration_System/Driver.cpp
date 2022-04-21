@@ -11,18 +11,16 @@ int main()
 {
     Class HCMUS = {"HCMUS"};
     inputAllData(HCMUS);
-//    testDataFunction(HCMUS);
-//    return 0;
     system("Color 9F");
     InitializeConsole();
     bool isStudent = false;
-    drawText(posCenter("COURSE REGISTRATION SYSTEM(Staff/Student): "), 10, "COURSE REGISTRATION SYSTEM(Staff/Student): ");
+    drawText(posCenter("COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: "), 10, "COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: ");
     cin >> isStudent;
     Student stu;
     Staff sta;
     if (isStudent) {
         login(HCMUS, stu);
-        drawMainGUI(stu, 1);
+        drawMainGUI(HCMUS, stu, 1);
     }
     else {
         login(HCMUS, sta);

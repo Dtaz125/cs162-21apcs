@@ -31,7 +31,7 @@ void readCSV(Class& classname, string _inputfile) {
 	for (int i = 0; i < content.size(); i++) {
 		Student new_stu;
 		new_stu.no = content[i][0];
-		new_stu.studentid = content[i][1];
+		new_stu.id = content[i][1];
 		User new_user;
 		new_user.firstname = content[i][2];
 		new_user.lastname = content[i][3];

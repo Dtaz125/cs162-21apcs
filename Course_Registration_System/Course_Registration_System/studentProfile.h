@@ -4,6 +4,7 @@
 #include<sstream>
 #include "Student.h"
 #include"Initialize.h"
+#include"getData.h"
 using namespace std;
 
 void changeID(Student& st) {
@@ -11,7 +12,7 @@ void changeID(Student& st) {
     drawText(baseX, 6, "1. ID: " + blank);
     drawText(baseX, 6, "1. ID: ");
     cin >> new_ID;
-    st.studentid = new_ID;
+    st.id = new_ID;
 }
 
 void changeName(Student& st) {
@@ -82,21 +83,21 @@ void changePassword(Student& st) {
 }
 
 
-void drawStudentProfile(Student& st) {
+void drawStudentProfile(Class& HCMUS, Student& st) {
     system("cls");
     int id, baseY=3;
     do {
         drawText(posCenter("STUDENT PROFILE"), baseY , "-------------------");
         drawText(posCenter("STUDENT PROFILE"), baseY + 1, "| STUDENT PROFILE |");
         drawText(posCenter("STUDENT PROFILE"), baseY + 2, "-------------------");
-        drawText(baseX, baseY + 3, "1. ID: ");  cout << st.studentid;
+        drawText(baseX, baseY + 3, "1. ID: ");  cout << st.id;
         drawText(baseX, baseY + 5, "2. Full name: "); cout << st.user_info.firstname << " " << st.user_info.lastname;
         drawText(baseX, baseY + 7, "3. Birthday: "); cout << st.user_info.birth.day << "/" << st.user_info.birth.month << "/" << st.user_info.birth.year;
         drawText(baseX, baseY + 9, "4. Gender(Male/Female): "); cout << getGender(st);
         drawText(baseX, baseY + 11, "5. Social ID: "); cout << st.user_info.social_id;
         drawText(baseX, baseY + 13, "6. GPA: "); cout << st.gpa;
         drawText(baseX, baseY + 15, "7. Change Password: ");
-        drawText(baseX, baseY + 17, "8. Exit");
+        drawText(baseX, baseY + 17, "8. Save and exit");
         drawText(posCenter("Press a number to change/view information: "), baseY + 19, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) {
@@ -108,6 +109,10 @@ void drawStudentProfile(Student& st) {
         else if (id == 5) { changeSocialID(st); }
         else if (id == 6) { viewGPA(st); }
         else if (id == 7) { changePassword(st); }
+        else{
+            updateClass(HCMUS, st);
+            outputStudentData(HCMUS);
+        }
         system("cls");
     } while (id != 8);
     system("cls");
