@@ -20,9 +20,9 @@ void createNewYear(const Staff& st) {
     int id, baseY=3;
     SchoolYear new_year;
     do {
-        drawText(posCenter("NEW SCHOOL YEAR"), baseY , "-------------------");
-        drawText(posCenter("NEW SCHOOL YEAR"), baseY + 1, "| NEW SCHOOL YEAR |");
-        drawText(posCenter("NEW SCHOOL YEAR"), baseY + 2, "-------------------");
+        drawText(posCenter("SCHOOL YEAR"), baseY , "-------------------");
+        drawText(posCenter("SCHOOL YEAR"), baseY + 1, "| SCHOOL YEAR |");
+        drawText(posCenter("SCHOOL YEAR"), baseY + 2, "-------------------");
         drawText(baseX, baseY + 4, "1. Year: "); cout << new_year.name;
         drawText(baseX, baseY + 6, "2. Next ");
         //drawText(baseX, baseY + 2, "3. Create this school year: ");

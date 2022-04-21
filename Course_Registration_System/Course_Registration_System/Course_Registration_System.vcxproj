@@ -150,6 +150,7 @@
     <ClInclude Include="createNewYear.h" />
     <ClInclude Include="createSemester.h" />
     <ClInclude Include="Date.h" />
+    <ClInclude Include="deleteCourse.h" />
     <ClInclude Include="Initialize.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Link.h" />

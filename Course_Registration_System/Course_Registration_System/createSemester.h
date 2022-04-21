@@ -4,6 +4,8 @@
 #include"other.h"
 #include"Initialize.h"
 #include"semesterData.h"
+#include"Initialize.h"
+#include"deleteCourse.h"
 void changeOrder(Semester& new_c) {
     drawText(baseX, baseY + 0, "1. Order: " + blank);
     drawText(baseX, baseY + 0, "1. Order: ");
@@ -35,14 +37,14 @@ void createSemester(SchoolYear& ny) {
     Semester new_sem;
     do {
         system("cls");
-        drawText(posCenter("ADDING SEMESTER"), baseY , "-------------------");
-        drawText(posCenter("ADDING SEMESTER"), baseY + 1, "| ADDING SEMESTER |");
-        drawText(posCenter("ADDING SEMESTER"), baseY + 2, "-------------------");
+        drawText(posCenter("SEMESTER"), baseY , "-------------------");
+        drawText(posCenter("SEMESTER"), baseY + 1, "| SEMESTER |");
+        drawText(posCenter("SEMESTER"), baseY + 2, "-------------------");
         drawText(baseX, baseY + 4, "1. Order : "); cout << new_sem.order;
         drawText(baseX, baseY + 6, "2. Start Date: "); cout << new_sem.start_date.day << "/" << new_sem.start_date.month << "/" << new_sem.start_date.year;
         drawText(baseX, baseY + 8, "3. End Date: "); cout << new_sem.end_date.day << "/" << new_sem.end_date.month << "/" << new_sem.end_date.year;
-        drawText(baseX, baseY + 10, "4. Create and next");
-        drawText(baseX, baseY + 12, "5. Exit");
+        drawText(baseX, baseY + 10, "4. Add Course");
+        drawText(baseX, baseY + 12, "5. Remove Course");
         drawText(posCenter("Press a number to change/view information: "), baseY + 14, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeOrder(new_sem); }
@@ -52,7 +54,8 @@ void createSemester(SchoolYear& ny) {
             createSemesterFolder(Folder, new_sem);
             createNewCourse(ny);
         }
+        else if (id == 5) { deleteCourse(ny); }
         system("cls");
-    } while (id != 5);
+    } while (id != 6);
     system("cls");
 }

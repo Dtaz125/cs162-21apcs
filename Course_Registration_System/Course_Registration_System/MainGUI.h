@@ -17,6 +17,7 @@
 #include"publishCourse.h"
 #include"viewClass.h"
 #include"viewCourse.h"
+
 void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
     int baseX = 30, id, baseY=3;
     while (1) {
@@ -58,13 +59,12 @@ void drawMainGUI(Class& HCMUS, Staff& st, bool isStudent) {
         drawText(baseX, baseY + 3, "1. Your Profile");
         drawText(baseX, baseY + 5, "2. Open Course Registration");
         drawText(baseX, baseY + 7, "3. Close Course Registration");
-        drawText(baseX, baseY + 9, "4. Create New School Year");
+        drawText(baseX, baseY + 9, "4. Update School Year");
         drawText(baseX, baseY + 11, "5. Update Student Results");
         drawText(baseX, baseY + 13, "6. View Score Board");
         drawText(baseX, baseY + 15, "7. Publish Course");
         drawText(baseX, baseY + 17, "8. Exit");
-
-        drawText(posCenter("Your Choice: "), baseY+19, "Your Choice: ");
+        drawText(posCenter("Your Choice: "), baseY+21, "Your Choice: ");
 
         cin >> id;
         system("cls");
