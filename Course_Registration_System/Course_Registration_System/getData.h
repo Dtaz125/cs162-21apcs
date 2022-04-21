@@ -2,6 +2,10 @@
 #include "Class.h"
 #include "staffData.h"
 #include "studentData.h"
+#include "courseData.h"
+#include "classData.h"
+#include "schoolyearData.h"
+#include "semesterData.h"
 #include <iostream>
 using namespace std;
 
@@ -28,5 +32,6 @@ void updateClass(Class& HCMUS, Student& st){
 void inputAllData(Class& HCMUS){
     inputStaffData(HCMUS);
     inputStudentData(HCMUS);
+    inputCourseData(HCMUS);
 }
 

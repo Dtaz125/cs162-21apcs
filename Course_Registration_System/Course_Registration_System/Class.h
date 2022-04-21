@@ -6,10 +6,12 @@
 #include<string>
 struct Student;
 struct Staff;
+struct Course;
 struct Class {
 	std::string name;
 	Linked_List<Student> student_list;
 	Linked_List<Staff> staff_list;
+	Linked_List<Course> course_list;
 	Class& operator = (Class& _class) { return _class; }
 };
 bool operator == (const Class& class_1, const Class& class_2);

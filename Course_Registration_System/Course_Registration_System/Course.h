@@ -30,7 +30,7 @@ struct Course {
     Linked_List<Score> student_score;
     bool is_published = false;
 
-    Course& operator = (Course& course) { return course; }
+    //Course& operator = (Course& course) { return course; }
 };
 
 bool operator == (const Course& course_1, const Course& course_2);

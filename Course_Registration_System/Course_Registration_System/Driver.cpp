@@ -4,6 +4,7 @@
 #include "other.h"
 #include "getData.h"
 #include "testDatafile.h"
+
 #define travel(it, var) for(auto it = var.begin(); it != var.end(); it++)
 using namespace std;
 

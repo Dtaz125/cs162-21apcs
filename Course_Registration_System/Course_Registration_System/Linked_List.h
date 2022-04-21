@@ -52,7 +52,7 @@ public:
 		return *this;
 	}
 	bool add(const T& new_data) {
-		if (contains(new_data)) return false;
+		//if (contains(new_data)) return false;
 		if (!head) {
 			head = tail = new Node<T>{ new_data, nullptr };
 		}
