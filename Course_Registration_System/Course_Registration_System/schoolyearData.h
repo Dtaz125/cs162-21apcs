@@ -4,10 +4,16 @@
 using namespace std;
 
 void createSchoolYear(SchoolYear& SY){
-    string Folder = "system/schoolyears" + SY.name;
-    string fileName = Folder + "/names.txt";
+    string Folder = "system/schoolyears/" + SY.name;
+    string fileName = "system/schoolyears/names.txt";
+    fstream g(fileName, ios::in);
+    string name;
+    while (g >> name){
+        if (name == SY.name) return;
+    }
+    g.close();
     mkdir(Folder.c_str());
-    ofstream f(fileName, ios::app);
+    fstream f(fileName, ios::app);
     f << SY.name << endl;
     f.close();
 }
