@@ -17,7 +17,8 @@ void inputCourseData(Class& HCMUS){
     string fileName = "system/courses.txt";
     ifstream f(fileName);
     Course co;
-    while (f >> co){
+    while (!f.eof()){
+        f >> co;
         HCMUS.course_list.add(co);
     }
     f.close();

@@ -30,12 +30,14 @@ void changeEndDate(Semester& new_c) {
     validDate(new_date, new_c.end_date);
 }
 
-void createSemester(SchoolYear& ny) {
+void createSemester(Class& HCMUS, SchoolYear& ny) {
     string Folder = "system/schoolyears/" + ny.name;
     system("cls");
     int id, baseY = 3;
     Semester new_sem;
+    string semesterFolder = Folder + "/semester0";
     do {
+
         system("cls");
         drawText(posCenter("SEMESTER"), baseY , "-------------------");
         drawText(posCenter("SEMESTER"), baseY + 1, "| SEMESTER |");
@@ -45,16 +47,28 @@ void createSemester(SchoolYear& ny) {
         drawText(baseX, baseY + 8, "3. End Date: "); cout << new_sem.end_date.day << "/" << new_sem.end_date.month << "/" << new_sem.end_date.year;
         drawText(baseX, baseY + 10, "4. Add Course");
         drawText(baseX, baseY + 12, "5. Remove Course");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 14, "Press a number to change/view information: ");
+        drawText(baseX, baseY + 14, "6. Exit");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 16, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) { changeOrder(new_sem); }
+        if (id == 1) { changeOrder(new_sem);
+            semesterFolder = Folder + "/semester" + to_string(new_sem.order);
+            createSemesterFolder(Folder, new_sem);
+            inputSemesterData(semesterFolder, new_sem);
+        }
         else if (id == 2) { changeStartDate(new_sem); }
         else if (id == 3) { changeEndDate(new_sem); }
         else if (id == 4) {
             createSemesterFolder(Folder, new_sem);
-            createNewCourse(ny);
+            createNewCourse(HCMUS, new_sem);
+            outputSemesterData(semesterFolder, new_sem);
         }
-        else if (id == 5) { deleteCourse(ny); }
+        else if (id == 5) {
+            deleteCourse(new_sem);
+            outputSemesterData(semesterFolder, new_sem);
+        }
+        else{
+            outputSemesterData(semesterFolder, new_sem);
+        }
         system("cls");
     } while (id != 6);
     system("cls");

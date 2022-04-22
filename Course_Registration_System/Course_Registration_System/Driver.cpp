@@ -12,6 +12,8 @@ int main()
 {
     Class HCMUS = {"HCMUS"};
     inputAllData(HCMUS);
+    outputCourseData(HCMUS);
+    return 0;
     system("Color 9F");
     InitializeConsole();
     bool isStudent = false;

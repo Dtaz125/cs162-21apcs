@@ -38,10 +38,6 @@
 		<Unit filename="Course.cpp" />
 		<Unit filename="Course.h" />
 		<Unit filename="CourseRegistration.h" />
-		<Unit filename="Course_Registration_System.sln" />
-		<Unit filename="Course_Registration_System.vcxproj" />
-		<Unit filename="Course_Registration_System.vcxproj.filters" />
-		<Unit filename="Course_Registration_System.vcxproj.user" />
 		<Unit filename="Date.h" />
 		<Unit filename="Driver.cpp" />
 		<Unit filename="Info_Course.csv" />

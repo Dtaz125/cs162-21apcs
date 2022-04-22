@@ -35,3 +35,8 @@ void inputAllData(Class& HCMUS){
     inputCourseData(HCMUS);
 }
 
+void outputAllData(Class& HCMUS){
+    outputStaffData(HCMUS);
+    outputStudentData(HCMUS);
+    outputCourseData(HCMUS);
+}

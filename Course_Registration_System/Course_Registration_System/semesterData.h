@@ -14,3 +14,20 @@ void createSemesterFolder(string Folder, Semester& se){
     f.close();
     mkdir((Folder + "/semester" + to_string(se.order)).c_str());
 }
+
+void inputSemesterData(string semesterFolder, Semester &se){
+    ofstream tmp(semesterFolder + "/names.txt", ios::app);
+    tmp.close();
+    Semester temp;
+    temp.order = se.order;
+    ifstream f(semesterFolder + "/names.txt");
+    if (!f.eof()) f >> temp;
+    se = temp;
+    f.close();
+}
+
+void outputSemesterData(string semesterFolder, Semester& se){
+    ofstream f(semesterFolder + "/names.txt", ios::out);
+    f << se;
+    f.close();
+}

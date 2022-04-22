@@ -15,7 +15,7 @@ void changeYearName(SchoolYear& ny) {
     ny.name = new_name;
 }
 
-void createNewYear(const Staff& st) {
+void createNewYear(Class& HCMUS, const Staff& st) {
     system("cls");
     int id, baseY=3;
     SchoolYear new_year;
@@ -32,7 +32,7 @@ void createNewYear(const Staff& st) {
         if (id == 1) { changeYearName(new_year); }
         else if (id == 2){
             createSchoolYear(new_year);
-            createSemester(new_year);
+            createSemester(HCMUS, new_year);
             break;
         }
         else if (id == 3) {

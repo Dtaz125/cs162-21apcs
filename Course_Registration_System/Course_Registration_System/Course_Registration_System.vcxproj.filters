@@ -111,9 +111,6 @@
     <ClInclude Include="createSemester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="deleteCourse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Student.cpp">

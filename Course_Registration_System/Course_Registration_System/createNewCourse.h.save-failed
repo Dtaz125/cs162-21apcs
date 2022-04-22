@@ -123,10 +123,9 @@ void changeCredits(Course& c) {
     cin >> new_number;
     c.credits = new_number;
 }
-void createNewCourse(Class& HCMUS, Semester& st) {
+void createNewCourse(Semester& st) {
     int id, baseY=3;
     Course new_c;
-    new_c.student_score.empty_list();
     do {
         system("cls");
         drawText(posCenter("NEW COURSE"), baseY, "--------------");
@@ -138,7 +137,7 @@ void createNewCourse(Class& HCMUS, Semester& st) {
         drawText(baseX, baseY + 9, "4. Teaching Time: "); cout << new_c.teaching_time;
         drawText(baseX, baseY + 11, "5. Maximum Students: "); cout << new_c.max_student;
         drawText(baseX, baseY + 13, "6. Credits: "); cout << new_c.credits;
-        drawText(baseX, baseY + 15, "7. Save and create");
+        drawText(baseX, baseY + 15, "7. Create");
         drawText(baseX, baseY + 17, "8. Exit");
         //display course have created here
         drawText(posCenter("Press a number to change/view information: "), baseY + 19, "Press a number to change/view information: ");
@@ -150,11 +149,9 @@ void createNewCourse(Class& HCMUS, Semester& st) {
         else if (id == 5) { chanegMaxStudent(new_c); }
         else if (id == 6) { changeCredits(new_c); }
         else {
-           st.list_of_courses.add({new_c.id, new_c.name});
-           //HCMUS.course_list.add(new_c);
-           //outputCourseData(HCMUS);
+            //do something here
         }
         system("cls");
-    } while (id != 8 && id != 7);
+    } while (id != 8);
 }
 
