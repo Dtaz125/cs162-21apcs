@@ -4,6 +4,8 @@
 #include"Initialize.h"
 #include"SchoolYear.h"
 #include"Class.h"
+#include"classData.h"
+#include"Staff.h"
 void createClass(SchoolYear& st) {
     system("cls");
     int id, baseY = 3;
@@ -21,7 +23,11 @@ void createClass(SchoolYear& st) {
         if (id == 1) { changeClass(link, baseX, baseY + 4, "1. Name: "); }
         else if (id == 2) { changeLinkCSV(link, baseX, baseY + 6, "2. Link Students CSV: "); }
         else if (id == 3) {
-
+            Class curr;
+            string Folder = "system/schoolyears/" + st.name+"/classes/"+link.classname+".txt";
+            inputClassData(Folder, curr);
+            readCSV(curr, link.link);
+            outputClassData(Folder, curr);
         }
         system("cls");
     } while (id != 4);
