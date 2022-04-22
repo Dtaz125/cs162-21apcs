@@ -9,7 +9,7 @@ class Linked_List {
 private:
 	Node<T>* head;
 	Node<T>* tail;
-	int list_size;
+	int list_size = 0;
 public:
 	Linked_List() {
 		head = tail = nullptr;
@@ -119,7 +119,7 @@ public:
 	}
 
 	void empty_list() {
-		if (list_size != 0) {
+		if (head) {
 			Node<T>* curr;
 			while (head) {
 				curr = head;
@@ -128,6 +128,7 @@ public:
 			}
 			tail = nullptr;
 		}
+		list_size = 0;
 	}
 
 	int size() { return list_size; }

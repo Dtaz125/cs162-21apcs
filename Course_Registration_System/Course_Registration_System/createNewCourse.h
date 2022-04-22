@@ -151,8 +151,8 @@ void createNewCourse(Class& HCMUS, Semester& st) {
         else if (id == 6) { changeCredits(new_c); }
         else {
            st.list_of_courses.add({new_c.id, new_c.name});
-           //HCMUS.course_list.add(new_c);
-           //outputCourseData(HCMUS);
+           HCMUS.course_list[HCMUS.numcourse++] = new_c;
+           outputCourseData(HCMUS);
         }
         system("cls");
     } while (id != 8 && id != 7);

@@ -12,7 +12,7 @@ void createSchoolYear(SchoolYear& SY){
         if (name == SY.name) return;
     }
     g.close();
-    mkdir(Folder.c_str());
+    _mkdir(Folder.c_str());
     fstream f(fileName, ios::app);
     f << SY.name << endl;
     f.close();

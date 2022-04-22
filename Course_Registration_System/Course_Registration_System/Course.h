@@ -18,7 +18,7 @@ struct Score {
     float total_mark = 0;
     float  other_score[20];
     int number_of_other_score = 0;
-    Score& operator = (Score& scr) { return scr; }
+    //Score& operator = (Score& scr) { return scr; }
 };
 struct Course {
     string id = "";

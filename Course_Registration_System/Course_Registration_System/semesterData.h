@@ -12,7 +12,7 @@ void createSemesterFolder(string Folder, Semester& se){
     fstream f(Folder + "/names.txt", ios::app);
     f << se.order << endl;
     f.close();
-    mkdir((Folder + "/semester" + to_string(se.order)).c_str());
+    _mkdir((Folder + "/semester" + to_string(se.order)).c_str());
 }
 
 void inputSemesterData(string semesterFolder, Semester &se){
