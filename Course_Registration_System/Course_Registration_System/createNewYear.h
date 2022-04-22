@@ -7,6 +7,7 @@
 #include"createSemester.h"
 #include"schoolyearData.h"
 #include"createClass.h"
+#include"classData.h"
 void changeYearName(SchoolYear& ny) {
     string new_name;
     drawText(baseX, baseY + 0, "1. Year: " + blank);
@@ -31,10 +32,13 @@ void createNewYear(Class& HCMUS, const Staff& st) {
         //drawText(baseX, baseY + 8, "3. Exit");
         drawText(posCenter("Press a number to change/view information: "), baseY + 10, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) { changeYearName(new_year); }
+        if (id == 1) { 
+            changeYearName(new_year);
+            string Folder = "system/schoolyears/" + new_year.name;
+            createClassesFolder(Folder);
+        }
         else if (id == 2){
             modifyClass(new_year);
-
         }
         else if (id == 3) {
             createSchoolYear(new_year);

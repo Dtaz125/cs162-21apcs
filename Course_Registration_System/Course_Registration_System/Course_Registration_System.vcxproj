@@ -142,6 +142,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Class.h" />
+    <ClInclude Include="classData.h" />
     <ClInclude Include="closeCourseRegistration.h" />
     <ClInclude Include="Course.h" />
     <ClInclude Include="courseActive.h" />
