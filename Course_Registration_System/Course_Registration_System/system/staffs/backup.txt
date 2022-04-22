@@ -5,16 +5,28 @@ Hoang Nhu Vinh
 21125030
 2
 Tran Kim Phat
-1/1/2003
+01/01/2003
 0
 21125054
 3
 Le Nguyen Anh Khoi
-2/2/2003
+02/02/2003
 0
-192108111
+0
 4
- Dat
+Dat
 0/0/0
 0
 0
+1
+nhuvinh2210
+vinh22
+2
+kimphat01
+phatne
+3
+khoikhoi
+yeye
+4
+datvip
+dat123
