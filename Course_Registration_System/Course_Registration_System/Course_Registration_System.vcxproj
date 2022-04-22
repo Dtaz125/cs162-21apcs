@@ -146,6 +146,7 @@
     <ClInclude Include="Course.h" />
     <ClInclude Include="courseActive.h" />
     <ClInclude Include="CourseRegistration.h" />
+    <ClInclude Include="createClass.h" />
     <ClInclude Include="createNewCourse.h" />
     <ClInclude Include="createNewYear.h" />
     <ClInclude Include="createSemester.h" />
