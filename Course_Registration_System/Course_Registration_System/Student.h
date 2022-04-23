@@ -9,15 +9,19 @@ using std::ifstream;
 struct Course;
 struct Class;
 struct Student {
-	string username;
-	string password;
+	string username = "";
+	string password = "";
 	User user_info = { "","",1,"", {0,0,0} };
 	string id = "";
 	string no = "";
 	float gpa = 0;
 	string student_class = ""; //name of the class
-	Linked_List<pair<string, string>> list_of_courses; //CourseID - Full name
+	int numcourse = 0;
+	pair<string, string> *list_of_courses; //CourseID - Full name
 	//Student& operator = (Student& stu) { return stu; }
+	void init(){
+        list_of_courses = new pair <string, string> [numcourse + 5];
+	}
 };
 bool operator == (const Student& student_1, const Student& student_2);
 
