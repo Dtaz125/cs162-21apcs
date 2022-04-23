@@ -28,7 +28,8 @@ void inputCourseData(Class& HCMUS) {
     while (getline(f, id)) {
         Course co;
         co.student_score.empty_list();
-        //// cout << id << " "; co.id = id;
+        //// cout << id << " ";
+        co.id = id;
         getline(f, name); //// cout << name << " ";
         co.name = name;
         getline(f, teacher_name); // cout << teacher_name << " ";

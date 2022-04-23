@@ -4,7 +4,7 @@
 #include "other.h"
 #include "getData.h"
 #include "testDatafile.h"
-
+#include "CourseRegistrationData.h"
 #define travel(it, var) for(auto it = var.begin(); it != var.end(); it++)
 using namespace std;
 
@@ -12,8 +12,6 @@ int main()
 {
     Class HCMUS = {"HCMUS"};
     inputAllData(HCMUS);
-    outputCourseData(HCMUS);
-    return 0;
     system("Color 9F");
     InitializeConsole();
     bool isStudent = false;

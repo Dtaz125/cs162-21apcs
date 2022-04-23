@@ -18,19 +18,22 @@ void drawCloseCourse(const Staff& st) {
         drawText(posCenter("CLOSING COURSE REGISTRATION"), baseY, "-------------------------------");
         drawText(posCenter("CLOSING COURSE REGISTRATION"), baseY + 1, "| CLOSING COURSE REGISTRATION |");
         drawText(posCenter("CLOSING COURSE REGISTRATION"), baseY + 2, "-------------------------------");
-        drawText(baseX, baseY + 4, "1. Name: "); cout << new_c.name;
-        /*drawText(baseX, baseY + 1, "2. Start Date: "); cout << new_c.start_date.day << "/" << new_c.start_date.month << "/" << new_c.start_date.year;
-        drawText(baseX, baseY + 2, "3. End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;*/
-        drawText(baseX, baseY + 6, "2. Continue to close: ");
-        drawText(baseX, baseY + 8, "3. Exit: ");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 10, "Press a number to change/view information: ");
+        drawText(baseX, baseY + 4, "1. School year: "); cout << new_c.syear;
+        drawText(baseX, baseY + 6, "2. Semester: "); cout << new_c.semester;
+        drawText(baseX, baseY + 8, "3. Active: "); cout << new_c.active;
+        drawText(baseX, baseY + 10, "4. Exit: ");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 12, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) { changeName(new_c, baseX, baseY+4, "1. Name: "); }
-        /*else if (id == 2) { changeStartDate(new_c); }
-        else if (id == 3) { changeEndDate(new_c); }*/
+        if (id == 1) { changeSchoolyear(new_c, baseX, baseY+4, "1. School year: "); }
+        else if (id == 2) { changeSemester(new_c, baseX, baseY+6, "2. Semester: "); }
+        else if (id == 3) {
+            new_c.active ^= 1;
+            outputRegisData(new_c);
+        }
         else {
             //do something here
         }
+        inputRegisData(new_c, new_c.syear, new_c.semester);
         system("cls");
-    } while (id != 3);
+    } while (id != 4);
 }

@@ -2,6 +2,7 @@
 #include"Node.h"
 #include"Iterator.h"
 #define travel(it, var) for(auto it = var.begin(); it != var.end(); it++)
+#define travelCourse(it) for(int it = 0; it < HCMUS.numcourse; it++)
 template<class T>
 class Iterator;
 template<class T>
