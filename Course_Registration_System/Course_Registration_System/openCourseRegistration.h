@@ -24,7 +24,7 @@ void drawOpenCourse(const Staff& st) {
         drawText(baseX, baseY + 12, "5. Add courseID: ");
             for (int i = 0; i < min(3, new_c.numcourse); i++) cout << new_c.courseID[i] << ", ";
             cout << "...";
-        drawText(baseX, baseY + 14, "  Max student of course: ");
+        drawText(baseX, baseY + 14, "   Max student of course: ");
         drawText(baseX, baseY + 16, "6. Cancel: ");
         drawText(posCenter("Press a number to change/view information: "), baseY + 18, "Press a number to change/view information: ");
         cin >> id;

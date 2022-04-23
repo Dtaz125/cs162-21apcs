@@ -20,9 +20,11 @@ void drawCloseCourse(const Staff& st) {
         drawText(posCenter("CLOSING COURSE REGISTRATION"), baseY + 2, "-------------------------------");
         drawText(baseX, baseY + 4, "1. School year: "); cout << new_c.syear;
         drawText(baseX, baseY + 6, "2. Semester: "); cout << new_c.semester;
-        drawText(baseX, baseY + 8, "3. Active: "); cout << new_c.active;
-        drawText(baseX, baseY + 10, "4. Exit: ");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 12, "Press a number to change/view information: ");
+        drawText(baseX, baseY + 8, "   Start Date: "); cout << new_c.start_date.day << "/" << new_c.start_date.month << "/" << new_c.start_date.year;
+        drawText(baseX, baseY + 10, "   End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;
+        drawText(baseX, baseY + 12, "3. Active: "); cout << new_c.active;
+        drawText(baseX, baseY + 14, "4. Exit: ");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 16, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeSchoolyear(new_c, baseX, baseY+4, "1. School year: "); }
         else if (id == 2) { changeSemester(new_c, baseX, baseY+6, "2. Semester: "); }
