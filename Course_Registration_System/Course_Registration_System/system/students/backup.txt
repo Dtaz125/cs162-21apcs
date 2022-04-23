@@ -1,33 +1,73 @@
+
+1
 21125030
 nhuvinh2210
-vinh22
-21125054
-kimphat01
-phatne
+vinh2210
+Hoang
+Nhu Vinh
+192108211
+21CTT1
+22 10 2003
+1
+9
 3
+CS162
+Introduce to CS162
+MTH252
+Calculus 2
+PH151
+Physics 2
+2
+21125054
+phatne
+123
+Tran
+Kim Phat
+192100000
+21CTT1
+1 1 2003
+1
+9
+3
+CS162
+Introduce to CS162
+MTH252
+Calculus 2
+PH151
+Physics 2
+3
+21125160
 khoikhoi
 yeye
-4
-datvip
-dat123
-
-21125030
-Hoang Nhu Vinh
-22/10/2003
+Le
+Nguyen Anh Khoi
+192100555
+21CTT1
+10 2 2003
 0
-21125030
-21125054
-Tran Kim Phat
-01/01/2003
-0
-21125054
+9
 3
-Le Nguyen Anh Khoi
-02/02/2003
-0
-0
+CS162
+Introduce to CS162
+MTH252
+Calculus 2
+PH151
+Physics 2
 4
+1800000
+datvip
+dat
+Thanh
 Dat
-0/0/0
+192103333
+21CTT1
+0 0 0
 0
 0
+3
+CS162
+Introduce to CS162
+MTH252
+Calculus 2
+PH151
+Physics 2
