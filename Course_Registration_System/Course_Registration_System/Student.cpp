@@ -12,22 +12,22 @@ ofstream& operator << (ofstream& out_file, Student& student) {
 		<< student.student_class << std::endl;
 
 	out_file << student.user_info.birth.day << " " << student.user_info.birth.month << " " << student.user_info.birth.year << " "
-	 << student.user_info.gender << " "<< student.gpa << endl;
-    out_file << student.numcourse << endl;
+		<< student.user_info.gender << " " << student.gpa << endl;
+	out_file << student.numcourse << endl;
 	/*for (Iterator<pair<string, string>> iter = student.list_of_courses.begin(); iter != student.list_of_courses.end(); iter++) {
 		pair<string, string> p = *iter;
 		out_file << p.first << std::endl << p.second << std::endl;
 	}*/
-	for (int i = 0; i < student.numcourse; i++){
-        out_file << student.list_of_courses[i].first << endl;
-        out_file << student.list_of_courses[i].second << endl;
+	for (int i = 0; i < student.numcourse; i++) {
+		out_file << student.list_of_courses[i].first << endl;
+		out_file << student.list_of_courses[i].second << endl;
 	}
 
 	return out_file;
 }
 
 ifstream& operator >> (ifstream& in_file, Student& student) {
-	in_file.ignore();
+	//in_file.ignore();
 	getline(in_file, student.no);
 	getline(in_file, student.id);
 	getline(in_file, student.username);
@@ -36,8 +36,8 @@ ifstream& operator >> (ifstream& in_file, Student& student) {
 	getline(in_file, student.user_info.lastname);
 	getline(in_file, student.user_info.social_id);
 	getline(in_file, student.student_class);
-	in_file>> student.user_info.birth.day >> student.user_info.birth.month
-		>> student.user_info.birth.year >> student.user_info.gender>>student.gpa;
+	in_file >> student.user_info.birth.day >> student.user_info.birth.month
+		>> student.user_info.birth.year >> student.user_info.gender >> student.gpa;
 	in_file >> student.numcourse;
 	in_file.ignore(1, '\n');
 	student.init();
