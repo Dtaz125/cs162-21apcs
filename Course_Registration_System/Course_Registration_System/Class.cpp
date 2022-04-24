@@ -9,9 +9,8 @@ bool operator != (const Class& class_1, const Class& class_2) {
 }
 
 ofstream& operator << (ofstream& out_file, Class& _class) {
-    out_file << std::endl;
     out_file << _class.name << std::endl;
-    out_file << _class.student_list.size();
+    out_file << _class.student_list.size() << endl;
     for (int i = 0; i < _class.student_list.size(); i++) {
         out_file << _class.student_list[i]->data;
     }
@@ -19,10 +18,11 @@ ofstream& operator << (ofstream& out_file, Class& _class) {
 }
 
 ifstream& operator >> (ifstream& in_file, Class& _class) {
-    in_file.ignore(1, '\n');
+    //in_file.ignore(1, '\n');
     getline(in_file, _class.name);
     int size;
     in_file >> size;
+    in_file.ignore(1, '\n');
     for (int i = 0; i < size; i++) {
         Student k;
         in_file >> k;
