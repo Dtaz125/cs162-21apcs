@@ -17,16 +17,24 @@ struct Student {
 	float gpa = 0;
 	string student_class = ""; //name of the class
 	int numcourse = 0;
-	pair<string, string> *list_of_courses; //CourseID - Full name
+	pair<string, string>* list_of_courses; //CourseID - Full name
 	//Student& operator = (Student& stu) { return stu; }
-	void init(){
-        list_of_courses = new pair <string, string> [numcourse + 5];
+	void init() {
+		list_of_courses = new pair <string, string>[numcourse + 10];
 	}
+    bool addCourse(string id, string fullname){
+        for (int i = 0; i < numcourse; i++) if (list_of_courses[i].first == id)
+            return false;
+        int n = numcourse++;
+        list_of_courses[n] = {id, fullname};
+        return true;
+    }
+
 };
 bool operator == (const Student& student_1, const Student& student_2);
 
 bool operator != (const Student& student_1, const Student& student_2);
 
-ofstream& operator << (ofstream & out_file, Student & student);
+ofstream& operator << (ofstream& out_file, Student& student);
 
 ifstream& operator >> (ifstream& in_file, Student& student);

@@ -39,9 +39,9 @@ void createSemester(Class& HCMUS, SchoolYear& ny) {
     do {
 
         system("cls");
-        drawText(posCenter("SEMESTER"), baseY , "-------------------");
+        drawText(posCenter("SEMESTER"), baseY , "------------");
         drawText(posCenter("SEMESTER"), baseY + 1, "| SEMESTER |");
-        drawText(posCenter("SEMESTER"), baseY + 2, "-------------------");
+        drawText(posCenter("SEMESTER"), baseY + 2, "------------");
         drawText(baseX, baseY + 4, "1. Order : "); cout << new_sem.order;
         drawText(baseX, baseY + 6, "2. Start Date: "); cout << new_sem.start_date.day << "/" << new_sem.start_date.month << "/" << new_sem.start_date.year;
         drawText(baseX, baseY + 8, "3. End Date: "); cout << new_sem.end_date.day << "/" << new_sem.end_date.month << "/" << new_sem.end_date.year;

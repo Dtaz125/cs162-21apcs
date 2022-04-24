@@ -16,6 +16,7 @@ string generateCourseAttending(string id_student, Class& tmp) {
     }
     return s;
 }
+
 void showClass(Student& st, Link& link) {
     system("cls");
     int baseY = 3, id;
@@ -39,6 +40,7 @@ void showClass(Student& st, Link& link) {
     } while (id!=1);
         
 }
+
 void viewClass(Student& st) {
     system("cls");
     int baseY = 3, id;

@@ -117,28 +117,22 @@
     <ClInclude Include="classData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="courseData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="deleteCourse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="getData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="schoolyearData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="semesterData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="staffData.h">
+    <ClInclude Include="courseData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CourseRegistrationData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="studentData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="testDatafile.h">
+    <ClInclude Include="calculateGPA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

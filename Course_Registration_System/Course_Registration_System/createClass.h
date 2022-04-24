@@ -36,39 +36,17 @@ void createClass(SchoolYear& st) {
     system("cls");
 }
 void updateStudent(Link& link, SchoolYear& st) {
-    Class old_class, new_class, tmp;
-    old_class.name = link.classname;
+    Class curr, new_class;
+    curr.name = link.classname;
     new_class.name = link.classname_1;
     string Folder = "system/schoolyears/" + st.name + "/classes";
-    string id_student = link.studentID;
-
-    inputStudentData(tmp);
-    for (int i = 0; i < tmp.student_list.size(); i++) {
-        Node<Student>* k = tmp.student_list[i];
-        if (k->data.id == id_student) {
-            k->data.student_class = new_class.name;
-            break;
-        }
-    }
-    outputStudentData(tmp);
-
-    inputClassData(Folder, old_class);
-    int index = -1;
-    for (int i = 0; i < old_class.student_list.size(); i++) {
-        if (old_class.student_list[i]->data.id == id_student) {
-            index = i;
-            break;
-        }
-    }
-    if (index != -1) {
-        inputClassData(Folder, new_class);
-        Node<Student>* stu = old_class.student_list[index];
-        stu->data.student_class = new_class.name;
-        new_class.student_list.add(stu->data);
-        outputClassData(Folder, new_class);
-        old_class.student_list.remove(stu->data);
-        outputClassData(Folder, old_class);
-    }
+    inputClassData(Folder, curr);
+    inputClassData(Folder, new_class);
+    /*Student tmp; tmp.id = link.studentID;
+    tmp = curr.student_list.contains(tmp)->data;
+    curr.student_list.remove(tmp);
+    new_class.student_list.add(tmp);
+    outputClassData(Folder, new_class);*/
 }
 void changeClass(SchoolYear& st) {
     system("cls");
@@ -88,7 +66,8 @@ void changeClass(SchoolYear& st) {
         else if (id == 2) { changeClass(link, baseX, baseY + 6, "2. Old Class: "); }
         else if (id == 3) {
             changeClass_1(link, baseX, baseY + 8, "3. New Class: ");
-            updateStudent(link, st);
+            
+            
             link = { "",0,"", "", "", "","Change has been made." };
         }
         system("cls");

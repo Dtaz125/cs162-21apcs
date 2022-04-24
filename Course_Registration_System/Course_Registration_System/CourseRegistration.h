@@ -7,28 +7,37 @@ struct CourseRegistration {
     bool active = true;;
     string syear = "";
     string semester = "0";
-	Date start_date = { 0,0,0 };
-	Date end_date = { 0,0,0 };
-	int numcourse = 0;
+    Date start_date = { 0,0,0 };
+    Date end_date = { 0,0,0 };
+    int numcourse = 0;
     string* courseID;
-    int* maxstudent, *curstudent;
+    int* maxstudent, * curstudent;
     pair<string, string>** students;
-    void clear(){
+    void clear() {
         active = true;
-        start_date = end_date = {0, 0, 0};
+        start_date = end_date = { 0, 0, 0 };
         numcourse = 0;
     }
-    void init(){
-        courseID = new string [numcourse + 5];
-        maxstudent = new int [numcourse + 5];
-        curstudent = new int [numcourse + 5];
-        students = new pair <string, string> *[numcourse + 5];
+    void init() {
+        courseID = new string[numcourse + 10];
+        maxstudent = new int[numcourse + 10];
+        curstudent = new int[numcourse + 10];
+        students = new pair <string, string> *[numcourse + 10];
+        //for (int i = 0; i < numcourse + 8; i++)
+          //  students[i] = new pair<string, string> [curstudent[i] + 8];
     }
-    void addCourse(string id, int maxst){
+    void addCourse(string id, int maxst) {
         maxstudent[numcourse] = maxst;
         curstudent[numcourse] = 0;
         courseID[numcourse] = id;
         numcourse++;
+    }
+
+    bool addStudent(int no, string id, string fullname){
+        if (curstudent[no] == maxstudent[no]) return false;
+        int n = curstudent[no]++;
+        students[no][n] = {id, fullname};
+        return true;
     }
 };
 

@@ -14,10 +14,6 @@ ofstream& operator << (ofstream& out_file, Student& student) {
 	out_file << student.user_info.birth.day << " " << student.user_info.birth.month << " " << student.user_info.birth.year << " "
 		<< student.user_info.gender << " " << student.gpa << endl;
 	out_file << student.numcourse << endl;
-	/*for (Iterator<pair<string, string>> iter = student.list_of_courses.begin(); iter != student.list_of_courses.end(); iter++) {
-		pair<string, string> p = *iter;
-		out_file << p.first << std::endl << p.second << std::endl;
-	}*/
 	for (int i = 0; i < student.numcourse; i++) {
 		out_file << student.list_of_courses[i].first << endl;
 		out_file << student.list_of_courses[i].second << endl;
@@ -51,3 +47,4 @@ ifstream& operator >> (ifstream& in_file, Student& student) {
 	}
 	return in_file;
 }
+

@@ -8,8 +8,8 @@ class Iterator;
 template<class T>
 class Linked_List {
 private:
-	Node<T>* head = nullptr;
-	Node<T>* tail = nullptr;
+	Node<T>* head;
+	Node<T>* tail;
 	int list_size = 0;
 public:
 	Linked_List() {
@@ -28,7 +28,10 @@ public:
 		}
 	}
 	~Linked_List() {
-		empty_list();
+		while (head) {
+			remove(head->data);
+		}
+		head = tail = nullptr;
 	}
 	Linked_List<T>& operator = (const Linked_List& list) {
 		if (this == &list) return *this;

@@ -132,6 +132,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="calculateGPA.h" />
     <ClInclude Include="Class.h" />
     <ClInclude Include="classData.h" />
     <ClInclude Include="closeCourseRegistration.h" />
@@ -148,13 +150,13 @@
     <ClInclude Include="courseActive.h" />
     <ClInclude Include="courseData.h" />
     <ClInclude Include="CourseRegistration.h" />
+    <ClInclude Include="CourseRegistrationData.h" />
     <ClInclude Include="createClass.h" />
     <ClInclude Include="createNewCourse.h" />
     <ClInclude Include="createNewYear.h" />
     <ClInclude Include="createSemester.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="deleteCourse.h" />
-    <ClInclude Include="getData.h" />
     <ClInclude Include="Initialize.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Link.h" />
@@ -167,17 +169,14 @@
     <ClInclude Include="publishCourse.h" />
     <ClInclude Include="RegistrationSystem.h" />
     <ClInclude Include="SchoolYear.h" />
-    <ClInclude Include="schoolyearData.h" />
     <ClInclude Include="Semester.h" />
     <ClInclude Include="semesterData.h" />
     <ClInclude Include="Staff.h" />
-    <ClInclude Include="staffData.h" />
     <ClInclude Include="staffProfile.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="studentData.h" />
     <ClInclude Include="studentProfile.h" />
     <ClInclude Include="studentScoreboard.h" />
-    <ClInclude Include="testDatafile.h" />
     <ClInclude Include="updateStudentResults.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="viewClass.h" />

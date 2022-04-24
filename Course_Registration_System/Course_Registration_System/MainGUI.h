@@ -19,11 +19,11 @@
 #include"viewCourse.h"
 
 void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
-    int baseX = 30, id, baseY=3;
+    int baseX = 30, id, baseY = 3;
     while (1) {
         drawText(baseX * 2 + 10, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
         drawText(baseX * 2 + 10, baseY + 22, "University of Natural Science");
-        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY , "------------------------------");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY, "------------------------------");
         drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 1, "| COURSE REGISTRATION SYSTEM |");
         drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 2, "------------------------------");
         drawText(baseX, baseY + 3, "1. Your Profile"); //done
@@ -40,8 +40,8 @@ void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
             drawStudentProfile(HCMUS, st);
         }
         else if (id == 2) { viewClass(st); }
-        else if (id == 3) { viewCourse(st); }
-        else if (id == 4) { drawOpenCourse(st);}
+        else if (id == 3) { viewCourse(HCMUS, st); }
+        else if (id == 4) { drawOpenCourse(HCMUS, st); }
         else {
             return;
         }
@@ -49,12 +49,12 @@ void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
 }
 
 void drawMainGUI(Class& HCMUS, Staff& st, bool isStudent) {
-    int baseX = 30, id, baseY=3;
+    int baseX = 30, id, baseY = 3;
     while (1) {
         drawText(baseX * 2 + 8, baseY - 2, "Welcome back, " + st.user_info.firstname + " " + st.user_info.lastname + "!");
         drawText(baseX * 2 + 10, baseY + 22, "University of Natural Science");
         drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY - 1, "------------------------------");
-        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY ,    "| COURSE REGISTRATION SYSTEM |");
+        drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY, "| COURSE REGISTRATION SYSTEM |");
         drawText(posCenter("COURSE REGISTRATION SYSTEM"), baseY + 1, "------------------------------");
         drawText(baseX, baseY + 3, "1. Your Profile");
         drawText(baseX, baseY + 5, "2. Open Course Registration");
@@ -64,7 +64,7 @@ void drawMainGUI(Class& HCMUS, Staff& st, bool isStudent) {
         drawText(baseX, baseY + 13, "6. View Score Board");
         drawText(baseX, baseY + 15, "7. Publish Course");
         drawText(baseX, baseY + 17, "8. Exit");
-        drawText(posCenter("Your Choice: "), baseY+21, "Your Choice: ");
+        drawText(posCenter("Your Choice: "), baseY + 21, "Your Choice: ");
 
         cin >> id;
         system("cls");

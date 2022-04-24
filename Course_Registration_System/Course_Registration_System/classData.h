@@ -1,18 +1,10 @@
+
 #pragma once
 #include <iostream>
 #include"Class.h"
 using namespace std;
 
 void createClassesFolder(string Folder) {
-    /*fstream g(Folder + "/classes.txt", ios::in | ios::app);
-    int order = -1;
-    while (g >> order) {
-        if (order == se.order) return;
-    }
-    g.close();
-    fstream f(Folder + "/names.txt", ios::app);
-    f << se.order << endl;
-    f.close();*/
     _mkdir((Folder + "/classes").c_str());
 }
 

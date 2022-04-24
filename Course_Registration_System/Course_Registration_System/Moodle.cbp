@@ -94,6 +94,7 @@
 		<Unit filename="createNewCourse.h" />
 		<Unit filename="createNewYear.h" />
 		<Unit filename="createSemester.h" />
+		<Unit filename="deleteCourse.h" />
 		<Unit filename="getData.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="openCourseRegistration.h" />

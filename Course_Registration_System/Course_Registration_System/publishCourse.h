@@ -2,7 +2,7 @@
 #include"Staff.h"
 #include"other.h"
 #include"Initialize.h"
-void printCourseStatus(bool is_pub){
+void printCourseStatus(bool is_pub) {
     if (is_pub) cout << "published";
     else cout << "unpublished";
 }
@@ -15,12 +15,12 @@ void publishCourse(Class& HCMUS, Staff& st) {
         drawText(posCenter("PUBLISHING COURSE"), baseY, "---------------------");
         drawText(posCenter("PUBLISHING COURSE"), baseY + 1, "| PUBLISHING COURSE |");
         drawText(posCenter("PUBLISHING COURSE"), baseY + 2, "---------------------");
-//        drawText(baseX, baseY + 4, "1. School Year: "); cout << link.year;
-//        drawText(baseX, baseY + 6, "2. Semester: "); cout << link.semester;
+        //        drawText(baseX, baseY + 4, "1. School Year: "); cout << link.year;
+        //        drawText(baseX, baseY + 6, "2. Semester: "); cout << link.semester;
         drawText(baseX, baseY + 4, "1. Course ID: "); cout << link.courseID;
         drawText(baseX, baseY + 6, "2. Publish: ");
-            if (curCourse < 0) cout << "Can't find this course";
-            else printCourseStatus(HCMUS.course_list[curCourse].is_published);
+        if (curCourse < 0) cout << "Can't find this course";
+        else printCourseStatus(HCMUS.course_list[curCourse].is_published);
         drawText(baseX, baseY + 8, "3. Exit: ");
         drawText(posCenter("Press a number: : "), baseY + 10, "Press a number: : ");
 
@@ -32,8 +32,8 @@ void publishCourse(Class& HCMUS, Staff& st) {
         if (id == 1) {
             changeCourseID(link, baseX, baseY + 4, "1. Course ID: "); //done
             curCourse = -1;
-            travelCourse(it){
-                if (HCMUS.course_list[it].id == link.courseID){
+            travelCourse(it) {
+                if (HCMUS.course_list[it].id == link.courseID) {
                     curCourse = it;
                     break;
                 }

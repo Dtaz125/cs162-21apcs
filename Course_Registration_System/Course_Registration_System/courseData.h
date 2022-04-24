@@ -1,18 +1,20 @@
 #pragma once
 #include <iostream>
+#include"Course.h"
 #include "direct.h"
+#include"Class.h"
 using namespace std;
 
-void outputCourseData(Class& HCMUS) {
+void outputCourseData(Class& HCMUS){
     string fileName = "system/courses.txt";
     ofstream f(fileName);
-    for (int i = 0; i < HCMUS.numcourse; i++) {
+    for (int i = 0; i < HCMUS.numcourse; i++){
         f << HCMUS.course_list[i];
     }
     f.close();
 }
 
-void inputCourseData(Class& HCMUS) {
+void inputCourseData(Class& HCMUS){
     HCMUS.course_list = new Course[1000];
     string fileName = "system/courses.txt";
     ifstream f(fileName);
@@ -25,10 +27,10 @@ void inputCourseData(Class& HCMUS) {
     float  other_score[20];
     int number_of_other_score = 0;
     int maxstudent, credit, ispublic;
-    while (getline(f, id)) {
+    while (getline(f, id)){
         Course co;
         co.student_score.empty_list();
-        //// cout << id << " ";
+        //// cout << id << " "; 
         co.id = id;
         getline(f, name); //// cout << name << " ";
         co.name = name;
@@ -37,7 +39,7 @@ void inputCourseData(Class& HCMUS) {
         getline(f, teaching_time); // cout << teaching_time << " ";
         co.teaching_time = teaching_time;
         f >> size; // cout << size << endl;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++){
             f.ignore();
             Score s;
             getline(f, st_id); // cout << st_id << " ";
@@ -49,7 +51,7 @@ void inputCourseData(Class& HCMUS) {
             f >> final_mark >> midterm_mark >> total_mark >> number_of_other_score;
             // cout << final_mark << " " << midterm_mark << " " << total_mark << " " << number_of_other_score << endl;
             s.final_mark = final_mark; s.midterm_mark = midterm_mark; s.total_mark = total_mark; s.number_of_other_score = number_of_other_score;
-            for (int j = 0; j < number_of_other_score; j++) {
+            for (int j = 0; j < number_of_other_score; j++){
                 f >> other_score[j];
                 s.other_score[j] = other_score[j];
                 // cout << other_score[j] << " ";

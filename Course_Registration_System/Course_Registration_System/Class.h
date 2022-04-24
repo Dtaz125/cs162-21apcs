@@ -4,6 +4,7 @@
 #include "Student.h"
 #include "Staff.h"
 #include<string>
+#include"Course.h"
 #include <vector>
 struct Student;
 struct Staff;
@@ -15,7 +16,12 @@ struct Class {
 	Linked_List<Staff> staff_list;
 	Course* course_list;
 	int numcourse = 0;
-	Class& operator = (Class& _class) { return _class; }
+	int getCourse(string id) {
+		for (int i = 0; i < numcourse; i++) if (id == course_list[i].id)
+			return i;
+		return -1;
+	}
+	//Class& operator = (Class& _class) { return _class; }
 };
 bool operator == (const Class& class_1, const Class& class_2);
 

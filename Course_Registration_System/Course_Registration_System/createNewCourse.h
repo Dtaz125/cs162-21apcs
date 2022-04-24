@@ -61,14 +61,35 @@ static inline std::string trim_copy(std::string s) {                            
     return s;
 }
 
+char norm(char x){
+    if ('A' <= x && x <= 'Z') x = x - 'A' + 'a';
+    return x;
+}
+
+#include <map>
 string convert_teachingtime(string input) {                     //TueS1 - ThuS2
-    string trimmed = trim_copy(input);                            //trimming string
-    string sub1 = trimmed.substr(0, 3);                           //Tue
-    string sub2 = trimmed.substr(3, 2);                           //S1
-    string sub3 = trimmed.substr(6, 3);                           //Thu
-    string sub4 = trimmed.substr(9, 2);                           //S2
-    string sub5 = toUpperCase(sub1) + " - " + converting_time(sub2) + " / " + toUpperCase(sub3) + " - " + converting_time(sub4);
-    return sub5;                                                //TUE - 7:30 / THU - 9:30
+    if (input.size() != 11) return input;
+    for (auto& ch: input){
+        if (isalpha(ch)) ch = norm(ch);
+    }
+    map <string, string> Map;
+    Map["mon"] = "Monday";
+    Map["tue"] = "Tuesday";
+    Map["wed"] = "Wednesday";
+    Map["thu"] = "Thursday";
+    Map["fri"] = "Friday";
+    Map["sat"] = "Saturday";
+    Map["sun"] = "Sunday";
+    Map["s1"] = "7:30 AM";
+    Map["s2"] = "9:30 AM";
+    Map["s3"] = "1:30 PM";
+    Map["s4"] = "3:30 PM";                    //trimming string
+    /// SatS1-MonS2
+    string s1 = input.substr(0, 3);
+    string s2 = input.substr(3, 2);
+    string s3 = input.substr(6, 3);
+    string s4 = input.substr(9, 2);
+    return Map[s1] + " " + Map[s2] + " - " + Map[s3] + " " + Map[s4];                                                //TUE - 7:30 / THU - 9:30
 }
 
 void changeName(Course& c) {

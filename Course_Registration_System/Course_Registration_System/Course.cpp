@@ -2,23 +2,22 @@
 #include <iostream>
 using namespace std;
 bool operator == (const Course& course_1, const Course& course_2) {
-	return course_1.id == course_2.id;
+    return course_1.id == course_2.id;
 }
 bool operator != (const Course& course_1, const Course& course_2) {
-	return course_1.id != course_2.id;
+    return course_1.id != course_2.id;
 }
 bool operator == (const Score& score_1, const Score& score_2) {
-	return score_1.id == score_2.id;
+    return score_1.id == score_2.id;
 }
 
 bool operator != (const Score& score_1, const Score& score_2) {
-	return score_1.id != score_2.id;
+    return score_1.id != score_2.id;
 }
 
 ofstream& operator << (ofstream& out_file, Course& course) {
 	out_file << course.id << std::endl << course.name
 		<< std::endl << course.teacher_name << std::endl << course.teaching_time << std::endl;
-	//cout << course.id << " " << course.name << " " << course.student_score.size() << endl;
 	out_file << course.student_score.size() << std::endl;
 	for (Iterator<Score> iter = course.student_score.begin(); iter != course.student_score.end(); iter++) {
 		Score s = *iter;
