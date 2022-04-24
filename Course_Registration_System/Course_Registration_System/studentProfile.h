@@ -5,6 +5,7 @@
 #include "Student.h"
 #include"Initialize.h"
 #include"getData.h"
+#include"calculateGPA.h"
 using namespace std;
 
 void changeID(Student& st) {
@@ -71,9 +72,13 @@ void changeSocialID(Student& st) {
     st.user_info = tmp;
 }
 
-void viewGPA(Student st) {
-
+void generateGPA(Student& st) {
+    int baseY = 3;
+    float count = 0;
+    st.gpa = calculateGPA(st, count);
+    if (count > 0) { drawText(baseX, baseY + 13, "6. GPA: "); cout << st.gpa; }
 }
+
 
 void changePassword(Student& st) {
     string new_password;
@@ -95,7 +100,7 @@ void drawStudentProfile(Class& HCMUS, Student& st) {
         drawText(baseX, baseY + 7, "3. Birthday: "); cout << st.user_info.birth.day << "/" << st.user_info.birth.month << "/" << st.user_info.birth.year;
         drawText(baseX, baseY + 9, "4. Gender(Male/Female): "); cout << getGender(st);
         drawText(baseX, baseY + 11, "5. Social ID: "); cout << st.user_info.social_id;
-        drawText(baseX, baseY + 13, "6. GPA: "); cout << st.gpa;
+        drawText(baseX, baseY + 13, "6. GPA: "); generateGPA(st);
         drawText(baseX, baseY + 15, "7. Change Password: ");
         drawText(baseX, baseY + 17, "8. Save and exit");
         drawText(posCenter("Press a number to change/view information: "), baseY + 19, "Press a number to change/view information: ");
@@ -107,7 +112,6 @@ void drawStudentProfile(Class& HCMUS, Student& st) {
         else if (id == 3) { changeBirthday(st); }
         else if (id == 4) { changeGender(st); }
         else if (id == 5) { changeSocialID(st); }
-        else if (id == 6) { viewGPA(st); }
         else if (id == 7) { changePassword(st); }
         else{
             updateClass(HCMUS, st);
