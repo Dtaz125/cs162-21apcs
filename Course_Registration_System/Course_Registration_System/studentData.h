@@ -3,14 +3,14 @@
 #include "Class.h"
 using namespace std;
 
-void outputStudentData(Class &HCMUS){
+void outputStudentData(Class& HCMUS) {
     string accFile = "system/students/accounts.txt";
     string userFile = "system/students/students.txt";
     ofstream user(userFile);
     ofstream acc(accFile);
     Student st;
     User info;
-    travel(it, HCMUS.student_list){
+    travel(it, HCMUS.student_list) {
         st = (*it);
         /*info = st.user_info;
         acc << st.id << endl << st.username << endl << st.password << endl;
@@ -29,7 +29,7 @@ void outputStudentData(Class &HCMUS){
     user.close();
 }
 
-void inputStudentData(Class &HCMUS){
+void inputStudentData(Class& HCMUS) {
     HCMUS.student_list.empty_list();
     string accFile = "system/students/accounts.txt";
     string userFile = "system/students/students.txt";
@@ -40,7 +40,7 @@ void inputStudentData(Class &HCMUS){
     string gender, fullName, birth, socialID;
     ///
     Student st;
-    while (user >> st){
+    while (user >> st) {
         /// search for accounts
         /*getline(user, fullName);
         getline(user, birth);
@@ -68,20 +68,20 @@ void inputStudentData(Class &HCMUS){
         */
         //user >> st;
         HCMUS.student_list.add(st);
-        cout << st.no << " " << st.id << endl;
+        //cout << st.no << " " << st.id << endl;
     }
     user.close();
     acc.close();
 }
 
-void getProfile(Student& st, string id){
+void getProfile(Student& st, string id) {
     string userFile = "system/students/students.txt";
     ifstream user(userFile);
     /// open File
     string cur_id, us, pass;
     string gender, fullName, birth, socialID;
     ///
-    while (!user.eof()){
+    while (!user.eof()) {
         /// search for accounts
         getline(user, cur_id, '\n');
         getline(user, fullName, '\n');
@@ -100,7 +100,7 @@ void getProfile(Student& st, string id){
     user.close();
 }
 
-void outputStudent(Student& st, string id){
+void outputStudent(Student& st, string id) {
     string userFile = "system/students/students.txt";
     ofstream user(userFile, ios::app);
     user << st;
