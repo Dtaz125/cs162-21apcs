@@ -1,4 +1,5 @@
 #pragma once
+
 #include"Node.h"
 #include"User.h"
 #include"SchoolYear.h"
@@ -18,3 +19,5 @@ void readCSV(Class& classname, string _inputfile);
 void writeCSV(Course& _course, const string& _outputfile);
 
 void readCSV_Scoreboard(Course& _course, const string& _inputfile);
+
+void writeCSV_Scoreboard(Course& _course, string _outputfile);

@@ -32,9 +32,6 @@ void drawCloseCourse(const Staff& st) {
             new_c.active ^= 1;
             outputRegisData(new_c);
         }
-        else {
-            //do something here
-        }
         inputRegisData(new_c, new_c.syear, new_c.semester);
         system("cls");
     } while (id != 4);

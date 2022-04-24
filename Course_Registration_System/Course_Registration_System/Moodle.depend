@@ -327,7 +327,7 @@
 	"Course.h"
 	<iostream>
 
-1650811762 source:d:\apcs\cs162\project\24_04_22_02\moodle\driver.cpp
+1650776612 source:d:\apcs\cs162\project\24_04_22_02\moodle\driver.cpp
 	"MainGUI.h"
 	"Initialize.h"
 	"login.h"
@@ -337,7 +337,7 @@
 	"CourseRegistrationData.h"
 	"calculateGPA.h"
 
-1650810896 d:\apcs\cs162\project\24_04_22_02\moodle\maingui.h
+1650799591 d:\apcs\cs162\project\24_04_22_02\moodle\maingui.h
 	<typeinfo>
 	"Initialize.h"
 	"studentProfile.h"
@@ -461,7 +461,7 @@
 	"schoolyearData.h"
 	"createClass.h"
 
-1650813478 d:\apcs\cs162\project\24_04_22_02\moodle\createnewcourse.h
+1650715816 d:\apcs\cs162\project\24_04_22_02\moodle\createnewcourse.h
 	"Course.h"
 	"Staff.h"
 	"Initialize.h"
@@ -471,7 +471,6 @@
 	<locale>
 	<string>
 	<iostream>
-	<map>
 
 1650734412 d:\apcs\cs162\project\24_04_22_02\moodle\createsemester.h
 	"SchoolYear.h"
@@ -522,10 +521,8 @@
 	"other.h"
 	"Link.h"
 
-1650813522 d:\apcs\cs162\project\24_04_22_02\moodle\viewcourse.h
-	<iostream>
+1650350052 d:\apcs\cs162\project\24_04_22_02\moodle\viewcourse.h
 	"Student.h"
-	"createNewCourse.h"
 
 1650536826 d:\apcs\cs162\project\24_04_22_02\moodle\login.h
 	<iostream>
@@ -551,4 +548,310 @@
 
 1650768892 source:d:\apcs\cs162\project\24_04_22_02\moodle\student.cpp
 	"Student.h"
+
+1650764712 source:d:\apcs\cs162\project\25_04_22\project\moodle\class.cpp
+	"Class.h"
+
+1650717848 d:\apcs\cs162\project\25_04_22\project\moodle\class.h
+	"Iterator.h"
+	"Linked_List.h"
+	"Student.h"
+	"Staff.h"
+	<string>
+	"Course.h"
+	<vector>
+
+1650350052 d:\apcs\cs162\project\25_04_22\project\moodle\iterator.h
+	"Node.h"
+
+1650350052 d:\apcs\cs162\project\25_04_22\project\moodle\node.h
+
+1650737480 d:\apcs\cs162\project\25_04_22\project\moodle\linked_list.h
+	"Node.h"
+	"Iterator.h"
+
+1650800268 d:\apcs\cs162\project\25_04_22\project\moodle\student.h
+	"User.h"
+	"Linked_List.h"
+	<utility>
+	<fstream>
+
+1650350052 d:\apcs\cs162\project\25_04_22\project\moodle\user.h
+	<string>
+	"Date.h"
+
+1650350052 d:\apcs\cs162\project\25_04_22\project\moodle\date.h
+
+1650812106 d:\apcs\cs162\project\25_04_22\project\moodle\staff.h
+	"Node.h"
+	"User.h"
+	"SchoolYear.h"
+
+1650350052 d:\apcs\cs162\project\25_04_22\project\moodle\schoolyear.h
+	"Linked_List.h"
+	"Semester.h"
+	<string>
+
+1650802444 d:\apcs\cs162\project\25_04_22\project\moodle\semester.h
+	"Linked_List.h"
+	"Class.h"
+	"Course.h"
+	"Date.h"
+	<fstream>
+	<utility>
+
+1650712026 d:\apcs\cs162\project\25_04_22\project\moodle\course.h
+	"Node.h"
+	"Linked_List.h"
+	"Student.h"
+	<string>
+	<utility>
+	<fstream>
+
+1650708628 source:d:\apcs\cs162\project\25_04_22\project\moodle\course.cpp
+	"Course.h"
+	<iostream>
+
+1650812864 source:d:\apcs\cs162\project\25_04_22\project\moodle\driver.cpp
+	"MainGUI.h"
+	"Initialize.h"
+	"Login.h"
+	"other.h"
+	"getData.h"
+	"testDatafile.h"
+	"CourseRegistrationData.h"
+	"calculateGPA.h"
+
+1650823185 d:\apcs\cs162\project\25_04_22\project\moodle\maingui.h
+	<typeinfo>
+	"Initialize.h"
+	"studentProfile.h"
+	"staffProfile.h"
+	"openCourseRegistration.h"
+	"closeCourseRegistration.h"
+	"studentScoreboard.h"
+	"createNewYear.h"
+	"Student.h"
+	"Staff.h"
+	"createNewCourse.h"
+	"updateStudentResults.h"
+	"viewScoreBoard.h"
+	"publishCourse.h"
+	"viewClass.h"
+	"viewCourse.h"
+	"viewStudentScoreboard.h"
+
+1650810090 d:\apcs\cs162\project\25_04_22\project\moodle\initialize.h
+	<iostream>
+	<windows.h>
+	<conio.h>
+	"other.h"
+
+1650804530 d:\apcs\cs162\project\25_04_22\project\moodle\other.h
+	<iostream>
+	<string>
+	"Date.h"
+	"Staff.h"
+
+1650771184 d:\apcs\cs162\project\25_04_22\project\moodle\studentprofile.h
+	<iostream>
+	"other.h"
+	<sstream>
+	"Student.h"
+	"Initialize.h"
+	"getData.h"
+	"calculateGPA.h"
+
+1650617064 d:\apcs\cs162\project\25_04_22\project\moodle\getdata.h
+	"Class.h"
+	"staffData.h"
+	"studentData.h"
+	"courseData.h"
+	"classData.h"
+	"schoolyearData.h"
+	"semesterData.h"
+	<iostream>
+
+1650474384 d:\apcs\cs162\project\25_04_22\project\moodle\staffdata.h
+	<iostream>
+
+1650764292 d:\apcs\cs162\project\25_04_22\project\moodle\studentdata.h
+	<iostream>
+	"Class.h"
+
+1650766930 d:\apcs\cs162\project\25_04_22\project\moodle\coursedata.h
+	<iostream>
+	"Course.h"
+	"direct.h"
+	"Class.h"
+
+1650709724 d:\apcs\cs162\project\25_04_22\project\moodle\classdata.h
+	<iostream>
+	"Class.h"
+
+1650708150 d:\apcs\cs162\project\25_04_22\project\moodle\schoolyeardata.h
+	<iostream>
+	<direct.h>
+
+1650708158 d:\apcs\cs162\project\25_04_22\project\moodle\semesterdata.h
+	<iostream>
+
+1650802584 d:\apcs\cs162\project\25_04_22\project\moodle\calculategpa.h
+	"courseData.h"
+
+1650476698 d:\apcs\cs162\project\25_04_22\project\moodle\staffprofile.h
+	<iostream>
+	"Initialize.h"
+	"other.h"
+	"getData.h"
+	"Staff.h"
+
+1650802518 d:\apcs\cs162\project\25_04_22\project\moodle\opencourseregistration.h
+	<iostream>
+	"Student.h"
+	"Staff.h"
+	"Initialize.h"
+	"other.h"
+	"CourseRegistration.h"
+	"CourseRegistrationData.h"
+
+1650810090 d:\apcs\cs162\project\25_04_22\project\moodle\courseregistration.h
+	<string>
+	"Date.h"
+	"Initialize.h"
+
+1650801570 d:\apcs\cs162\project\25_04_22\project\moodle\courseregistrationdata.h
+	<iostream>
+	"direct.h"
+	"CourseRegistration.h"
+
+1650814958 d:\apcs\cs162\project\25_04_22\project\moodle\closecourseregistration.h
+	<iostream>
+	"Student.h"
+	"Staff.h"
+	"CourseRegistration.h"
+	"Initialize.h"
+	"other.h"
+
+1650350052 d:\apcs\cs162\project\25_04_22\project\moodle\studentscoreboard.h
+	<iostream>
+	"Student.h"
+
+1650734374 d:\apcs\cs162\project\25_04_22\project\moodle\createnewyear.h
+	"Initialize.h"
+	"SchoolYear.h"
+	"Staff.h"
+	"other.h"
+	"createNewCourse.h"
+	"createSemester.h"
+	"schoolyearData.h"
+	"createClass.h"
+
+1650815158 d:\apcs\cs162\project\25_04_22\project\moodle\createnewcourse.h
+	"Course.h"
+	"Staff.h"
+	"Initialize.h"
+	"other.h"
+	<algorithm>
+	<cctype>
+	<locale>
+	<string>
+	<iostream>
+	<map>
+
+1650734412 d:\apcs\cs162\project\25_04_22\project\moodle\createsemester.h
+	"SchoolYear.h"
+	"Course.h"
+	"other.h"
+	"Initialize.h"
+	"semesterData.h"
+	"Initialize.h"
+	"deleteCourse.h"
+
+1650615356 d:\apcs\cs162\project\25_04_22\project\moodle\deletecourse.h
+	"Initialize.h"
+	"other.h"
+	"Staff.h"
+	"Link.h"
+
+1650735646 d:\apcs\cs162\project\25_04_22\project\moodle\link.h
+
+1650803944 d:\apcs\cs162\project\25_04_22\project\moodle\createclass.h
+	"Staff.h"
+	"other.h"
+	"Initialize.h"
+	"SchoolYear.h"
+	"Class.h"
+	"classData.h"
+	"Staff.h"
+	"Link.h"
+
+1650816180 d:\apcs\cs162\project\25_04_22\project\moodle\updatestudentresults.h
+	"Staff.h"
+	"Initialize.h"
+	"other.h"
+	"Link.h"
+	"scheduleCSV.h"
+
+1650812124 d:\apcs\cs162\project\25_04_22\project\moodle\schedulecsv.h
+	"courseData.h"
+	"createNewCourse.h"
+	<vector>
+	<fstream>
+	<sstream>
+
+1650777814 d:\apcs\cs162\project\25_04_22\project\moodle\viewscoreboard.h
+	"Staff.h"
+	"Initialize.h"
+	"other.h"
+	"Link.h"
+
+1650737480 d:\apcs\cs162\project\25_04_22\project\moodle\publishcourse.h
+	"Staff.h"
+	"other.h"
+	"Initialize.h"
+
+1650776046 d:\apcs\cs162\project\25_04_22\project\moodle\viewclass.h
+	"Student.h"
+	"other.h"
+	"Link.h"
+
+1650822450 d:\apcs\cs162\project\25_04_22\project\moodle\viewcourse.h
+	<iostream>
+	"Student.h"
+	"createNewCourse.h"
+
+1650804548 d:\apcs\cs162\project\25_04_22\project\moodle\login.h
+	<iostream>
+	<fstream>
+	"Student.h"
+	"Staff.h"
+	"studentData.h"
+	"staffData.h"
+
+1650535246 d:\apcs\cs162\project\25_04_22\project\moodle\testdatafile.h
+	<iostream>
+
+1650385230 source:d:\apcs\cs162\project\25_04_22\project\moodle\main.cpp
+
+1650350052 source:d:\apcs\cs162\project\25_04_22\project\moodle\schoolyear.cpp
+	"SchoolYear.h"
+
+1650736262 source:d:\apcs\cs162\project\25_04_22\project\moodle\semester.cpp
+	"Semester.h"
+
+1650812096 source:d:\apcs\cs162\project\25_04_22\project\moodle\staff.cpp
+	"Staff.h"
+	<fstream>
+	<iostream>
+	<sstream>
+	<vector>
+
+1650768892 source:d:\apcs\cs162\project\25_04_22\project\moodle\student.cpp
+	"Student.h"
+
+1650823340 d:\apcs\cs162\project\25_04_22\project\moodle\viewstudentscoreboard.h
+	<iostream>
+	"Student.h"
+	"createNewCourse.h"
 

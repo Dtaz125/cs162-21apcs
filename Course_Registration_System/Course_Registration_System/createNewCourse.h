@@ -61,7 +61,7 @@ static inline std::string trim_copy(std::string s) {                            
     return s;
 }
 
-char norm(char x){
+char norm(char x) {
     if ('A' <= x && x <= 'Z') x = x - 'A' + 'a';
     return x;
 }
@@ -69,7 +69,7 @@ char norm(char x){
 #include <map>
 string convert_teachingtime(string input) {                     //TueS1 - ThuS2
     if (input.size() != 11) return input;
-    for (auto& ch: input){
+    for (auto& ch : input) {
         if (isalpha(ch)) ch = norm(ch);
     }
     map <string, string> Map;

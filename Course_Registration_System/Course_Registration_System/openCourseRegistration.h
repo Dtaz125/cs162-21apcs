@@ -26,7 +26,7 @@ void drawOpenCourse(Class& HCMUS, Student& st) {
     system("cls");
     int id, baseX = 5, baseY = 1;
     CourseRegistration new_c;
-    bool *avail;
+    bool *avail = nullptr;
     do {
         system("cls");
         baseY = 1;

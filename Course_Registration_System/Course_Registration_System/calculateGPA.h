@@ -9,7 +9,7 @@ float calculateGPA(Student& st, float& count) {
     for (int i = 0; i < st.numcourse; i++) {
         string id = st.list_of_courses[i].first;
         int index = tmp.getCourse(id);
-        cout << index << endl;
+        //cout << index << endl;
         if (index != -1) {
             for (int j = 0; j < tmp.course_list[index].student_score.size(); j++) {
                 if (st.id == tmp.course_list[index].student_score[j]->data.id) {

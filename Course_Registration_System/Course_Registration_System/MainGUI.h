@@ -17,7 +17,7 @@
 #include"publishCourse.h"
 #include"viewClass.h"
 #include"viewCourse.h"
-
+#include"viewStudentScoreboard.h"
 void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
     int baseX = 30, id, baseY = 3;
     while (1) {
@@ -29,9 +29,10 @@ void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
         drawText(baseX, baseY + 3, "1. Your Profile"); //done
         drawText(baseX, baseY + 5, "2. Your Class");
         drawText(baseX, baseY + 7, "3. Your Courses");
-        drawText(baseX, baseY + 9, "4. View Course Registration");
-        drawText(baseX, baseY + 11, "5. Exit");
-        drawText(posCenter("Your Choice: "), baseY + 13, "Your Choice: ");
+        drawText(baseX, baseY + 9, "4. Your scoreboard");
+        drawText(baseX, baseY + 11, "5. View Course Registration");
+        drawText(baseX, baseY + 13, "6. Exit");
+        drawText(posCenter("Your Choice: "), baseY + 15, "Your Choice: ");
 
         cin >> id;
         system("cls");
@@ -40,8 +41,9 @@ void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
             drawStudentProfile(HCMUS, st);
         }
         else if (id == 2) { viewClass(st); }
-        else if (id == 3) { viewCourse(HCMUS, st); }
-        else if (id == 4) { drawOpenCourse(HCMUS, st); }
+        else if (id == 3) { viewCourse(HCMUS,st); }
+        else if (id == 4) { viewScoreboardCourse(HCMUS, st);}
+        else if (id == 5) { drawOpenCourse(HCMUS, st); }
         else {
             return;
         }
@@ -60,7 +62,7 @@ void drawMainGUI(Class& HCMUS, Staff& st, bool isStudent) {
         drawText(baseX, baseY + 5, "2. Open Course Registration");
         drawText(baseX, baseY + 7, "3. Close Course Registration");
         drawText(baseX, baseY + 9, "4. Update School Year");
-        drawText(baseX, baseY + 11, "5. Update Student Results");
+        drawText(baseX, baseY + 11, "5. CSV Work");
         drawText(baseX, baseY + 13, "6. View Score Board");
         drawText(baseX, baseY + 15, "7. Publish Course");
         drawText(baseX, baseY + 17, "8. Exit");
@@ -75,7 +77,7 @@ void drawMainGUI(Class& HCMUS, Staff& st, bool isStudent) {
         else if (id == 2) drawOpenCourse(st); //done
         else if (id == 3) drawCloseCourse(st); //done
         else if (id == 4) createNewYear(HCMUS, st); //done
-        else if (id == 5) updateStudentResults(st); //done
+        else if (id == 5) workonScoreboard(st); //done
         else if (id == 6) viewScoreBoard(st);
         else if (id == 7) publishCourse(HCMUS, st);
         else {

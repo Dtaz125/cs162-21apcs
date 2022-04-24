@@ -1,9 +1,9 @@
 #include"Staff.h"
-#include"Student.h"
 #include<fstream>
 #include<iostream>
 #include<sstream>
 #include<vector>
+
 using std::vector;
 using std::getline;
 using std::stringstream;
@@ -104,11 +104,36 @@ void readCSV_Scoreboard(Course& _course, const string& _inputfile) {
 }
 
 void writeCSV(Course& _course, const string& _outputfile) {
-	fstream file;
-	file.open(_outputfile, ios::out);
+	ofstream file;
+	file.open(_outputfile);
+	file << "Course Name" << "," << "ID" << "," << "Credits" << '\n';
+	file << _course.name << "," << _course.id << "," << _course.credits << '\n';
+	file << "Students List" << '\n';
+	file << "NO" << "," << "ID" << "," << "Full Name" << '\n';
 	for (int i = 0; i < _course.student_score.size(); i++) {
 		Node<Score>* g = _course.student_score[i];
 		file << g->data.no << "," << g->data.id << "," << g->data.fullname << "\n";
+	}
+	file.close();
+}
+
+void writeCSV_Scoreboard(Course& _course, string _outputfile) {
+	fstream file;
+	file.open(_outputfile);
+	file << "Course Name" << "," << "ID" << "," << "Credits" << '\n';
+	file << _course.name << "," << _course.id << "," << _course.credits << '\n';
+	file << "Students List" << '\n';
+	file << "NO" << "," << "ID" << "," << "Full Name";
+	
+	for (int i = 0; i < _course.student_score.size(); i++) {
+		Node<Score>* g = _course.student_score[i];
+		if (i == 0) {
+			for(int j = 0; j<g->data.number_of_other_score; j++) file << "," << "Other";
+			file << "," << "Midterm" << "," << "Final" << "," << "Total" << '\n';
+		}
+		file << g->data.no << "," << g->data.id << "," << g->data.fullname;
+		for (int j = 0; j < g->data.number_of_other_score; j++) file << "," << g->data.other_score[j];
+		file << "," << g->data.midterm_mark << "," << g->data.final_mark << "," << g->data.total_mark << '\n';
 	}
 	file.close();
 }
