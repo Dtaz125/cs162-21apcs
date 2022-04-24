@@ -70,24 +70,36 @@ void readCSV_Scoreboard(Course& _course, const string& _inputfile) {
 			content.push_back(row);
 		}
 	}
-
 	for (int i = 0; i < content.size(); i++) {
 		Score s;
 		s.no = content[i][0];
 		s.id = content[i][1];
-		s.fullname = content[i][2];
-		s.total_mark = stof(content[i][3]);
-		s.final_mark = stof(content[i][4]);
-		s.midterm_mark = stof(content[i][5]);
-		int length = 0;
-		for (int j = 6; j < content[i].size(); j++) {
-			s.other_score[j - 6] = stof(content[i][j]);
-			length++;
+		if (_course.student_score.contains(s)) {
+			Node<Score>* tmp = _course.student_score.contains(s);
+			tmp->data.total_mark = stof(content[i][3]);
+			tmp->data.final_mark = stof(content[i][4]);
+			tmp->data.midterm_mark = stof(content[i][5]);
+			int length = 0;
+			for (int j = 6; j < content[i].size(); j++) {
+				tmp->data.other_score[j - 6] = stof(content[i][j]);
+				length++;
+			}
+			tmp->data.number_of_other_score = length;
 		}
-		s.number_of_other_score = length;
-		_course.student_score.add(s);
+		else {
+			s.fullname = content[i][2];
+			s.total_mark = stof(content[i][3]);
+			s.final_mark = stof(content[i][4]);
+			s.midterm_mark = stof(content[i][5]);
+			int length = 0;
+			for (int j = 6; j < content[i].size(); j++) {
+				s.other_score[j - 6] = stof(content[i][j]);
+				length++;
+			}
+			s.number_of_other_score = length;
+			_course.student_score.add(s);
+		}
 	}
-
 	file.close();
 }
 
