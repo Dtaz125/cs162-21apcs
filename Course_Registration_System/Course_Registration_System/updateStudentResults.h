@@ -11,20 +11,25 @@ void updateStudentResults(const Staff& st) {
         drawText(posCenter("UPDATE RESULTS"), baseY, "------------------");
         drawText(posCenter("UPDATE RESULTS"), baseY + 1, "| UPDATE RESULTS |");
         drawText(posCenter("UPDATE RESULTS"), baseY + 2, "------------------");
-        drawText(baseX, baseY + 3, "1. Enter School Year: ");  cout << link.year;
-        drawText(baseX, baseY + 5, "2. Course ID: "); cout << link.courseID;
-        drawText(baseX, baseY + 7, "3. Link CSV: "); cout << link.link;
-        drawText(baseX, baseY + 9, "4. Continue");
-        drawText(baseX, baseY + 11, "5. Exit");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 13, "Press a number to change/view information: ");
+        drawText(baseX, baseY + 3, "1. Course ID: "); cout << link.courseID;
+        drawText(baseX, baseY + 5, "2. Link CSV: "); cout << link.link;
+        drawText(baseX, baseY + 7, "3. Update");
+        drawText(baseX, baseY + 9, "4. Exit");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 11, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) changeYear(link, baseX, baseY+3, "1. Enter School Year: ");
-        else if (id == 2) { changeCourseID(link, baseX, baseY + 5, "2. Course ID: "); }
-        else if (id == 3) { changeLinkCSV(link, baseX, baseY + 7, "3. Link CSV: "); }
-        else if (id == 4) { 
-            //do something here
+        if (id == 1) { changeCourseID(link, baseX, baseY + 3, "1. Course ID: "); }
+        else if (id == 2) { changeLinkCSV(link, baseX, baseY + 5, "2. Link CSV: "); }
+        else if (id == 3) { 
+            Class tmp;
+            inputCourseData(tmp);
+            int index = tmp.getCourse(link.courseID);
+            if (index != -1) {
+                readCSV_Scoreboard(tmp.course_list[index], link.link);
+            }
+            outputCourseData(tmp);
+            drawText(baseX, baseY + 7, "Update Completed!");
         }
         system("cls");
-    } while (id != 5);
+    } while (id != 4);
     system("cls");
 }
