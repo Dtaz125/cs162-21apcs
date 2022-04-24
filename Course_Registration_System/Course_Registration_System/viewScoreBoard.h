@@ -29,7 +29,7 @@ void findCourse(Link& link) {
     system("cls");
 }
 
-string generateGPA(string id_student, Class& tmp) {
+void generateGPA(string id_student, Class& tmp) {
     float gpa, count = 0;
     for (int i = 0; i < tmp.student_list.size(); i++) {
         Node<Student>* stu = tmp.student_list[i];
@@ -41,6 +41,7 @@ string generateGPA(string id_student, Class& tmp) {
         }
     }
 }
+
 void displayClass(string Folder, Link& link) {
     float count = 0.0;
     Class curr, tmp;

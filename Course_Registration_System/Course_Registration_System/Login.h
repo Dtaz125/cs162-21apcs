@@ -1,4 +1,6 @@
 #pragma once
+#include <conio.h>
+#include <string>+
 #include <iostream>
 #include<fstream>
 #include "Student.h"
@@ -52,6 +54,26 @@ bool matched(Class& HCMUS, string username, string password, Staff& st) {
     return ok;
 }
 
+string hidePassword(string &password) {
+    char s[20] = { 0 };
+    int i;
+    for (i = 0; i < 20; i++) {
+        s[i] = _getch();
+        if (s[i] < 32) {
+            break;
+        }
+        else {
+            _putch('*');
+        }
+    };
+    getchar();
+    password = s;
+    password.pop_back();
+    trim_copy(password);
+
+    return password;
+}
+
 /// Student/staff login(){}
 void login(Class& HCMUS, auto& st) {
     bool first = true;
@@ -77,7 +99,7 @@ void login(Class& HCMUS, auto& st) {
         drawText(baseX + 24, baseY + 4, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
         drawText(baseX + 35, baseY + 2, " "); cin >> username;
-        drawText(baseX + 35, baseY + 3, " "); cin >> password;
+        drawText(baseX + 35, baseY + 3, " "); password = hidePassword(password);       
     }
     system("cls");
 }
