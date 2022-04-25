@@ -29,7 +29,14 @@ struct Student {
         list_of_courses[n] = {id, fullname};
         return true;
     }
-
+    void delCourse(string id){
+        for (int i = 0; i < numcourse; i++) if (list_of_courses[i].first == id){
+            for (int j = i; j < numcourse - 1; j++)
+                list_of_courses[j] = list_of_courses[j + 1];
+            numcourse--;
+            break;
+        }
+    }
 };
 bool operator == (const Student& student_1, const Student& student_2);
 

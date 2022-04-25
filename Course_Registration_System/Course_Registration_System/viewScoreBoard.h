@@ -3,7 +3,7 @@
 #include"Initialize.h"
 #include"other.h"
 #include"Link.h"
-
+#include"displayStudentinCourse.h"
 void findCourse(Link& link) {
     system("cls");
     int id, baseY=3;
@@ -11,36 +11,20 @@ void findCourse(Link& link) {
         drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY, "--------------------------");
         drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY + 1, "| COURSE SCOREBOARD |");
         drawText(posCenter("VIEW COURSE SCOREBOARD"), baseY + 2, "--------------------------");
-        drawText(baseX, baseY + 3, "1. School Year: "); cout << link.year;
-        drawText(baseX, baseY + 5, "2. Semester: "); cout << link.semester;
-        drawText(baseX, baseY + 7, "3. Course ID: "); cout << link.courseID;
-        drawText(baseX, baseY + 9, "4. Continue: ");
-        drawText(baseX, baseY + 11, "5. Exit: ");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 13, "Press a number to change/view information: ");
+        drawText(baseX, baseY + 3, "1. Course ID: "); cout << link.courseID;
+        drawText(baseX, baseY + 5, "2. Process Now");
+        drawText(baseX, baseY + 7, "3. Exit: ");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 9, "Press a number to change/view information: ");
         cin >> id;
-        if (id == 1) changeYear(link, baseX, baseY+3, "1. School Year: ");
-        else if (id == 2) { changeSemester(link, baseX, baseY + 5, "2. Semester: "); }
-        else if (id == 3) { changeCourseID(link, baseX, baseY + 7, "3. Course ID: "); }
-        else if (id == 4){
-
+        if (id == 1) { changeCourseID(link, baseX, baseY + 3, "1. Course ID: "); }
+        else if (id == 2){
+            displayScoreinCourse(link.courseID);
         }
         system("cls");
     } while (id != 5);
     system("cls");
 }
 
-void generateGPA(string id_student, Class& tmp) {
-    float gpa, count = 0;
-    for (int i = 0; i < tmp.student_list.size(); i++) {
-        Node<Student>* stu = tmp.student_list[i];
-        if (id_student == stu->data.id) {
-            for (int j = 0; j < stu->data.numcourse; j++) {
-                
-            }
-            break;
-        }
-    }
-}
 
 void displayClass(string Folder, Link& link) {
     float count = 0.0;

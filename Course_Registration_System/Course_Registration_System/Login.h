@@ -13,7 +13,7 @@ bool matched(Class& HCMUS, string username, string password, Student& st) {
     string id, us, pass;
     bool ok = false;
     ///
-    travel(it, HCMUS.student_list){
+    travel(it, HCMUS.student_list) {
         /// search for accounts
         id = (*it).id;
         us = (*it).username;
@@ -22,8 +22,8 @@ bool matched(Class& HCMUS, string username, string password, Student& st) {
         if (username == us && password == pass) {
             st = (*it);
             ok = true;
-            drawText(baseX + 5, baseY+9, blank);
-            drawText(baseX + 17, baseY+9, "Accepted!");
+            drawText(baseX + 5, baseY + 9, blank);
+            drawText(baseX + 17, baseY + 9, "Accepted!");
             _getch();
             break;
         }
@@ -36,7 +36,7 @@ bool matched(Class& HCMUS, string username, string password, Staff& st) {
     bool ok = false;
     ///
     int baseY = 11;
-    travel(it, HCMUS.staff_list){
+    travel(it, HCMUS.staff_list) {
         /// search for accounts
         id = (*it).id;
         us = (*it).username;
@@ -45,8 +45,8 @@ bool matched(Class& HCMUS, string username, string password, Staff& st) {
         if (username == us && password == pass) {
             st = (*it);
             ok = true;
-            drawText(baseX + 5, baseY+5, blank);
-            drawText(baseX + 17, baseY+5, "Accepted!");
+            drawText(baseX + 5, baseY + 5, blank);
+            drawText(baseX + 17, baseY + 5, "Accepted!");
             _getch();
             break;
         }
@@ -54,7 +54,7 @@ bool matched(Class& HCMUS, string username, string password, Staff& st) {
     return ok;
 }
 
-string hidePassword(string &password) {
+string hidePassword(string& password) {
     char s[20] = { 0 };
     int i;
     for (i = 0; i < 20; i++) {
@@ -94,12 +94,12 @@ void login(Class& HCMUS, auto& st) {
         drawText(posCenter("LOGIN TO THE SYSTEM"), 10, "| LOGIN TO THE SYSTEM |");
         drawText(posCenter("LOGIN TO THE SYSTEM"), 11, "-----------------------");
         drawText(baseX + 24, baseY + 1, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        drawText(baseX+24, baseY + 2, "| Username:                       |");
-        drawText(baseX+24, baseY + 3, "| Password:                       |");
+        drawText(baseX + 24, baseY + 2, "| Username:                       |");
+        drawText(baseX + 24, baseY + 3, "| Password:                       |");
         drawText(baseX + 24, baseY + 4, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
         drawText(baseX + 35, baseY + 2, " "); cin >> username;
-        drawText(baseX + 35, baseY + 3, " "); password = hidePassword(password);       
+        drawText(baseX + 35, baseY + 3, " "); password = hidePassword(password);
     }
     system("cls");
 }

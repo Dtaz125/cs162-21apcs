@@ -39,6 +39,27 @@ struct CourseRegistration {
         students[no][n] = {id, fullname};
         return true;
     }
+    void delStudent(int no, string id){
+        int n = curstudent[no];
+        for (int i = 0; i < n; i++) if (students[no][i].first == id){
+            for (int j = i; j < n - 1; j++)
+                students[no][j] = students[no][j + 1];
+            curstudent[no]--;
+            break;
+        }
+    }
+    void delCourse(string id){
+        for (int i = 0; i < numcourse; i++)if(courseID[i] == id){
+            for (int j = i; j < numcourse - 1; j++){
+                courseID[j] = courseID[j + 1];
+                maxstudent[j] = maxstudent[j + 1];
+                curstudent[j] = curstudent[j + 1];
+                students[j] = students[j + 1];
+            }
+            numcourse--;
+            break;
+        }
+    }
 };
 
 void addCourse(CourseRegistration& new_c, int baseX, int baseY, string text, string text2) {

@@ -24,12 +24,18 @@ void createClass(SchoolYear& st) {
         if (id == 1) { changeClass(link, baseX, baseY + 4, "1. Name: "); }
         else if (id == 2) { changeLinkCSV(link, baseX, baseY + 6, "2. Link Students CSV: "); }
         else if (id == 3) {
-            Class curr;
+            Class curr, tmp;
             string Folder = "system/schoolyears/" + st.name + "/classes";
             curr.name = link.classname;
             outputClassData(Folder, curr);
             readCSV(curr, link.link);
             outputClassData(Folder, curr);
+            inputStudentData(tmp);
+            for (int i = 0; i < curr.student_list.size(); i++) {
+                Node<Student>* k = curr.student_list[i];
+                tmp.student_list.add(k->data);
+            }
+            outputStudentData(tmp);
         }
         system("cls");
     } while (id != 4);

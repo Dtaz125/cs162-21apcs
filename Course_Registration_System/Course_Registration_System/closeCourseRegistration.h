@@ -11,7 +11,7 @@ void drawCloseCourse(const Student& st) {
 
 }
 
-void drawCloseCourse(const Staff& st) {
+void drawCloseCourse(Class& HCMUS, const Staff& st) {
     int id, baseY=3;
     CourseRegistration new_c;
     do {
@@ -31,6 +31,20 @@ void drawCloseCourse(const Staff& st) {
         else if (id == 3) {
             new_c.active ^= 1;
             outputRegisData(new_c);
+            for (int i = 0; i < new_c.numcourse; i++){
+                travelCourse(it){
+                    if (HCMUS.course_list[it].id == new_c.courseID[i]){
+                        for (int j = 0; j < new_c.curstudent[i]; j++){
+                            Score sc;
+                            sc.id = new_c.students[i][j].first;
+                            sc.fullname = new_c.students[i][j].second;
+                            HCMUS.course_list[it].student_score.add(sc);
+                        }
+                        break;
+                    }
+                }
+            }
+            outputCourseData(HCMUS);
         }
         inputRegisData(new_c, new_c.syear, new_c.semester);
         system("cls");

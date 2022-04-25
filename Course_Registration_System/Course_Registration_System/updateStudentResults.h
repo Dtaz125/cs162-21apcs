@@ -45,7 +45,7 @@ void writeScoretoCSV(Staff& st) {
         drawText(posCenter("CSV RESULTS"), baseY + 2, "---------------");
         drawText(baseX, baseY + 3, "1. Course ID: "); cout << link.courseID;
         drawText(baseX, baseY + 5, "2. Location: "); cout << link.link;
-        drawText(baseX, baseY + 7, "3. Progress Now");
+        drawText(baseX, baseY + 7, "3. Process Now");
         drawText(baseX, baseY + 9, "4. Exit");
         drawText(posCenter("Press a number to change/view information: "), baseY + 11, "Press a number to change/view information: ");
         cin >> id;
@@ -76,7 +76,7 @@ void writeCoursetoCSV(Staff& st) {
         drawText(posCenter("CSV RESULTS"), baseY + 2, "---------------");
         drawText(baseX, baseY + 3, "1. Course ID: "); cout << link.courseID;
         drawText(baseX, baseY + 5, "2. Location: "); cout << link.link;
-        drawText(baseX, baseY + 7, "3. Progress Now");
+        drawText(baseX, baseY + 7, "3. Process Now");
         drawText(baseX, baseY + 9, "4. Exit");
         drawText(posCenter("Press a number to change/view information: "), baseY + 11, "Press a number to change/view information: ");
         cin >> id;
@@ -105,7 +105,7 @@ void importScheduleCSV(Staff& st) {
         drawText(posCenter("IMPORT SCHEDULE"), baseY + 1, "| IMPORT SCHEDULE |");
         drawText(posCenter("IMPORT SCHEDULE"), baseY + 2, "-------------------");
         drawText(baseX, baseY + 3, "1. File Location: "); cout << link.link;
-        drawText(baseX, baseY + 5, "2. Progress Now");
+        drawText(baseX, baseY + 5, "2. Process Now");
         drawText(baseX, baseY + 7, "3. Exit");
         drawText(posCenter("Press a number to change/view information: "), baseY + 9, "Press a number to change/view information: ");
         cin >> id;
@@ -128,7 +128,7 @@ void exportScheduleCSV(Staff& st) {
         drawText(posCenter("EXPORT SCHEDULE"), baseY + 1, "| EXPORT SCHEDULE |");
         drawText(posCenter("EXPORT SCHEDULE"), baseY + 2, "-------------------");
         drawText(baseX, baseY + 3, "1. File Location: "); cout << link.link;
-        drawText(baseX, baseY + 5, "2. Progress Now");
+        drawText(baseX, baseY + 5, "2. Process Now");
         drawText(baseX, baseY + 7, "3. Exit");
         drawText(posCenter("Press a number to change/view information: "), baseY + 9, "Press a number to change/view information: ");
         cin >> id;
@@ -174,13 +174,14 @@ void workonScoreboard(Staff& st) {
         drawText(baseX, baseY + 7, "3. Write Scoreboard to CSV");
         drawText(baseX, baseY + 9, "4. Write Course Information to CSV");
         drawText(baseX, baseY + 11, "5. Exit");
-        drawText(posCenter("Your Choice: "), baseY + 12, "Your Choice: ");
+        drawText(posCenter("Your Choice: "), baseY + 13, "Your Choice: ");
         cin >> id;
+        
         if (id == 1) { updateStudentResults(st); }
         else if (id == 2) { schedulewithCSV(st); }
         else if (id == 3) { writeScoretoCSV(st); }
         else if (id == 4) { writeCoursetoCSV(st); }
         system("cls");
-    } while (id != 4);
+    } while (id != 5);
     system("cls");
 }

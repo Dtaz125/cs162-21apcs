@@ -41,8 +41,8 @@ void drawMainGUI(Class& HCMUS, Student& st, bool isStudent) {
             drawStudentProfile(HCMUS, st);
         }
         else if (id == 2) { viewClass(st); }
-        else if (id == 3) { viewCourse(HCMUS,st); }
-        else if (id == 4) { viewScoreboardCourse(HCMUS, st);}
+        else if (id == 3) { viewCourse(HCMUS, st); }
+        else if (id == 4) { viewScoreboardCourse(HCMUS, st); }
         else if (id == 5) { drawOpenCourse(HCMUS, st); }
         else {
             return;
@@ -75,7 +75,7 @@ void drawMainGUI(Class& HCMUS, Staff& st, bool isStudent) {
             drawStaffProfile(HCMUS, st); //done
         }
         else if (id == 2) drawOpenCourse(st); //done
-        else if (id == 3) drawCloseCourse(st); //done
+        else if (id == 3) drawCloseCourse(HCMUS, st); //done
         else if (id == 4) createNewYear(HCMUS, st); //done
         else if (id == 5) workonScoreboard(st); //done
         else if (id == 6) viewScoreBoard(st);

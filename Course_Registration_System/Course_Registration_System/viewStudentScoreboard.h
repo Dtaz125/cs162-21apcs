@@ -44,13 +44,13 @@ void viewScoreboardCourse(Class& HCMUS, Student& st) {
         drawText(baseX, baseY, to_string(d));
         drawText(baseX + 8, baseY, ""); cout << new_c.id;
         drawText(baseX + 23, baseY, "");
-        if (new_c.is_published == false){
+        if (new_c.is_published == false) {
             cout << "the staff has't published this";
             continue;
         }
         Score sc;
         bool ok = false;
-        travel(it, new_c.student_score){
+        travel(it, new_c.student_score) {
             if ((*it).id == st.id) {
                 sc = (*it);
                 ok = true;
@@ -65,7 +65,7 @@ void viewScoreboardCourse(Class& HCMUS, Student& st) {
         drawText(baseX + 35, baseY, ""); cout << sc.final_mark;
         drawText(baseX + 50, baseY, ""); cout << sc.midterm_mark;
         drawText(baseX + 63, baseY, "");
-        for (int j = 0; j < sc.number_of_other_score; j++){
+        for (int j = 0; j < sc.number_of_other_score; j++) {
             cout << sc.other_score[j] << " ";
         }
     }

@@ -8,6 +8,7 @@
 #include"calculateGPA.h"
 #define travel(it, var) for(auto it = var.begin(); it != var.end(); it++)
 using namespace std;
+
 int main()
 {
     Class HCMUS = {"HCMUS"};
@@ -27,5 +28,11 @@ int main()
         login(HCMUS, sta);
         drawMainGUI(HCMUS, sta, 0);
     }
+	/*Class tmp;
+	readCSV_1(tmp, "test_csv.csv");
+	for (int i = 0; i < tmp.student_list.size(); i++) {
+		Node<Student>* k = tmp.student_list[i];
+		cout << k->data.username << " " << k->data.password << " " << k->data.id << " " << k->data.user_info.firstname << " " << k->data.user_info.lastname << endl;
+	}*/
     return 0;
 }

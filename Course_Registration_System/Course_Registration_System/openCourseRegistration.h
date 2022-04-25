@@ -37,7 +37,7 @@ void drawOpenCourse(Class& HCMUS, Student& st) {
         drawText(baseX, baseY + 5, "2. Semester: "); cout << new_c.semester;
         drawText(baseX, baseY + 6, "   Start Date: "); cout << new_c.start_date.day << "/" << new_c.start_date.month << "/" << new_c.start_date.year;
         drawText(baseX, baseY + 7, "   End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;
-        drawText(baseX, baseY + 8, "3. Register: ");
+        drawText(baseX, baseY + 8, "3. Register: "); if (new_c.active == false) cout << "You can't register now!";
         drawText(baseX, baseY + 9, "4. Exit: ");
         drawText(posCenter("ALL COURSES"), baseY + 10, "ALL COURSES");
         baseY += 12;
@@ -77,7 +77,7 @@ void drawOpenCourse(Class& HCMUS, Student& st) {
                 avail[i] = Matched(new_c.courseID[i], st);
             }
         }
-        else if (id == 3) {
+        else if (id == 3 && new_c.active == true) {
             drawText(baseX, baseY + 4, blank);
             drawText(posCenter("Input index of courseID to register: "), baseY + 4, "Input index of courseID to register: ");
             int index; cin >> index;
@@ -97,6 +97,14 @@ void drawOpenCourse(Class& HCMUS, Student& st) {
                     outputRegisData(new_c);
                 }
             }
+            else{
+                avail[index - 1] = false;
+                new_c.delStudent(index - 1, st.id);
+                st.delCourse(new_c.courseID[index - 1]);
+                updateClass(HCMUS, st);
+                outputStudentData(HCMUS);
+                outputRegisData(new_c);
+            }
         }
         else if (id == 4) {
 
@@ -114,6 +122,7 @@ void drawOpenCourse(const Staff& st) {
     int id, baseY = 3;
     CourseRegistration new_c;
     do {
+        system("cls");
         drawText(posCenter("CREATE COURSE REGISTRATION"), baseY, "------------------------------");
         drawText(posCenter("CREATE COURSE REGISTRATION"), baseY + 1, "| CREATE COURSE REGISTRATION |");
         drawText(posCenter("CREATE COURSE REGISTRATION"), baseY + 2, "------------------------------");
@@ -123,8 +132,8 @@ void drawOpenCourse(const Staff& st) {
         drawText(baseX, baseY + 10, "4. End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;
         drawText(baseX, baseY + 12, "5. Add courseID: ");
         for (int i = 0; i < new_c.numcourse; i++) cout << new_c.courseID[i] << ", ";
-        drawText(baseX, baseY + 14, "   Max student of course: ");
-        drawText(baseX, baseY + 16, "6. Cancel: ");
+        drawText(baseX, baseY + 14, "6. Del courseID: ");
+        drawText(baseX, baseY + 16, "7. Cancel: ");
         drawText(posCenter("Press a number to change/view information: "), baseY + 18, "Press a number to change/view information: ");
         cin >> id;
 
@@ -139,11 +148,18 @@ void drawOpenCourse(const Staff& st) {
             outputRegisData(new_c);
         }
         else if (id == 5) {
-            addCourse(new_c, baseX, baseY + 12, "5. Add courseID: ", "  Max student of course: ");
+            addCourse(new_c, baseX, baseY + 12, "5. Add courseID: ", "   Max student of course: ");
             //do something here
+            outputRegisData(new_c);
+        }
+        else if (id == 6){
+            drawText(baseX, baseY + 14, "6. Del courseID: ");
+            string cID;
+            cin >> cID;
+            new_c.delCourse(cID);
             outputRegisData(new_c);
         }
         inputRegisData(new_c, new_c.syear, new_c.semester);
         system("cls");
-    } while (id != 6);
+    } while (id != 7);
 }

@@ -138,6 +138,12 @@
     <ClInclude Include="scheduleCSV.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="viewStudentScoreboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="displayStudentinCourse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Student.cpp">
