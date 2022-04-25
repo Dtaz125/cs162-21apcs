@@ -22,13 +22,17 @@ void drawCloseCourse(Class& HCMUS, const Staff& st) {
         drawText(baseX, baseY + 6, "2. Semester: "); cout << new_c.semester;
         drawText(baseX, baseY + 8, "   Start Date: "); cout << new_c.start_date.day << "/" << new_c.start_date.month << "/" << new_c.start_date.year;
         drawText(baseX, baseY + 10, "   End Date: "); cout << new_c.end_date.day << "/" << new_c.end_date.month << "/" << new_c.end_date.year;
-        drawText(baseX, baseY + 12, "3. Active: "); cout << new_c.active;
-        drawText(baseX, baseY + 14, "4. Exit: ");
-        drawText(posCenter("Press a number to change/view information: "), baseY + 16, "Press a number to change/view information: ");
+        drawText(baseX, baseY + 12, "3. View all courses: "); //cout << new_c.active;
+        drawText(baseX, baseY + 14, "4. Active: "); cout << new_c.active;
+        drawText(baseX, baseY + 16, "5. Exit: ");
+        drawText(posCenter("Press a number to change/view information: "), baseY + 18, "Press a number to change/view information: ");
         cin >> id;
         if (id == 1) { changeSchoolyear(new_c, baseX, baseY+4, "1. School year: "); }
         else if (id == 2) { changeSemester(new_c, baseX, baseY+6, "2. Semester: "); }
         else if (id == 3) {
+            viewRegisCourse(new_c);
+        }
+        else if (id == 4) {
             new_c.active ^= 1;
             outputRegisData(new_c);
             for (int i = 0; i < new_c.numcourse; i++){
@@ -48,5 +52,5 @@ void drawCloseCourse(Class& HCMUS, const Staff& st) {
         }
         inputRegisData(new_c, new_c.syear, new_c.semester);
         system("cls");
-    } while (id != 4);
+    } while (id != 5);
 }
