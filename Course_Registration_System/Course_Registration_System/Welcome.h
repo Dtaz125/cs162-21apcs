@@ -7,6 +7,7 @@
 #include<ctime>
 #include <vector>
 #include "windows.h" 
+#include <windows.h>
 using namespace std;
 
 void SetColor(WORD color)
@@ -28,7 +29,8 @@ void SetColor(WORD color)
 void Welcome() {
 	string ngiu;
 		system("cls");
-		//system("mode 650");
+		system("mode 650");
+		ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 		cout << endl << endl;
 		cout << "Please open the console in fullscreen before continuining. Thank you." << endl << endl;
 		cout << "Press Enter to Continue";
@@ -54,5 +56,8 @@ void Welcome() {
 				break;
 
 				SetColor(A.at(i++ % A.size()));				
+			}
+			for (int i = 0; i < 3; i++) {
+				cout << endl;
 			}
 }
