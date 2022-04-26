@@ -29,7 +29,6 @@ void SetColor(WORD color)
 void Welcome() {
 	string ngiu;
 		system("cls");
-		system("mode 650");
 		ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 		cout << endl << endl;
 		cin.ignore();
@@ -55,7 +54,8 @@ void Welcome() {
 
 				SetColor(A.at(i++ % A.size()));				
 			}
-			for (int i = 0; i < 3; i++) {
-				cout << endl;
-			}
+
+			cin.ignore();
+			ShowWindow(GetConsoleWindow(), SW_SHOWNORMAL);
+			system("cls");
 }
