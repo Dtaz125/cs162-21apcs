@@ -10,8 +10,7 @@
 #include <windows.h>
 using namespace std;
 
-void SetColor(WORD color)
-{
+void SetColor(WORD color) {
 	HANDLE hConsoleOutput;
 	hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -27,7 +26,6 @@ void SetColor(WORD color)
 }
 
 void Welcome() {
-	string ngiu;
 		system("cls");
 		ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 		cout << endl << endl;
@@ -40,7 +38,7 @@ void Welcome() {
 			A.push_back(10);
 			while (true) {
 				int i = 0;
-				SetColor(A.at(i++ % A.size()));
+				//SetColor(A.at(i++ % A.size()));
 
 				ifstream file;
 				file.open("fithcmus.txt", ios::in);
@@ -51,8 +49,6 @@ void Welcome() {
 				}
 				file.close();
 				break;
-
-				SetColor(A.at(i++ % A.size()));				
 			}
 
 			cin.ignore();
