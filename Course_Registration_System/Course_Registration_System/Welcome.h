@@ -31,11 +31,11 @@ void Welcome() {
 		cout << endl << endl;
 		cin.ignore();
 
-			vector <int> A;
-			A.push_back(7);
-			A.push_back(12);
-			A.push_back(14);
-			A.push_back(10);
+			//vector <int> A;
+			//A.push_back(7);
+			//A.push_back(12);
+			//A.push_back(14);
+			//A.push_back(10);
 			while (true) {
 				int i = 0;
 				//SetColor(A.at(i++ % A.size()));
