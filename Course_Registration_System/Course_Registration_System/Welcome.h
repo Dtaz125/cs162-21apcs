@@ -32,8 +32,6 @@ void Welcome() {
 		system("mode 650");
 		ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 		cout << endl << endl;
-		cout << "Please open the console in fullscreen before continuining. Thank you." << endl << endl;
-		cout << "Press Enter to Continue";
 		cin.ignore();
 
 			vector <int> A;

@@ -18,7 +18,7 @@ int main()
     InitializeConsole();
     Welcome();
     bool isStudent = false;
-    drawText(posCenter("COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: "), 106, "COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: ");
+    drawText(posCenter("COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: "), 104, "COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: ");
     cin >> isStudent;
     Student stu;
     Staff sta;
