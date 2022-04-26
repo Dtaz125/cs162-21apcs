@@ -44,7 +44,7 @@ void Welcome() {
 				SetColor(A.at(i++ % A.size()));
 
 				ifstream file;
-				file.open("D:/Projects/CS162/Project/cs162-21apcs/Course_Registration_System/Course_Registration_System/fithcmus.txt", ios::in);
+				file.open("fithcmus.txt", ios::in);
 				string line;
 				while (getline(file, line)) {
 					cout << line << endl;
