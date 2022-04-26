@@ -146,7 +146,7 @@ void viewRegisCourse(CourseRegistration new_c){
             drawText(baseX + 83, baseY, ""); if (new_c.maxstudent[i] == new_c.curstudent[i]) cout << "Course is full, can't register now";
         }
         drawText(baseX, baseY + 4, blank);
-        getch();
+        _getch();
         system("cls");
 }
 

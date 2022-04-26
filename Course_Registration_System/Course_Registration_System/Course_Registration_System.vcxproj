@@ -185,6 +185,7 @@
     <ClInclude Include="viewCourse.h" />
     <ClInclude Include="viewScoreBoard.h" />
     <ClInclude Include="viewStudentScoreboard.h" />
+    <ClInclude Include="Welcome.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Class.cpp" />

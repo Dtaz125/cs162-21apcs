@@ -6,6 +6,7 @@
 #include "testDatafile.h"
 #include"CourseRegistrationData.h"
 #include"calculateGPA.h"
+#include "Welcome.h"
 #define travel(it, var) for(auto it = var.begin(); it != var.end(); it++)
 using namespace std;
 
@@ -15,8 +16,9 @@ int main()
     inputAllData(HCMUS);
     system("Color 9F");
     InitializeConsole();
+    Welcome();
     bool isStudent = false;
-    drawText(posCenter("COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: "), 10, "COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: ");
+    drawText(posCenter("COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: "), 106, "COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: ");
     cin >> isStudent;
     Student stu;
     Staff sta;

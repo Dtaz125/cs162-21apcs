@@ -73,7 +73,7 @@ system("cls");
         }
         */
         //drawText(baseX, baseY + 4, blank);
-        getch();
+        _getch();
         system("cls");
 }
 
