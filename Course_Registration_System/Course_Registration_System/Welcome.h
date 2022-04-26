@@ -39,7 +39,6 @@ void Welcome() {
 			while (true) {
 				int i = 0;
 				//SetColor(A.at(i++ % A.size()));
-
 				ifstream file;
 				file.open("fithcmus.txt", ios::in);
 				string line;
