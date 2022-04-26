@@ -10,7 +10,7 @@
 #include <windows.h>
 using namespace std;
 
-void SetColor(WORD color) {
+/* void SetColor(WORD color) {
 	HANDLE hConsoleOutput;
 	hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -23,7 +23,7 @@ void SetColor(WORD color) {
 	wAttributes |= color;
 
 	SetConsoleTextAttribute(hConsoleOutput, wAttributes);
-}
+} */
 
 void Welcome() {
 		system("cls");

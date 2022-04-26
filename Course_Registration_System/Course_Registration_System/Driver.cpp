@@ -14,9 +14,10 @@ int main()
 {
     Class HCMUS = {"HCMUS"};
     inputAllData(HCMUS);
-    system("Color 9F");
+    system("Color 1F");
     InitializeConsole();
     Welcome();
+    system("Color 4F");
     bool isStudent = false;
     drawText(posCenter("COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: "), 10, "COURSE REGISTRATION SYSTEM(Staff/Student)[0/1]: ");
     cin >> isStudent;
