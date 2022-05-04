@@ -1,0 +1,29 @@
+
+CS162
+Introduction to CS II
+DBT
+TueS1-SatS1
+2
+2112
+1
+John
+10 10 10 3 10 10 10
+2113
+2
+Peter
+10 10 10 3 10 10 10
+46 4 1
+MTH252
+Calculus II
+DBT
+TueS1-SatS1
+2
+2112
+1
+John
+10 10 10 3 10 10 10
+2113
+2
+Peter
+10 10 10 3 10 10 10
+46 4 1

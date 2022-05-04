@@ -1,0 +1,52 @@
+
+Introduction to CS II
+DBT
+TueS1-SatS1
+2
+2112
+1
+John
+10 10 10 3 10 10 10
+2113
+2
+Peter
+10 10 10 3 10 10 10
+46 4 1
+
+Calculus II
+NHA
+TueS1-SatS1
+4
+2112
+1
+John
+10 10 10 3 10 10 10
+2113
+2
+Peter
+10 10 10 3 10 10 10
+2112
+1
+John
+10 10 10 3 10 10 10
+2113
+2
+Peter
+10 10 10 3 10 10 10
+46 4 1
+
+Physics II
+NHN
+TueS1-SatS1
+1
+2112
+1
+John
+10 10 10 3 10 10 10
+46 4 1
+
+Fixbug
+Vinh
+SAT - 7h30 / THU - 9h30
+0
+100 5 0
